@@ -1,0 +1,30 @@
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    width: 200px;
+    padding: 10px;
+
+    font-family: system-ui;
+    text-align: center;
+}
+
+#translate-btn {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#translate-btn:hover {
+    background-color: #e9ecef;
+}
+
+@media (prefers-color-scheme: dark) {
+    /* Dark Mode styles go here. */
+}
