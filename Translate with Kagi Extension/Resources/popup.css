@@ -1,30 +1,201 @@
 :root {
     color-scheme: light dark;
-}
-
-body {
-    width: 200px;
-    padding: 10px;
-
-    font-family: system-ui;
-    text-align: center;
-}
-
-#translate-btn {
-    padding: 8px 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f9fa;
-    font-family: inherit;
-    font-size: 14px;
-    cursor: pointer;
-    width: 100%;
-}
-
-#translate-btn:hover {
-    background-color: #e9ecef;
+    --primary-color: #2196F3;
+    --primary-hover: #1976D2;
+    --background: #ffffff;
+    --surface: #f8f9fa;
+    --text-primary: #212121;
+    --text-secondary: #757575;
+    --border: #e0e0e0;
+    --border-hover: #bdbdbd;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --radius: 6px;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
-    /* Dark Mode styles go here. */
+    :root {
+        --background: #1e1e1e;
+        --surface: #2d2d2d;
+        --text-primary: #ffffff;
+        --text-secondary: #b3b3b3;
+        --border: #404040;
+        --border-hover: #555555;
+        --shadow: rgba(0, 0, 0, 0.3);
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--background);
+    color: var(--text-primary);
+    min-width: 280px;
+    max-width: 320px;
+}
+
+.popup-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+}
+
+.popup-header {
+    padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-md);
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.popup-header h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.popup-main {
+    flex: 1;
+    padding: var(--spacing-md);
+}
+
+.translate-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.translate-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--surface);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    width: 100%;
+}
+
+.translate-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.translate-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px var(--shadow);
+}
+
+.translate-btn .flag {
+    font-size: 1.2rem;
+    min-width: 24px;
+    text-align: center;
+}
+
+.translate-btn .text {
+    flex: 1;
+    font-weight: 500;
+}
+
+.empty-state {
+    text-align: center;
+    padding: var(--spacing-lg);
+    color: var(--text-secondary);
+}
+
+.empty-state p {
+    margin-bottom: var(--spacing-xs);
+}
+
+.empty-state .hint {
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.popup-footer {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-top: 1px solid var(--border);
+    background-color: var(--surface);
+}
+
+.settings-container {
+    display: flex;
+    justify-content: center;
+}
+
+.settings-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--background);
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.settings-btn:hover {
+    background-color: var(--border);
+    color: var(--text-primary);
+}
+
+/* Loading state */
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+    color: var(--text-secondary);
+}
+
+/* Animation for button appearance */
+.translate-btn {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 300px) {
+    body {
+        min-width: 250px;
+    }
+    
+    .translate-btn {
+        padding: var(--spacing-sm);
+        font-size: 13px;
+    }
+    
+    .translate-btn .flag {
+        font-size: 1rem;
+        min-width: 20px;
+    }
 }

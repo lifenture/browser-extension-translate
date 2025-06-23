@@ -4,18 +4,30 @@ A Safari web extension that allows users to quickly translate web pages to Polis
 
 ## Features
 
-- 🌍 **One-click translation** to Polish using Kagi Translate
-- 🦘 **Safari Web Extension** format for macOS
-- 🔒 **Minimal permissions** - only accesses the current tab and Kagi Translate
-- 🎨 **Clean UI** with a simple button interface
+- 🌍 **Multi-language support** - Choose up to 5 preferred languages from 100+ options
+- ⚙️ **Dynamic configuration** - Customizable language selection via settings page
+- 🔍 **Smart search** - Find languages by name, native name, or language code
+- 🏳️ **Visual flags** - Country flags for easy language identification
+- 🦘 **Safari Web Extension** format for macOS with cross-browser compatibility
+- 🔒 **Minimal permissions** - only accesses tabs and storage
+- 🎨 **Clean UI** with responsive design and animations
 - 🌙 **Dark mode support** with system color scheme adaptation
+- 💾 **Settings sync** - Preferences synchronized across browser instances
 
 ## How it Works
 
+### Basic Usage
 1. Click the extension icon in Safari's toolbar
-2. Press the "Translate page to Polish" button
+2. Choose from your configured translation languages (up to 5)
 3. The current page URL is sent to Kagi Translate for translation
-4. Automatically redirects to `https://translate.kagi.com/translate/pl/<encoded-url>`
+4. Automatically redirects to `https://translate.kagi.com/translate/{language}/{encoded-url}`
+
+### Configuration
+1. Click the extension icon and select "⚙️ Settings"
+2. Choose up to 5 preferred languages from 100+ options
+3. Use search to find languages by name, native name, or code
+4. Save settings - they sync across browser instances
+5. Your popup will show buttons for selected languages
 
 ## Installation
 
@@ -47,8 +59,12 @@ Translate with Kagi/
 │   │   ├── manifest.json                   # Extension manifest (MV3)
 │   │   ├── popup.html                      # Extension popup UI
 │   │   ├── popup.css                       # Popup styling
-│   │   ├── popup.js                        # Popup functionality
+│   │   ├── popup.js                        # Dynamic popup functionality
 │   │   ├── background.js                   # Background script
+│   │   ├── options.html                    # Settings/configuration page
+│   │   ├── options.css                     # Settings page styling
+│   │   ├── options.js                      # Settings page functionality
+│   │   ├── languages.js                    # 100+ language definitions
 │   │   ├── images/                         # Extension icons
 │   │   └── _locales/en/messages.json       # Localization
 │   ├── SafariWebExtensionHandler.swift     # Swift extension handler
@@ -107,6 +123,16 @@ Translate with Kagi/
 MIT License - see LICENSE file for details
 
 ## Version History
+
+- **1.1.0** - Configuration & Multi-language Support
+  - ⚙️ Dynamic language configuration (up to 5 languages)
+  - 🔍 Smart search across 100+ languages
+  - 🏳️ Visual language flags and native names
+  - 💾 Settings synchronization via browser storage
+  - 📱 Responsive settings page with live preview
+  - 🔄 Reset to defaults functionality
+  - 🎨 Enhanced popup with dynamic button generation
+  - 🔧 Background script improvements for direct toolbar clicks
 
 - **1.0.0** - Initial release
   - Basic Polish translation functionality

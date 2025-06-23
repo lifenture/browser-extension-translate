@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="popup.css">
-    <script type="module" src="popup.js"></script>
 </head>
 <body>
-    <button id="translate-btn">Translate page to Polish</button>
+    <div class="popup-container">
+        <header class="popup-header">
+            <h1>🌍 Kagi Translate</h1>
+        </header>
+        
+        <main class="popup-main">
+            <div id="translate-buttons" class="translate-buttons">
+                <!-- Buttons will be generated dynamically -->
+            </div>
+        </main>
+        
+        <footer class="popup-footer">
+            <div id="settings-link" class="settings-container">
+                <!-- Settings link will be added by JS -->
+            </div>
+        </footer>
+    </div>
+    
+    <script src="languages.js"></script>
+    <script src="popup.js"></script>
 </body>
 </html>
