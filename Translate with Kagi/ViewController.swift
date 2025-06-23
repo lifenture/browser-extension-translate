@@ -9,7 +9,7 @@ import Cocoa
 import SafariServices
 import WebKit
 
-let extensionBundleIdentifier = "com.lifenture.browser.extension.safari.Translate-with-Kagi.Extension"
+let extensionBundleIdentifier = "com.lifenture.browser.extension.translate"
 
 class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHandler {
 
