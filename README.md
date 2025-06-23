@@ -1,6 +1,6 @@
 # Translate with Kagi Extension
 
-A Safari web extension that allows users to quickly translate web pages to Polish using Kagi Translate.
+A Safari web extension that allows users to quickly translate web pages using Kagi Translate.
 
 ## Features
 
