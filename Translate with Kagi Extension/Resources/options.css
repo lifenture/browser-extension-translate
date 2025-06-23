@@ -50,6 +50,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: var(--spacing-lg);
+    padding-bottom: 100px; /* Space for sticky save button */
     min-height: 100vh;
 }
 
@@ -374,10 +375,32 @@ footer {
     }
 }
 
+/* Sticky Save Bar */
+.sticky-save-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--background);
+    border-top: 1px solid var(--border);
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    box-shadow: 0 -2px 8px var(--shadow);
+}
+
+.sticky-save-bar .primary-btn {
+    min-width: 200px;
+    font-size: 1.1rem;
+    padding: var(--spacing-md) var(--spacing-xl);
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .container {
         padding: var(--spacing-md);
+        padding-bottom: 100px; /* Space for sticky save button */
     }
     
     .language-grid {
@@ -391,6 +414,16 @@ footer {
     
     .primary-btn,
     .secondary-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .sticky-save-bar {
+        padding: var(--spacing-md);
+    }
+    
+    .sticky-save-bar .primary-btn {
+        min-width: unset;
         width: 100%;
         max-width: 300px;
     }

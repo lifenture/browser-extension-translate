@@ -31,10 +31,6 @@ class LanguageSelector {
             this.saveSettings();
         });
 
-        // Reset settings
-        document.getElementById('reset-settings').addEventListener('click', () => {
-            this.resetSettings();
-        });
     }
 
     async loadSavedSettings() {
@@ -94,14 +90,6 @@ class LanguageSelector {
         }
     }
 
-    resetSettings() {
-        if (confirm('Reset to default languages? This will remove all your current selections.')) {
-            this.selectedLanguages = [...this.defaultLanguages];
-            this.updateUI();
-            this.enableSaveButton();
-            this.showNotification('Settings reset to default', 'success');
-        }
-    }
 
     renderLanguageGrid() {
         const grid = document.getElementById('language-grid');
