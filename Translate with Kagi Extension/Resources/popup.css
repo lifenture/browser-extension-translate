@@ -183,6 +183,59 @@ body {
     }
 }
 
+/* Kagi domain warning message */
+.kagi-domain-message {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: var(--radius);
+    color: #856404;
+}
+
+@media (prefers-color-scheme: dark) {
+    .kagi-domain-message {
+        background: #2d2a1f;
+        border-color: #4a431c;
+        color: #f1c40f;
+    }
+}
+
+.kagi-domain-message .message-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.kagi-domain-message .message-content {
+    flex: 1;
+}
+
+.kagi-domain-message h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 var(--spacing-xs) 0;
+    color: inherit;
+}
+
+.kagi-domain-message p {
+    margin: 0 0 var(--spacing-xs) 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.kagi-domain-message p:last-child {
+    margin-bottom: 0;
+}
+
+.kagi-domain-message .hint {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
 /* Responsive adjustments */
 @media (max-width: 300px) {
     body {
@@ -197,5 +250,11 @@ body {
     .translate-btn .flag {
         font-size: 1rem;
         min-width: 20px;
+    }
+    
+    .kagi-domain-message {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-sm);
     }
 }

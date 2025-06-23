@@ -148,6 +148,18 @@
                 <li>Should translate using the first selected language</li>
             </ol>
         </div>
+
+        <div class="test-step">
+            <h3>Step 8: Test Kagi Domain Protection</h3>
+            <ol>
+                <li>Navigate to <code>https://translate.kagi.com</code></li>
+                <li>Click the extension icon</li>
+                <li>Should show warning message: "Extension Disabled"</li>
+                <li>Message should explain it cannot be used on Kagi Translate pages</li>
+                <li>Settings button should still be available</li>
+                <li>Try clicking toolbar icon directly - should do nothing</li>
+            </ol>
+        </div>
     </div>
 
     <div class="section expected">
@@ -160,6 +172,7 @@
             <li><strong>Translation URLs:</strong> <code>https://translate.kagi.com/translate/{code}/{encoded-url}</code></li>
             <li><strong>Storage:</strong> Settings persist between browser sessions</li>
             <li><strong>Fallback:</strong> Works even if no languages selected (defaults to Polish)</li>
+            <li><strong>Domain Protection:</strong> Extension disabled on translate.kagi.com with clear warning message</li>
         </ul>
     </div>
 

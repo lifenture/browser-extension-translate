@@ -8,6 +8,14 @@ class TranslatePopup {
     async init() {
         await this.loadLanguagesData();
         await this.loadUserSettings();
+        
+        // Check if we're on translate.kagi.com and show appropriate message
+        if (await this.isOnKagiTranslate()) {
+            this.renderKagiDomainMessage();
+            this.addSettingsLink();
+            return;
+        }
+        
         this.renderTranslateButtons();
         this.addSettingsLink();
     }
@@ -114,6 +122,42 @@ class TranslatePopup {
             url: browser.runtime.getURL('options.html')
         });
         window.close();
+    }
+
+    async isOnKagiTranslate() {
+        try {
+            const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
+            if (!tab || !tab.url) {
+                return false;
+            }
+            
+            // Check if URL starts with translate.kagi.com
+            const url = new URL(tab.url);
+            return url.hostname === 'translate.kagi.com';
+        } catch (error) {
+            console.error('Failed to check current tab URL:', error);
+            return false;
+        }
+    }
+
+    renderKagiDomainMessage() {
+        const container = document.getElementById('translate-buttons');
+        
+        if (!container) {
+            console.error('Translate buttons container not found');
+            return;
+        }
+
+        container.innerHTML = `
+            <div class="kagi-domain-message">
+                <div class="message-icon">⚠️</div>
+                <div class="message-content">
+                    <h3>Extension Disabled</h3>
+                    <p>This extension cannot be used on Kagi Translate pages to prevent conflicts.</p>
+                    <p class="hint">Navigate to another page to use the translation feature.</p>
+                </div>
+            </div>
+        `;
     }
 
     getLanguageFlag(code) {

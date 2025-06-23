@@ -38,6 +38,12 @@ class TranslateBackground {
             return;
         }
 
+        // Check if we're on translate.kagi.com and do nothing
+        if (this.isKagiTranslateDomain(tab.url)) {
+            console.log('Extension disabled on Kagi Translate domain');
+            return;
+        }
+
         try {
             // Get user's preferred languages
             const result = await browser.storage.sync.get(['selectedLanguages']);
@@ -113,6 +119,16 @@ class TranslateBackground {
         const target = `https://translate.kagi.com/translate/${languageCode}/` + encodeURIComponent(tab.url);
         await browser.tabs.update(tab.id, { url: target });
         console.log(`Translated page to ${languageCode}`);
+    }
+
+    isKagiTranslateDomain(url) {
+        try {
+            const urlObj = new URL(url);
+            return urlObj.hostname === 'translate.kagi.com';
+        } catch (error) {
+            console.error('Failed to parse URL:', error);
+            return false;
+        }
     }
 }
 
