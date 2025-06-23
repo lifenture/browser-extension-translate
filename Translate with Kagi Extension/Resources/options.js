@@ -60,15 +60,33 @@ class LanguageSelector {
             
             this.showNotification('Settings saved successfully!', 'success');
             
-            // Disable save button temporarily
+            // Disable save button and show confirmation
             const saveBtn = document.getElementById('save-settings');
             saveBtn.disabled = true;
             saveBtn.textContent = '✅ Saved';
             
+            // Close the settings page after a short delay to show confirmation
             setTimeout(() => {
-                saveBtn.disabled = false;
-                saveBtn.innerHTML = '💾 Save Settings';
-            }, 2000);
+                if (typeof window !== 'undefined' && window.close) {
+                    window.close();
+                } else {
+                    // Fallback: try to close the current tab
+                    if (typeof browser !== 'undefined' && browser.tabs) {
+                        browser.tabs.query({ active: true, currentWindow: true })
+                            .then(([tab]) => {
+                                if (tab && tab.id) {
+                                    browser.tabs.remove(tab.id);
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Failed to close tab:', error);
+                                // Reset button state if closing fails
+                                saveBtn.disabled = false;
+                                saveBtn.innerHTML = '💾 Save Settings';
+                            });
+                    }
+                }
+            }, 1500); // Close after 1.5 seconds to allow user to see confirmation
             
         } catch (error) {
             console.error('Failed to save settings:', error);
