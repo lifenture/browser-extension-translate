@@ -122,9 +122,23 @@ const uniqueLanguages = LANGUAGES.filter((lang, index, self) =>
   index === self.findIndex(l => l.code === lang.code)
 ).slice(0, 100);
 
+// Language code mapping utility for Google Translate
+// Most ISO codes are identical; only handle known special cases
+function mapCodeForGoogle(c) {
+  const table = { 
+    'zh': 'zh-CN',     // Chinese (Simplified)
+    'zh-tw': 'zh-TW',  // Chinese (Traditional)
+    'pt': 'pt',        // Portuguese (same as ISO)
+    'yue': 'zh-TW'     // Cantonese -> Chinese (Traditional)
+    /* Add more mappings here as needed */
+  };
+  return table[c] || c;
+}
+
 // Export for use in other modules
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { LANGUAGES: uniqueLanguages };
+  module.exports = { LANGUAGES: uniqueLanguages, mapCodeForGoogle };
 } else {
   window.LANGUAGES = uniqueLanguages;
+  window.mapCodeForGoogle = mapCodeForGoogle;
 }

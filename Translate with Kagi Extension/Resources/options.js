@@ -5,6 +5,7 @@ class LanguageSelector {
         this.maxLanguages = 5;
         this.defaultLanguages = ['pl']; // Default to Polish as originally intended
         this.searchTimeout = null;
+        this.provider = 'kagi'; // Default provider
         
         this.init();
     }
@@ -26,6 +27,17 @@ class LanguageSelector {
             }, 300);
         });
 
+        // Provider selection
+        const providerRadios = document.querySelectorAll('input[name="provider"]');
+        providerRadios.forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                if (e.target.checked) {
+                    this.provider = e.target.value;
+                    this.enableSaveButton();
+                }
+            });
+        });
+
         // Save settings
         document.getElementById('save-settings').addEventListener('click', () => {
             this.saveSettings();
@@ -35,23 +47,37 @@ class LanguageSelector {
 
     async loadSavedSettings() {
         try {
-            const result = await browser.storage.sync.get(['selectedLanguages']);
-            if (result.selectedLanguages && Array.isArray(result.selectedLanguages)) {
-                this.selectedLanguages = result.selectedLanguages;
+            const { selectedLanguages, provider } = await browser.storage.sync.get(['selectedLanguages', 'provider']);
+            
+            // Load selected languages
+            if (selectedLanguages && Array.isArray(selectedLanguages)) {
+                this.selectedLanguages = selectedLanguages;
             } else {
                 // Set default languages if none saved
                 this.selectedLanguages = [...this.defaultLanguages];
             }
+            
+            // Load provider setting
+            this.provider = provider || 'kagi';
+            
+            // Update the radio button selection
+            const providerRadio = document.querySelector(`input[name="provider"][value="${this.provider}"]`);
+            if (providerRadio) {
+                providerRadio.checked = true;
+            }
+            
         } catch (error) {
             console.error('Failed to load settings:', error);
             this.selectedLanguages = [...this.defaultLanguages];
+            this.provider = 'kagi';
         }
     }
 
     async saveSettings() {
         try {
             await browser.storage.sync.set({
-                selectedLanguages: this.selectedLanguages
+                selectedLanguages: this.selectedLanguages,
+                provider: this.provider
             });
             
             this.showNotification('Settings saved successfully!', 'success');

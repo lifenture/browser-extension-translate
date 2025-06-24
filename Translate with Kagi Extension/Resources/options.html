@@ -13,6 +13,26 @@
             <p>Select up to 5 preferred languages for quick translation</p>
         </header>
 
+        <section class="provider-section">
+            <h2>Translation Provider</h2>
+            <div id="provider-select">
+                <label class="provider-option">
+                    <input type="radio" name="provider" value="kagi" checked>
+                    <div class="provider-info">
+                        <span class="provider-name">Kagi</span>
+                        <span class="provider-description">Uses Kagi's FastGPT for high-quality, private translations with no tracking</span>
+                    </div>
+                </label>
+                <label class="provider-option">
+                    <input type="radio" name="provider" value="google">
+                    <div class="provider-info">
+                        <span class="provider-name">Google Translate</span>
+                        <span class="provider-description">Fast and reliable translations using Google's translation service</span>
+                    </div>
+                </label>
+            </div>
+        </section>
+
         <main>
             <div class="current-selection">
                 <h2>Selected Languages (<span id="selection-count">0</span>/5)</h2>

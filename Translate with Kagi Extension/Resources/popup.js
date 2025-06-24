@@ -9,14 +9,14 @@ class TranslatePopup {
         await this.loadLanguagesData();
         await this.loadUserSettings();
         
-        // Check if we're on translate.kagi.com and show appropriate message
-        if (await this.isOnKagiTranslate()) {
-            this.renderKagiDomainMessage();
+        // Check if we're on translate domain and show appropriate message
+        if (await this.isOnTranslateDomain()) {
+            this.renderDisabledDomainMessage();
             this.addSettingsLink();
             return;
         }
         
-        this.renderTranslateButtons();
+        await this.renderTranslateButtons();
         this.addSettingsLink();
     }
 
@@ -30,15 +30,23 @@ class TranslatePopup {
 
     async loadUserSettings() {
         try {
-            const result = await browser.storage.sync.get(['selectedLanguages']);
+            const result = await browser.storage.sync.get(['selectedLanguages', 'provider']);
             this.selectedLanguages = result.selectedLanguages || this.defaultLanguages;
+            this.provider = result.provider || 'kagi'; // Default to 'kagi'
         } catch (error) {
             console.error('Failed to load user settings:', error);
             this.selectedLanguages = this.defaultLanguages;
+            this.provider = 'kagi';
         }
     }
 
-    renderTranslateButtons() {
+    async renderTranslateButtons() {
+        // Check if we're on translate domain first
+        if (await this.isOnTranslateDomain()) {
+            this.renderDisabledDomainMessage();
+            return;
+        }
+        
         const container = document.getElementById('translate-buttons');
         
         if (!container) {
@@ -101,6 +109,14 @@ class TranslatePopup {
         }
     }
 
+    buildTargetUrl(tabUrl, lang) {
+        if (this.provider === 'google') {
+            const gCode = window.mapCodeForGoogle(lang);
+            return `https://translate.google.com/translate?sl=auto&tl=${gCode}&hl=en-US&u=${encodeURIComponent(tabUrl)}&client=webapp`;
+        }
+        return `https://translate.kagi.com/translate/${lang}/` + encodeURIComponent(tabUrl);
+    }
+
     async translateToLanguage(languageCode) {
         try {
             const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
@@ -109,7 +125,7 @@ class TranslatePopup {
                 return;
             }
 
-            const target = `https://translate.kagi.com/translate/${languageCode}/` + encodeURIComponent(tab.url);
+            const target = this.buildTargetUrl(tab.url, languageCode);
             await browser.tabs.update(tab.id, { url: target });
             window.close();
         } catch (error) {
@@ -124,23 +140,60 @@ class TranslatePopup {
         window.close();
     }
 
-    async isOnKagiTranslate() {
+    async isOnTranslateDomain() {
         try {
             const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
             if (!tab || !tab.url) {
                 return false;
             }
             
-            // Check if URL starts with translate.kagi.com
             const url = new URL(tab.url);
-            return url.hostname === 'translate.kagi.com';
+            
+            // Check if URL is on translate service domains
+            if (url.hostname === 'translate.kagi.com' || url.hostname === 'translate.google.com') {
+                return true;
+            }
+            
+            // Check if page is already translated through Google Translate
+            // Google Translate creates frames/embeds with specific patterns
+            if (this.isGoogleTranslatedPage(url)) {
+                return true;
+            }
+            
+            return false;
         } catch (error) {
             console.error('Failed to check current tab URL:', error);
             return false;
         }
     }
 
-    renderKagiDomainMessage() {
+    isGoogleTranslatedPage(url) {
+        // Check for Google Translate URL patterns that indicate a translated page
+        if (url.hostname === 'translate.google.com') {
+            // Check if this is a translation result page (has 'u' parameter with original URL)
+            return url.searchParams.has('u') && url.searchParams.has('tl');
+        }
+        
+        // Check for Google Translate translated pages (domains ending with .translate.goog)
+        if (url.hostname.endsWith('.translate.goog')) {
+            return true;
+        }
+        
+        // Check for Google Translate widget/frame patterns
+        // These might appear when Google Translate is embedded in pages
+        if (url.hostname.includes('translate.googleusercontent.com')) {
+            return true;
+        }
+        
+        // Check for other Google Translate related domains or patterns
+        if (url.hostname.includes('translate-pa.googleapis.com')) {
+            return true;
+        }
+        
+        return false;
+    }
+
+    renderDisabledDomainMessage() {
         const container = document.getElementById('translate-buttons');
         
         if (!container) {
@@ -152,8 +205,8 @@ class TranslatePopup {
             <div class="kagi-domain-message">
                 <div class="message-icon">⚠️</div>
                 <div class="message-content">
-                    <h3>Extension Disabled</h3>
-                    <p>This extension cannot be used on Kagi Translate pages to prevent conflicts.</p>
+                    <h3>Extension Disabled on translation site</h3>
+                    <p>This extension cannot be used on translation service pages to prevent conflicts.</p>
                     <p class="hint">Navigate to another page to use the translation feature.</p>
                 </div>
             </div>
