@@ -1,4 +1,4 @@
-// 100 most popular languages with their Kagi Translate codes and native names
+// 100 most popular languages with their language codes and native names
 const LANGUAGES = [
   { code: 'en', name: 'English', native: 'English' },
   { code: 'zh', name: 'Chinese (Simplified)', native: '中文 (简体)' },

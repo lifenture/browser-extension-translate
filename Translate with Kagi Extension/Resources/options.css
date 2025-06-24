@@ -65,6 +65,17 @@ header h1 {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.header-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px var(--shadow));
 }
 
 header p {
