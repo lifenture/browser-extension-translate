@@ -200,7 +200,6 @@ MIT License - see LICENSE file for details
   - 🏳️ Visual language flags and native names
   - 💾 Settings synchronization via browser storage
   - 📱 Responsive settings page with live preview
-  - 🔄 Reset to defaults functionality
   - 🎨 Enhanced popup with dynamic button generation
   - 🔧 Background script improvements for direct toolbar clicks
 
