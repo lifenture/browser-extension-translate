@@ -24,7 +24,7 @@
         "default_icon": "images/toolbar-icon.png"
     },
 
-    "permissions": ["activeTab", "tabs", "storage"],
+    "permissions": ["activeTab", "tabs", "storage", "windows"],
     "host_permissions": ["https://translate.kagi.com/*", "https://translate.google.com/*"],
     
     "options_page": "options.html"

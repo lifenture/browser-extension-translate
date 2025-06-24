@@ -87,26 +87,47 @@ class LanguageSelector {
             saveBtn.disabled = true;
             saveBtn.textContent = '✅ Saved';
             
-            // Close the settings page after a short delay to show confirmation
-            setTimeout(() => {
-                if (typeof window !== 'undefined' && window.close) {
-                    window.close();
-                } else {
-                    // Fallback: try to close the current tab
-                    if (typeof browser !== 'undefined' && browser.tabs) {
-                        browser.tabs.query({ active: true, currentWindow: true })
-                            .then(([tab]) => {
-                                if (tab && tab.id) {
-                                    browser.tabs.remove(tab.id);
-                                }
-                            })
-                            .catch(error => {
-                                console.error('Failed to close tab:', error);
-                                // Reset button state if closing fails
-                                saveBtn.disabled = false;
-                                saveBtn.innerHTML = '💾 Save Settings';
-                            });
+            // Close the settings page after a short delay and return to original tab
+            setTimeout(async () => {
+                try {
+                    // Get the original tab ID that was stored when opening settings
+                    const { originalTabId } = await browser.storage.local.get(['originalTabId']);
+                    
+                    if (typeof window !== 'undefined' && window.close) {
+                        window.close();
+                    } else {
+                        // Fallback: close the current settings tab
+                        const [currentTab] = await browser.tabs.query({ active: true, currentWindow: true });
+                        if (currentTab && currentTab.id) {
+                            await browser.tabs.remove(currentTab.id);
+                        }
                     }
+                    
+                    // Try to return to the original tab if it still exists
+                    if (originalTabId) {
+                        try {
+                            // Check if the original tab still exists
+                            const originalTab = await browser.tabs.get(originalTabId);
+                            if (originalTab) {
+                                // Switch to the original tab
+                                await browser.tabs.update(originalTabId, { active: true });
+                                // Focus the window containing the tab
+                                await browser.windows.update(originalTab.windowId, { focused: true });
+                            }
+                        } catch (tabError) {
+                            // Original tab no longer exists, that's okay
+                            console.log('Original tab no longer exists, continuing...');
+                        }
+                        
+                        // Clean up the stored tab ID
+                        await browser.storage.local.remove(['originalTabId']);
+                    }
+                    
+                } catch (error) {
+                    console.error('Failed to return to original tab:', error);
+                    // Reset button state if there's an error
+                    saveBtn.disabled = false;
+                    saveBtn.innerHTML = '💾 Save Settings';
                 }
             }, 1500); // Close after 1.5 seconds to allow user to see confirmation
             

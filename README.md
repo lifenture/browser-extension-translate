@@ -70,6 +70,7 @@ A Safari web extension that allows users to quickly translate web pages using th
 - Language selections work with both providers
 - Settings page displays current provider selection
 - No data loss when switching between providers
+- After saving settings, automatically returns to the original tab
 
 ## Installation
 

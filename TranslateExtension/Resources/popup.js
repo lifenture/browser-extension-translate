@@ -133,11 +133,29 @@ class TranslatePopup {
         }
     }
 
-    openSettings() {
-        browser.tabs.create({
-            url: browser.runtime.getURL('options.html')
-        });
-        window.close();
+    async openSettings() {
+        try {
+            // Get the current active tab before opening settings
+            const [currentTab] = await browser.tabs.query({ active: true, currentWindow: true });
+            
+            // Store the original tab ID for returning later
+            if (currentTab && currentTab.id) {
+                await browser.storage.local.set({ originalTabId: currentTab.id });
+            }
+            
+            // Create the settings tab
+            browser.tabs.create({
+                url: browser.runtime.getURL('options.html')
+            });
+            window.close();
+        } catch (error) {
+            console.error('Failed to open settings:', error);
+            // Fallback: just open settings without storing tab ID
+            browser.tabs.create({
+                url: browser.runtime.getURL('options.html')
+            });
+            window.close();
+        }
     }
 
     async isOnTranslateDomain() {
