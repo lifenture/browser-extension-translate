@@ -1,4 +1,4 @@
-# Translate with Kagi Extension
+# Translate Extension
 
 A Safari web extension that allows users to quickly translate web pages using their choice of translation provider (Kagi Translate or Google Translate).
 
@@ -79,7 +79,7 @@ A Safari web extension that allows users to quickly translate web pages using th
 2. Build the project (`Cmd+B`)
 3. Open Safari
 4. Go to Safari → Settings → Extensions
-5. Enable "Translate with Kagi Extension"
+5. Enable "Translate Extension"
 6. The extension icon will appear in the Safari toolbar
 
 ### Chrome/Edge (for testing)
@@ -88,15 +88,15 @@ A Safari web extension that allows users to quickly translate web pages using th
 2. Open Chrome and go to `chrome://extensions/`
 3. Enable Developer mode
 4. Click "Load unpacked"
-5. Select the extension folder: `build/Debug/Translate with Kagi Extension.appex/Contents/Resources/`
+5. Select the extension folder: `build/Debug/TranslateExtension.appex/Contents/Resources/`
 
 ## Development
 
 ### Project Structure
 
 ```
-Translate with Kagi/
-├── Translate with Kagi Extension/          # Safari Web Extension
+Translate/
+├── TranslateExtension/                     # Safari Web Extension
 │   ├── Resources/                          # Extension files
 │   │   ├── manifest.json                   # Extension manifest (MV3)
 │   │   ├── popup.html                      # Extension popup UI
@@ -111,8 +111,8 @@ Translate with Kagi/
 │   │   └── _locales/en/messages.json       # Localization
 │   ├── SafariWebExtensionHandler.swift     # Swift extension handler
 │   └── Info.plist                          # Extension metadata
-├── Translate with Kagi/                    # macOS app container
-└── Translate with Kagi.xcodeproj           # Xcode project
+├── Translate/                              # macOS app container
+└── Translate.xcodeproj                     # Xcode project
 ```
 
 ### Technologies Used
@@ -140,10 +140,10 @@ Translate with Kagi/
 
 ## Building
 
-1. Open `Translate with Kagi.xcodeproj` in Xcode
-2. Select the "Translate with Kagi Extension" target
+1. Open `Translate.xcodeproj` in Xcode
+2. Select the "TranslateExtension" target
 3. Build the project (`Product` → `Build` or `Cmd+B`)
-4. The extension will be built to `build/Debug/Translate with Kagi Extension.appex`
+4. The extension will be built to `build/Debug/TranslateExtension.appex`
 
 ## Testing
 

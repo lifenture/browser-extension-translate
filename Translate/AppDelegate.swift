@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Translate with Kagi
+//  Translate
 //
 //  Created by Krolicki, Lukasz on 21/06/2025.
 //

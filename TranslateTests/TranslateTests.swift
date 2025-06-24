@@ -1,6 +1,6 @@
 //
 //  Translate_with_KagiTests.swift
-//  Translate with KagiTests
+//  TranslateTests
 //
 //  Created by Krolicki, Lukasz on 21/06/2025.
 //

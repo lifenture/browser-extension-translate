@@ -12,7 +12,7 @@ Updated the extension icon from the original design to the new icon located at `
 ## Generated Icon Sizes
 
 ### Extension Icons (manifest.json)
-The following icon sizes were generated and placed in `Translate with Kagi Extension/Resources/images/`:
+The following icon sizes were generated and placed in `TranslateExtension/Resources/images/`:
 
 | Size | File Name | Dimensions | Purpose |
 |------|-----------|------------|---------|
@@ -27,18 +27,18 @@ The following icon sizes were generated and placed in `Translate with Kagi Exten
 - **File**: `toolbar-icon.png`
 - **Dimensions**: 32×32 pixels
 - **Purpose**: Browser toolbar display
-- **Location**: `Translate with Kagi Extension/Resources/images/toolbar-icon.png`
+- **Location**: `TranslateExtension/Resources/images/toolbar-icon.png`
 
 ### macOS App Container Icon
 - **File**: `Icon.png`
 - **Purpose**: macOS app container icon
-- **Location**: `Translate with Kagi/Resources/Icon.png`
+- **Location**: `Translate/Resources/Icon.png`
 - **Source**: Direct copy of original 295×295 icon
 
 ## Files Modified
 
 ### 1. Manifest.json
-**File**: `Translate with Kagi Extension/Resources/manifest.json`
+**File**: `TranslateExtension/Resources/manifest.json`
 
 **Change Made**:
 ```diff
@@ -51,9 +51,9 @@ The following icon sizes were generated and placed in `Translate with Kagi Exten
 ### 2. Icon Files Replaced
 All icon files in the following locations were replaced with new versions:
 
-- `Translate with Kagi Extension/Resources/images/icon-*.png` (all sizes)
-- `Translate with Kagi Extension/Resources/images/toolbar-icon.png` (new file)
-- `Translate with Kagi/Resources/Icon.png`
+- `TranslateExtension/Resources/images/icon-*.png` (all sizes)
+- `TranslateExtension/Resources/images/toolbar-icon.png` (new file)
+- `Translate/Resources/Icon.png`
 
 ## Build Directory Cleanup
 - Removed `build/` directory to ensure clean rebuild with new icons

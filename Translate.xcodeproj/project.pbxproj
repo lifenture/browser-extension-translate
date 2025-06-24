@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2501A2282E06CA0900CBD1F2 /* Translate with Kagi Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2501A2272E06CA0900CBD1F2 /* Translate with Kagi Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2501A2282E06CA0900CBD1F2 /* TranslateExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2501A2272E06CA0900CBD1F2 /* TranslateExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -16,21 +16,21 @@
 			containerPortal = 2501A1ED2E06CA0600CBD1F2 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2501A1F42E06CA0600CBD1F2;
-			remoteInfo = "Translate with Kagi";
+			remoteInfo = "Translate";
 		};
 		2501A21C2E06CA0900CBD1F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2501A1ED2E06CA0600CBD1F2 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2501A1F42E06CA0600CBD1F2;
-			remoteInfo = "Translate with Kagi";
+			remoteInfo = "Translate";
 		};
 		2501A2292E06CA0900CBD1F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2501A1ED2E06CA0600CBD1F2 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2501A2262E06CA0900CBD1F2;
-			remoteInfo = "Translate with Kagi Extension";
+			remoteInfo = "TranslateExtension";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -41,7 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2501A2282E06CA0900CBD1F2 /* Translate with Kagi Extension.appex in Embed Foundation Extensions */,
+				2501A2282E06CA0900CBD1F2 /* TranslateExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,48 +49,48 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2501A1F52E06CA0600CBD1F2 /* Translate with Kagi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Translate with Kagi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2501A2112E06CA0900CBD1F2 /* Translate with KagiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Translate with KagiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2501A21B2E06CA0900CBD1F2 /* Translate with KagiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Translate with KagiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2501A2272E06CA0900CBD1F2 /* Translate with Kagi Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Translate with Kagi Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2501A1F52E06CA0600CBD1F2 /* Translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Translate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2501A2112E06CA0900CBD1F2 /* TranslateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TranslateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2501A21B2E06CA0900CBD1F2 /* TranslateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TranslateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2501A2272E06CA0900CBD1F2 /* TranslateExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TranslateExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		2501A2412E06CA0900CBD1F2 /* Exceptions for "Translate with Kagi Extension" folder in "Translate with Kagi Extension" target */ = {
+		2501A2412E06CA0900CBD1F2 /* Exceptions for "TranslateExtension" folder in "TranslateExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 2501A2262E06CA0900CBD1F2 /* Translate with Kagi Extension */;
+			target = 2501A2262E06CA0900CBD1F2 /* TranslateExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		2501A1F72E06CA0600CBD1F2 /* Translate with Kagi */ = {
+		2501A1F72E06CA0600CBD1F2 /* Translate */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Translate with Kagi";
+			path = "Translate";
 			sourceTree = "<group>";
 		};
-		2501A2142E06CA0900CBD1F2 /* Translate with KagiTests */ = {
+		2501A2142E06CA0900CBD1F2 /* TranslateTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Translate with KagiTests";
+			path = "TranslateTests";
 			sourceTree = "<group>";
 		};
-		2501A21E2E06CA0900CBD1F2 /* Translate with KagiUITests */ = {
+		2501A21E2E06CA0900CBD1F2 /* TranslateUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Translate with KagiUITests";
+			path = "TranslateUITests";
 			sourceTree = "<group>";
 		};
-		2501A22B2E06CA0900CBD1F2 /* Translate with Kagi Extension */ = {
+		2501A22B2E06CA0900CBD1F2 /* TranslateExtension */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				2501A2412E06CA0900CBD1F2 /* Exceptions for "Translate with Kagi Extension" folder in "Translate with Kagi Extension" target */,
+				2501A2412E06CA0900CBD1F2 /* Exceptions for "TranslateExtension" folder in "TranslateExtension" target */,
 			);
 			explicitFolders = (
 				Resources/_locales,
 				Resources/images,
 			);
-			path = "Translate with Kagi Extension";
+			path = "TranslateExtension";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -130,10 +130,10 @@
 		2501A1EC2E06CA0600CBD1F2 = {
 			isa = PBXGroup;
 			children = (
-				2501A1F72E06CA0600CBD1F2 /* Translate with Kagi */,
-				2501A2142E06CA0900CBD1F2 /* Translate with KagiTests */,
-				2501A21E2E06CA0900CBD1F2 /* Translate with KagiUITests */,
-				2501A22B2E06CA0900CBD1F2 /* Translate with Kagi Extension */,
+				2501A1F72E06CA0600CBD1F2 /* Translate */,
+				2501A2142E06CA0900CBD1F2 /* TranslateTests */,
+				2501A21E2E06CA0900CBD1F2 /* TranslateUITests */,
+				2501A22B2E06CA0900CBD1F2 /* TranslateExtension */,
 				2501A1F62E06CA0600CBD1F2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -141,10 +141,10 @@
 		2501A1F62E06CA0600CBD1F2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2501A1F52E06CA0600CBD1F2 /* Translate with Kagi.app */,
-				2501A2112E06CA0900CBD1F2 /* Translate with KagiTests.xctest */,
-				2501A21B2E06CA0900CBD1F2 /* Translate with KagiUITests.xctest */,
-				2501A2272E06CA0900CBD1F2 /* Translate with Kagi Extension.appex */,
+				2501A1F52E06CA0600CBD1F2 /* Translate.app */,
+				2501A2112E06CA0900CBD1F2 /* TranslateTests.xctest */,
+				2501A21B2E06CA0900CBD1F2 /* TranslateUITests.xctest */,
+				2501A2272E06CA0900CBD1F2 /* TranslateExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,9 +152,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2501A1F42E06CA0600CBD1F2 /* Translate with Kagi */ = {
+		2501A1F42E06CA0600CBD1F2 /* Translate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2501A2482E06CA0900CBD1F2 /* Build configuration list for PBXNativeTarget "Translate with Kagi" */;
+			buildConfigurationList = 2501A2482E06CA0900CBD1F2 /* Build configuration list for PBXNativeTarget "Translate" */;
 			buildPhases = (
 				2501A1F12E06CA0600CBD1F2 /* Sources */,
 				2501A1F22E06CA0600CBD1F2 /* Frameworks */,
@@ -167,18 +167,18 @@
 				2501A22A2E06CA0900CBD1F2 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				2501A1F72E06CA0600CBD1F2 /* Translate with Kagi */,
+				2501A1F72E06CA0600CBD1F2 /* Translate */,
 			);
-			name = "Translate with Kagi";
+			name = "Translate";
 			packageProductDependencies = (
 			);
-			productName = "Translate with Kagi";
-			productReference = 2501A1F52E06CA0600CBD1F2 /* Translate with Kagi.app */;
+			productName = "Translate";
+			productReference = 2501A1F52E06CA0600CBD1F2 /* Translate.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2501A2102E06CA0900CBD1F2 /* Translate with KagiTests */ = {
+		2501A2102E06CA0900CBD1F2 /* TranslateTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2501A24B2E06CA0900CBD1F2 /* Build configuration list for PBXNativeTarget "Translate with KagiTests" */;
+			buildConfigurationList = 2501A24B2E06CA0900CBD1F2 /* Build configuration list for PBXNativeTarget "TranslateTests" */;
 			buildPhases = (
 				2501A20D2E06CA0900CBD1F2 /* Sources */,
 				2501A20E2E06CA0900CBD1F2 /* Frameworks */,
@@ -190,18 +190,18 @@
 				2501A2132E06CA0900CBD1F2 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				2501A2142E06CA0900CBD1F2 /* Translate with KagiTests */,
+				2501A2142E06CA0900CBD1F2 /* TranslateTests */,
 			);
-			name = "Translate with KagiTests";
+			name = "TranslateTests";
 			packageProductDependencies = (
 			);
-			productName = "Translate with KagiTests";
-			productReference = 2501A2112E06CA0900CBD1F2 /* Translate with KagiTests.xctest */;
+			productName = "TranslateTests";
+			productReference = 2501A2112E06CA0900CBD1F2 /* TranslateTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2501A21A2E06CA0900CBD1F2 /* Translate with KagiUITests */ = {
+		2501A21A2E06CA0900CBD1F2 /* TranslateUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2501A24E2E06CA0900CBD1F2 /* Build configuration list for PBXNativeTarget "Translate with KagiUITests" */;
+			buildConfigurationList = 2501A24E2E06CA0900CBD1F2 /* Build configuration list for PBXNativeTarget "TranslateUITests" */;
 			buildPhases = (
 				2501A2172E06CA0900CBD1F2 /* Sources */,
 				2501A2182E06CA0900CBD1F2 /* Frameworks */,
@@ -213,18 +213,18 @@
 				2501A21D2E06CA0900CBD1F2 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				2501A21E2E06CA0900CBD1F2 /* Translate with KagiUITests */,
+				2501A21E2E06CA0900CBD1F2 /* TranslateUITests */,
 			);
-			name = "Translate with KagiUITests";
+			name = "TranslateUITests";
 			packageProductDependencies = (
 			);
-			productName = "Translate with KagiUITests";
-			productReference = 2501A21B2E06CA0900CBD1F2 /* Translate with KagiUITests.xctest */;
+			productName = "TranslateUITests";
+			productReference = 2501A21B2E06CA0900CBD1F2 /* TranslateUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		2501A2262E06CA0900CBD1F2 /* Translate with Kagi Extension */ = {
+		2501A2262E06CA0900CBD1F2 /* TranslateExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2501A2422E06CA0900CBD1F2 /* Build configuration list for PBXNativeTarget "Translate with Kagi Extension" */;
+			buildConfigurationList = 2501A2422E06CA0900CBD1F2 /* Build configuration list for PBXNativeTarget "TranslateExtension" */;
 			buildPhases = (
 				2501A2232E06CA0900CBD1F2 /* Sources */,
 				2501A2242E06CA0900CBD1F2 /* Frameworks */,
@@ -235,13 +235,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				2501A22B2E06CA0900CBD1F2 /* Translate with Kagi Extension */,
+				2501A22B2E06CA0900CBD1F2 /* TranslateExtension */,
 			);
-			name = "Translate with Kagi Extension";
+			name = "TranslateExtension";
 			packageProductDependencies = (
 			);
-			productName = "Translate with Kagi Extension";
-			productReference = 2501A2272E06CA0900CBD1F2 /* Translate with Kagi Extension.appex */;
+			productName = "TranslateExtension";
+			productReference = 2501A2272E06CA0900CBD1F2 /* TranslateExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -270,7 +270,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2501A1F02E06CA0600CBD1F2 /* Build configuration list for PBXProject "Translate with Kagi" */;
+			buildConfigurationList = 2501A1F02E06CA0600CBD1F2 /* Build configuration list for PBXProject "Translate" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -284,10 +284,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2501A1F42E06CA0600CBD1F2 /* Translate with Kagi */,
-				2501A2102E06CA0900CBD1F2 /* Translate with KagiTests */,
-				2501A21A2E06CA0900CBD1F2 /* Translate with KagiUITests */,
-				2501A2262E06CA0900CBD1F2 /* Translate with Kagi Extension */,
+				2501A1F42E06CA0600CBD1F2 /* Translate */,
+				2501A2102E06CA0900CBD1F2 /* TranslateTests */,
+				2501A21A2E06CA0900CBD1F2 /* TranslateUITests */,
+				2501A2262E06CA0900CBD1F2 /* TranslateExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -357,17 +357,17 @@
 /* Begin PBXTargetDependency section */
 		2501A2132E06CA0900CBD1F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2501A1F42E06CA0600CBD1F2 /* Translate with Kagi */;
+			target = 2501A1F42E06CA0600CBD1F2 /* Translate */;
 			targetProxy = 2501A2122E06CA0900CBD1F2 /* PBXContainerItemProxy */;
 		};
 		2501A21D2E06CA0900CBD1F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2501A1F42E06CA0600CBD1F2 /* Translate with Kagi */;
+			target = 2501A1F42E06CA0600CBD1F2 /* Translate */;
 			targetProxy = 2501A21C2E06CA0900CBD1F2 /* PBXContainerItemProxy */;
 		};
 		2501A22A2E06CA0900CBD1F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2501A2262E06CA0900CBD1F2 /* Translate with Kagi Extension */;
+			target = 2501A2262E06CA0900CBD1F2 /* TranslateExtension */;
 			targetProxy = 2501A2292E06CA0900CBD1F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -376,13 +376,13 @@
 		2501A2432E06CA0900CBD1F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Translate with Kagi Extension/Translate_with_Kagi_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "TranslateExtension/TranslateExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Translate with Kagi Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Translate with Kagi Extension";
+				INFOPLIST_FILE = "TranslateExtension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "TranslateExtension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -406,13 +406,13 @@
 		2501A2442E06CA0900CBD1F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Translate with Kagi Extension/Translate_with_Kagi_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "TranslateExtension/TranslateExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Translate with Kagi Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Translate with Kagi Extension";
+				INFOPLIST_FILE = "TranslateExtension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "TranslateExtension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -556,13 +556,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Translate with Kagi/Translate with Kagi.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Translate/Translate.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Translate with Kagi";
+				INFOPLIST_KEY_CFBundleDisplayName = "Translate";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -591,13 +591,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Translate with Kagi/Translate with Kagi.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Translate/Translate.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Translate with Kagi";
+				INFOPLIST_KEY_CFBundleDisplayName = "Translate";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -634,7 +634,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Translate with Kagi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Translate with Kagi";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Translate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Translate";
 			};
 			name = Debug;
 		};
@@ -651,7 +651,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Translate with Kagi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Translate with Kagi";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Translate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Translate";
 			};
 			name = Release;
 		};
@@ -666,7 +666,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Translate with Kagi";
+				TEST_TARGET_NAME = "Translate";
 			};
 			name = Debug;
 		};
@@ -681,14 +681,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Translate with Kagi";
+				TEST_TARGET_NAME = "Translate";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2501A1F02E06CA0600CBD1F2 /* Build configuration list for PBXProject "Translate with Kagi" */ = {
+		2501A1F02E06CA0600CBD1F2 /* Build configuration list for PBXProject "Translate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2501A2452E06CA0900CBD1F2 /* Debug */,
@@ -697,7 +697,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2501A2422E06CA0900CBD1F2 /* Build configuration list for PBXNativeTarget "Translate with Kagi Extension" */ = {
+		2501A2422E06CA0900CBD1F2 /* Build configuration list for PBXNativeTarget "TranslateExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2501A2432E06CA0900CBD1F2 /* Debug */,
@@ -706,7 +706,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2501A2482E06CA0900CBD1F2 /* Build configuration list for PBXNativeTarget "Translate with Kagi" */ = {
+		2501A2482E06CA0900CBD1F2 /* Build configuration list for PBXNativeTarget "Translate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2501A2492E06CA0900CBD1F2 /* Debug */,
@@ -715,7 +715,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2501A24B2E06CA0900CBD1F2 /* Build configuration list for PBXNativeTarget "Translate with KagiTests" */ = {
+		2501A24B2E06CA0900CBD1F2 /* Build configuration list for PBXNativeTarget "TranslateTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2501A24C2E06CA0900CBD1F2 /* Debug */,
@@ -724,7 +724,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2501A24E2E06CA0900CBD1F2 /* Build configuration list for PBXNativeTarget "Translate with KagiUITests" */ = {
+		2501A24E2E06CA0900CBD1F2 /* Build configuration list for PBXNativeTarget "TranslateUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2501A24F2E06CA0900CBD1F2 /* Debug */,
