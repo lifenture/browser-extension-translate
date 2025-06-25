@@ -356,6 +356,27 @@ footer {
     margin-top: var(--spacing-xl);
 }
 
+
+/* Style the Stripe button container to match our theme */
+stripe-buy-button {
+    --stripe-button-border-radius: var(--radius);
+    --stripe-button-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    --stripe-button-background-color: var(--primary-color);
+    --stripe-button-background-color-hover: var(--primary-hover);
+    --stripe-button-padding: var(--spacing-md) var(--spacing-xl);
+    --stripe-button-font-size: 1rem;
+    --stripe-button-font-weight: 500;
+    transition: all 0.2s ease;
+    flex-shrink: 0;          /* avoid squeezing */
+}
+
+@media (prefers-color-scheme: dark) {
+    .support-section {
+        background: var(--surface);
+        border-color: var(--border);
+    }
+}
+
 .notification {
     position: fixed;
     top: var(--spacing-lg);
@@ -397,7 +418,9 @@ footer {
     border-top: 1px solid var(--border);
     padding: var(--spacing-md) var(--spacing-lg);
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center the Save button */
+    align-items: center;
+    gap: var(--spacing-md);
     z-index: 100;
     box-shadow: 0 -2px 8px var(--shadow);
 }
@@ -406,6 +429,30 @@ footer {
     min-width: 200px;
     font-size: 1.1rem;
     padding: var(--spacing-md) var(--spacing-xl);
+}
+
+.sticky-save-bar .support-btn {
+    position: absolute;
+    right: var(--spacing-lg);
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.sticky-save-bar .support-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px var(--shadow);
 }
 
 /* Responsive design */
@@ -431,13 +478,22 @@ footer {
     }
     
     .sticky-save-bar {
+        flex-direction: column;
+        align-items: stretch;     /* full-width buttons */
         padding: var(--spacing-md);
+        gap: var(--spacing-md);
     }
     
     .sticky-save-bar .primary-btn {
-        min-width: unset;
         width: 100%;
-        max-width: 300px;
+        order: 1;
+        min-width: auto;
+    }
+    
+    .sticky-save-bar .support-btn {
+        position: static;
+        width: 100%;
+        order: 2;
     }
 }
 
