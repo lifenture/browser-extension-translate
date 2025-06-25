@@ -434,7 +434,7 @@ stripe-buy-button {
 .sticky-save-bar .support-btn {
     position: absolute;
     right: var(--spacing-lg);
-    background: var(--primary-color);
+    background: #4CAF50;
     color: white;
     border: none;
     border-radius: var(--radius);
@@ -450,8 +450,7 @@ stripe-buy-button {
 }
 
 .sticky-save-bar .support-btn:hover {
-    background: var(--primary-hover);
-    transform: translateY(-1px);
+    background: #45a049;
     box-shadow: 0 2px 8px var(--shadow);
 }
 

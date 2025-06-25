@@ -1,4 +1,5 @@
 // Dynamic popup functionality based on user's language preferences
+
 class TranslatePopup {
     constructor() {
         this.defaultLanguages = ['pl']; // Polish as default
@@ -12,12 +13,12 @@ class TranslatePopup {
         // Check if we're on translate domain and show appropriate message
         if (await this.isOnTranslateDomain()) {
             this.renderDisabledDomainMessage();
-            this.addSettingsLink();
+            this.addFooterButtons();
             return;
         }
         
         await this.renderTranslateButtons();
-        this.addSettingsLink();
+        this.addFooterButtons();
     }
 
     async loadLanguagesData() {
@@ -94,17 +95,20 @@ class TranslatePopup {
         `;
     }
 
-    addSettingsLink() {
-        const settingsContainer = document.getElementById('settings-link');
-        if (settingsContainer) {
-            settingsContainer.innerHTML = `
-                <button id="open-settings" class="settings-btn">
-                    ⚙️ Settings
-                </button>
-            `;
-            
-            document.getElementById('open-settings').addEventListener('click', () => {
+    addFooterButtons() {
+        // Add event listeners to existing footer buttons
+        const settingsBtn = document.getElementById('open-settings');
+        const supportBtn = document.getElementById('open-support');
+        
+        if (settingsBtn) {
+            settingsBtn.addEventListener('click', () => {
                 this.openSettings();
+            });
+        }
+        
+        if (supportBtn) {
+            supportBtn.addEventListener('click', () => {
+                openStripeCheckout();
             });
         }
     }
@@ -157,6 +161,7 @@ class TranslatePopup {
             window.close();
         }
     }
+
 
     async isOnTranslateDomain() {
         try {

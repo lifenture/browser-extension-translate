@@ -7,12 +7,6 @@ class LanguageSelector {
         this.searchTimeout = null;
         this.provider = 'kagi'; // Default provider
         
-        // Support/donation configuration
-        this.supportConfig = {
-            paymentLink: 'https://buy.stripe.com/test_7sY00l4RM0LM0lW4bD2sM00',
-            productName: 'Support Translate Extension Development',
-            buttonText: '❤️ Support Project'
-        };
         
         this.init();
     }
@@ -52,7 +46,7 @@ class LanguageSelector {
 
         // Support project button
         document.getElementById('support-project').addEventListener('click', () => {
-            this.openStripeCheckout();
+            openStripeCheckout({}, this.showNotification.bind(this));
         });
 
     }
@@ -318,24 +312,6 @@ class LanguageSelector {
         });
     }
 
-    openStripeCheckout() {
-        try {
-            // Use the configured payment link from the class
-            const paymentLink = this.supportConfig.paymentLink;
-            
-            if (paymentLink) {
-                // Open Stripe payment link in a new tab
-                browser.tabs.create({ url: paymentLink });
-                this.showNotification(`Opening ${this.supportConfig.productName}...`, 'success');
-            } else {
-                console.error('Stripe payment link not configured');
-                this.showNotification('Support page not available', 'error');
-            }
-        } catch (error) {
-            console.error('Failed to open Stripe payment page:', error);
-            this.showNotification('Failed to open support page', 'error');
-        }
-    }
 
     showNotification(message, type = 'success') {
         // Remove existing notifications
