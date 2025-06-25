@@ -71,6 +71,31 @@ body {
     filter: drop-shadow(0 1px 2px var(--shadow));
 }
 
+.translation-counter {
+    margin-top: var(--spacing-sm);
+    font-size: 0.60rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+}
+
+.counter-number {
+    font-weight: 600;
+    color: var(--primary-color);
+    background: rgba(33, 150, 243, 0.1);
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-size: 0.60rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .counter-number {
+        background: rgba(33, 150, 243, 0.2);
+    }
+}
+
 .popup-main {
     flex: 1;
     padding: var(--spacing-md);

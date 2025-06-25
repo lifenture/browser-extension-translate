@@ -31,13 +31,17 @@ class TranslatePopup {
 
     async loadUserSettings() {
         try {
-            const result = await browser.storage.sync.get(['selectedLanguages', 'provider']);
+            const result = await browser.storage.sync.get(['selectedLanguages', 'provider', 'translationCount']);
             this.selectedLanguages = result.selectedLanguages || this.defaultLanguages;
             this.provider = result.provider || 'kagi'; // Default to 'kagi'
+            this.translationCount = result.translationCount || 0;
+            this.updateTranslationCounter();
         } catch (error) {
             console.error('Failed to load user settings:', error);
             this.selectedLanguages = this.defaultLanguages;
             this.provider = 'kagi';
+            this.translationCount = 0;
+            this.updateTranslationCounter();
         }
     }
 
@@ -131,6 +135,10 @@ class TranslatePopup {
 
             const target = this.buildTargetUrl(tab.url, languageCode);
             await browser.tabs.update(tab.id, { url: target });
+            
+            // Increment translation counter
+            await this.incrementTranslationCounter();
+            
             window.close();
         } catch (error) {
             console.error('Translation failed:', error);
@@ -234,6 +242,23 @@ class TranslatePopup {
                 </div>
             </div>
         `;
+    }
+
+    updateTranslationCounter() {
+        const counterElement = document.getElementById('translation-count');
+        if (counterElement) {
+            counterElement.textContent = this.translationCount || 0;
+        }
+    }
+
+    async incrementTranslationCounter() {
+        try {
+            this.translationCount = (this.translationCount || 0) + 1;
+            await browser.storage.sync.set({ translationCount: this.translationCount });
+            this.updateTranslationCounter();
+        } catch (error) {
+            console.error('Failed to update translation counter:', error);
+        }
     }
 
     getLanguageFlag(code) {
