@@ -3,7 +3,7 @@
 
 // Support configuration constants
 const SUPPORT_CONFIG = {
-    paymentLink: 'https://buy.stripe.com/test_7sY00l4RM0LM0lW4bD2sM00',
+    paymentLink: 'https://buy.stripe.com/4gM28s2xy07wfyV62nfw400',
     productName: 'Support Translate Extension Development',
     buttonText: '❤️ Support Project'
 };
