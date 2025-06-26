@@ -27,9 +27,6 @@
     "permissions": ["activeTab", "tabs", "storage", "windows"],
     "host_permissions": ["https://translate.kagi.com/*", "https://translate.google.com/*"],
     
-    "content_security_policy": {
-        "extension_pages": "script-src 'self' 'unsafe-inline' https://js.stripe.com; object-src 'self'; connect-src 'self' https://api.stripe.com https://checkout.stripe.com;"
-    },
     
     "options_page": "options.html"
 }
