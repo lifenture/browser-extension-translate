@@ -164,7 +164,7 @@ body {
 }
 
 .popup-footer {
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-md) var(--spacing-lg) calc(var(--spacing-md) + 10px);
     border-top: 1px solid var(--border);
     background-color: var(--surface);
     display: flex;
@@ -320,4 +320,21 @@ body {
         width: 100%;
         justify-content: center;
     }
+}
+
+/* Signature Styles */
+.signature {
+    position: absolute;
+    bottom: -3px; /* Moved up by 1 point */
+    right: 8px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 50;
+}
+
+.signature-logo {
+    width: 24px; /* Very tiny for popup */
+    height: auto;
+    transform: rotate(3deg); /* Reduced rotation to 3 degrees */
 }

@@ -574,3 +574,32 @@ stripe-buy-button {
         font-size: 0.85rem;
     }
 }
+
+/* Signature Styles */
+.signature {
+    position: fixed;
+    bottom: 90px; /* Moved down */
+    right: 40px; /* Moved left */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: var(--spacing-sm);
+    z-index: 50;
+}
+
+.signature-logo {
+    width: 60px;
+    height: auto;
+    transform: rotate(7deg); /* Rotated 7 degrees */
+}
+
+@media (max-width: 768px) {
+    .signature {
+        bottom: 110px; /* Moved down on mobile */
+        right: 30px; /* Moved left on mobile */
+    }
+    
+    .signature-logo {
+        width: 50px;
+    }
+}

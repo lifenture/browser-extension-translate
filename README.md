@@ -221,3 +221,9 @@ MIT License - see LICENSE file for details
   - Manifest V3 compatibility
   - Clean popup interface
   - Dark mode support
+
+---
+
+<div align="center">
+  <img src="lifenture-signature.png" alt="Lifenture" width="120" style="opacity: 0.8;">
+</div>
