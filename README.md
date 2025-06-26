@@ -182,6 +182,17 @@ MIT License - see LICENSE file for details
 
 ## Version History
 
+- **1.4.0** - Translation Counter & Support Integration
+  - 📊 **Translation counter** - Track pages translated with persistent storage
+  - 💝 **Support project button** - Direct Stripe integration for extension support
+  - 🎨 **Dual-button footer** - Settings and Support buttons in vertical layout
+  - 🟢 **Fresh green styling** - Support buttons use attractive green theme
+  - 📱 **Enhanced UI** - Improved button sizing and responsive design
+  - 🔧 **Shared utilities** - Centralized support configuration reduces code duplication
+  - 🎯 **Motivational UX** - Counter encourages continued usage
+  - 🛡️ **Clean manifest** - Removed excessive CSP permissions following security best practices
+  - 💳 **Production payments** - Live Stripe checkout for real support transactions
+
 - **1.3.0** - Provider Choice Feature
   - 🔄 **Provider selection** - Choose between Kagi Translate and Google Translate
   - 🎛️ **Enhanced settings** - Provider choice UI in options page
