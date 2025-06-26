@@ -225,5 +225,7 @@ MIT License - see LICENSE file for details
 ---
 
 <div align="center">
-  <img src="lifenture-signature.png" alt="Lifenture" width="120" style="opacity: 0.8;">
+  <a href="https://lifenture.com" target="_blank" rel="noopener noreferrer">
+    <img src="lifenture-signature.png" alt="Lifenture" width="120" style="opacity: 0.8;">
+  </a>
 </div>
