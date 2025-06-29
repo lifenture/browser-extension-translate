@@ -603,3 +603,23 @@ stripe-buy-button {
         width: 50px;
     }
 }
+
+.issues-link-wrapper {
+    text-align: center;
+    margin: var(--spacing-xl) 0 var(--spacing-lg);
+}
+
+.issues-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    transition: color 0.2s;
+}
+
+.issues-link:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
