@@ -164,7 +164,7 @@ body {
 }
 
 .popup-footer {
-    padding: var(--spacing-md) var(--spacing-lg) calc(var(--spacing-md) + 10px);
+    padding: var(--spacing-md) var(--spacing-lg);
     border-top: 1px solid var(--border);
     background-color: var(--surface);
     display: flex;
@@ -322,10 +322,39 @@ body {
     }
 }
 
+/* Bottom links container */
+.bottom-links {
+    position: relative;
+    width: 100%;
+    height: 26px; /* Increased height to 26px */
+    margin-top: var(--spacing-xs); /* Reduced margin */
+    padding: 0 8px; /* Minimal padding */
+}
+
+/* Issues link */
+.issues-link-small {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 8px;
+    transform: translateY(calc(-50% - 3px)); /* Move up by 3px */
+    font-size: 8px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    z-index: 50;
+    line-height: 1;
+}
+
+.issues-link-small:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
 /* Signature Styles */
 .signature {
     position: absolute;
-    bottom: -3px; /* Moved up by 1 point */
+    bottom: 1px;
     right: 8px;
     display: flex;
     justify-content: flex-end;
