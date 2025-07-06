@@ -1,0 +1,16 @@
+{
+  "name": "lifenture-translate-extension",
+  "version": "1.4.0",
+  "description": "Build automation for Lifenture Translate Chromium Extension (Chrome, Edge, Brave, etc.)",
+  "private": true,
+  "scripts": {
+    "copy-chromium": "node build-chromium.js",
+    "test-chromium": "node test-chromium-extension.js",
+    "copy-chrome": "node build-chromium.js",
+    "test-chrome": "node test-chromium-extension.js"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

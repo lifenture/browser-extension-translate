@@ -56,7 +56,7 @@ A Safari web extension that allows users to quickly translate web pages using th
 ### Provider-Specific Behavior
 - **Kagi:** Uses clean URL structure with language codes as path segments
 - **Google:** Uses query parameters with `sl=auto` for source language detection
-- **Fallback:** If translation fails, extension falls back to Polish with Kagi
+- **Fallback:** If translation fails and no languages are configured, extension opens the settings page
 
 ### Smart Domain Detection
 - **Translation Sites:** Extension automatically disables on both Kagi and Google Translate domains
@@ -83,13 +83,134 @@ A Safari web extension that allows users to quickly translate web pages using th
 5. Enable "Translate Extension"
 6. The extension icon will appear in the Safari toolbar
 
-### Chrome/Edge (for testing)
+### Chrome/Edge/Brave (Cross-Browser Support)
 
-1. Build the project in Xcode
-2. Open Chrome and go to `chrome://extensions/`
-3. Enable Developer mode
-4. Click "Load unpacked"
-5. Select the extension folder: `build/Debug/TranslateExtension.appex/Contents/Resources/`
+The extension works in Chrome, Edge, Brave, and other Chromium-based browsers. **Unlike Safari, these browsers do not require the Safari app container** - you can load the extension directly from built files.
+
+#### Method 1: Automated Build Script (Recommended)
+
+Use the automated build script for best compatibility:
+
+```bash
+# Build the Chromium-compatible extension
+npm run copy-chromium
+
+# Optional: Test the build
+npm run test-chromium
+
+# Legacy commands (still work)
+npm run copy-chrome
+npm run test-chrome
+```
+
+**Load in Chrome:**
+1. Open `chrome://extensions/`
+2. Enable "Developer mode" (toggle in top-right)
+3. Click "Load unpacked"
+4. Select the `chromium-extension` folder
+
+**Load in Edge:**
+1. Open `edge://extensions/`
+2. Enable "Developer mode" (toggle in left sidebar)
+3. Click "Load unpacked"
+4. Select the `chromium-extension` folder
+
+**Load in Brave:**
+1. Open `brave://extensions/`
+2. Enable "Developer mode"
+3. Click "Load unpacked"
+4. Select the `chromium-extension` folder
+
+#### What the Build Script Does
+
+The `build-chromium.js` script creates a Chromium-compatible version by:
+
+- **Copying extension files** from Safari extension to `chromium-extension` directory
+- **Converting manifest.json** for Chromium MV3 compatibility (service worker instead of scripts)
+- **Fixing service worker issues** - removes `"type": "module"` and inlines dependencies
+- **Adding browser polyfill** for cross-browser API compatibility
+- **Resolving CSP violations** - creates external script files instead of inline scripts
+- **Creating isolated build** that doesn't interfere with Safari version
+
+#### Chrome Service Worker Fixes
+
+The build script addresses common Chrome extension issues:
+
+- **Service worker registration failed (Status Code: 15)** - Fixed by removing ES modules
+- **Content Security Policy violations** - Fixed by using external script files
+- **Import statement errors** - Fixed by inlining all dependencies
+
+#### Method 2: Manual Installation (Alternative)
+
+If you prefer manual installation:
+
+1. **Build Safari extension first:**
+   - Open `Translate.xcodeproj` in Xcode
+   - Build the project (`Cmd+B`)
+
+2. **Load in browser:**
+   - Navigate to: `build/Debug/TranslateExtension.appex/Contents/Resources/`
+   - Note: May require manifest adjustments for full compatibility
+
+#### Key Differences from Safari
+
+| Aspect | Safari | Chrome/Edge/Brave |
+|--------|--------|--------------------|
+| **App Container** | Required macOS app | Direct file loading |
+| **Installation** | App Store or Xcode build | Developer mode only |
+| **Background** | Script array | Service worker |
+| **Polyfill** | Native browser API | Chrome API mapping |
+| **Updates** | Automatic via app | Manual rebuild/reload |
+
+#### Browser Compatibility
+
+- ✅ **Chrome** - Full support with automated build
+- ✅ **Edge** (Chromium) - Full support
+- ✅ **Brave** - Full support
+- ✅ **Opera** - Should work (untested)
+- ✅ **Vivaldi** - Should work (untested)
+- ✅ **Firefox** - Manifest V3 compatible
+
+#### Development Workflow
+
+After making changes to the extension:
+
+```bash
+# 1. Rebuild the extension
+npm run copy-chromium
+
+# 2. Reload in browser
+# Go to chrome://extensions/ and click refresh on the extension
+```
+
+#### Troubleshooting
+
+**Extension Not Loading:**
+- Ensure Developer mode is enabled
+- Verify you're selecting the `chromium-extension` folder
+- Check that manifest.json exists in selected folder
+
+**Service Worker Errors:**
+- Use the automated build script (fixes most issues)
+- Check console in `chrome://extensions/` → Inspect service worker
+- Ensure no import statements in background.js
+
+**CSP Violations:**
+- Automated build creates external script files
+- No inline scripts should be present
+- Check that `chrome-polyfill.js` exists
+
+**Permission Errors:**
+- Extensions in developer mode have different permission handling
+- Required permissions: `activeTab`, `tabs`, `storage`, `windows`
+- Host permissions auto-granted for translation services
+
+#### Limitations
+
+- **Developer Mode Only** - Chrome/Edge installation requires developer mode
+- **Not Store-Distributed** - This is a Safari-first extension
+- **Manual Updates** - Updates must be applied by rebuilding
+- **Testing Purpose** - Primarily for development and testing
 
 ## Development
 
@@ -98,7 +219,7 @@ A Safari web extension that allows users to quickly translate web pages using th
 ```
 Translate/
 ├── TranslateExtension/                     # Safari Web Extension
-│   ├── Resources/                          # Extension files
+│   ├── Resources/                          # Extension files (source)
 │   │   ├── manifest.json                   # Extension manifest (MV3)
 │   │   ├── popup.html                      # Extension popup UI
 │   │   ├── popup.css                       # Popup styling
@@ -113,8 +234,25 @@ Translate/
 │   ├── SafariWebExtensionHandler.swift     # Swift extension handler
 │   └── Info.plist                          # Extension metadata
 ├── Translate/                              # macOS app container
+├── chromium-extension/                     # Built Chromium extension (generated)
+├── build-chromium.js                       # Chromium build automation script
+├── package.json                            # NPM configuration
 └── Translate.xcodeproj                     # Xcode project
 ```
+
+### Development Workflow
+
+#### For Safari Development
+1. Make changes to source files in `TranslateExtension/Resources/`
+2. Build in Xcode (`Cmd+B`)
+3. Test in Safari
+
+#### For Chromium Development
+1. Make changes to source files in `TranslateExtension/Resources/`
+2. Run `npm run copy-chromium` to rebuild Chromium extension
+3. Load the `chromium-extension/` directory in browser's developer mode
+4. Test your changes
+5. Reload extension in browser after each rebuild
 
 ### Technologies Used
 
@@ -123,6 +261,7 @@ Translate/
 - **JavaScript ES6+** - Modern JavaScript with async/await
 - **Swift** - macOS app container
 - **CSS3** - Modern styling with dark mode support
+- **Node.js** - Build automation for Chrome extensions
 
 ### Key Features
 
@@ -134,17 +273,72 @@ Translate/
 - `https://translate.google.com/*` - Host permission for Google Translate
 
 #### Browser Compatibility
-- ✅ Safari (primary target)
-- ✅ Chrome (Manifest V3)
-- ✅ Edge (Manifest V3)
-- ✅ Firefox (Manifest V3)
+- ✅ **Safari** (primary target) - Native macOS app
+- ✅ **Chrome** - Full support via automated build script
+- ✅ **Edge** (Chromium) - Full support via automated build script
+- ✅ **Brave** - Full support via automated build script
+- ✅ **Firefox** - Manifest V3 compatible
+- ✅ **Opera/Vivaldi** - Should work with Chromium builds
 
 ## Building
+
+### Safari Extension (Primary)
 
 1. Open `Translate.xcodeproj` in Xcode
 2. Select the "TranslateExtension" target
 3. Build the project (`Product` → `Build` or `Cmd+B`)
 4. The extension will be built to `build/Debug/TranslateExtension.appex`
+
+### Chrome/Chromium Extensions (Automated)
+
+Use the automated build scripts for Chrome-compatible extensions:
+
+```bash
+# Build Chromium extension
+npm run copy-chromium
+
+# Test the build (optional)
+npm run test-chromium
+
+# Alternative: Run build script directly
+node build-chromium.js
+
+# Legacy commands (still work)
+npm run copy-chrome
+npm run test-chrome
+```
+
+#### What the Build Script Does
+
+The `build-chromium.js` script automates the Chromium extension build process:
+
+1. **Cleans the target directory**: Deletes the existing `chromium-extension/` directory and recreates it
+2. **Copies all source files**: Copies all files from `TranslateExtension/Resources/` to `chromium-extension/`
+3. **Sets up vendor dependencies**: Ensures the `vendor/` directory exists and creates a minimal browser polyfill if needed
+4. **Applies patches**: Modifies specific files for Chromium compatibility:
+   - **manifest.json**: Converts Safari extension format to Chromium MV3 format (changes `scripts` array to `service_worker`)
+   - **background.js**: Adds necessary import statements for browser polyfill and languages.js
+
+#### Key Changes Applied
+
+**Manifest.json Patches:**
+- Converts `"background": {"scripts": [...]}` to `"background": {"service_worker": "background.js"}`
+- Maintains Chrome MV3 compatibility
+
+**Background.js Patches:**
+- Adds `import './vendor/browser-polyfill.min.js';`
+- Adds `import './languages.js';`
+- Ensures Chrome compatibility with ES modules
+
+#### Browser Polyfill
+
+The build script automatically creates a minimal browser polyfill if one doesn't exist. This polyfill simply maps the `browser` API to Chrome's `chrome` API for compatibility.
+
+#### Build Notes
+
+- The build script is idempotent - it can be run multiple times safely
+- All files are copied fresh on each build, ensuring a clean state
+- The `chromium-extension/` directory should not be edited directly as it will be overwritten
 
 ## Testing
 
@@ -152,8 +346,9 @@ Translate/
 2. Load it in Safari or Chrome
 3. Visit any website
 4. Click the extension icon
-5. Press "Translate page to Polish"
-6. Verify it redirects to `https://translate.kagi.com/translate/pl/<encoded-url>`
+5. Configure your preferred languages in Settings (if not already done)
+6. Select a language to translate to
+7. Verify it redirects to the appropriate translation service URL
 
 ## Contributing
 
@@ -216,7 +411,7 @@ MIT License - see LICENSE file for details
   - 🔧 Background script improvements for direct toolbar clicks
 
 - **1.0.0** - Initial release
-  - Basic Polish translation functionality
+  - Basic translation functionality
   - Safari Web Extension format
   - Manifest V3 compatibility
   - Clean popup interface

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Translate</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <header class="popup-header">
+            <h1><img src="images/icon-48.png" alt="Translate" class="header-icon"> Translate</h1>
+            <div class="translation-counter">
+                <span class="counter-text">Pages translated: </span>
+                <span id="translation-count" class="counter-number">0</span>
+            </div>
+        </header>
+        
+        <main class="popup-main">
+            <div id="translate-buttons" class="translate-buttons">
+                <!-- Buttons will be generated dynamically -->
+            </div>
+        </main>
+        
+        <footer class="popup-footer">
+            <div class="footer-buttons">
+                <button id="open-settings">⚙️ Settings</button>
+                <button id="open-support">❤️ Support Project</button>
+            </div>
+        </footer>
+        
+        <div class="bottom-links">
+            <a href="https://github.com/lifenture/browser-extension-translate/issues/new" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="issues-link-small">
+                💡 Report an idea or issue
+            </a>
+            <div class="signature">
+                <a href="https://lifenture.com" target="_blank" rel="noopener noreferrer">
+                    <img src="lifenture-signature.png" alt="Lifenture" class="signature-logo">
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="chromium-polyfill.js"></script>
+    <script src="languages.js"></script>
+    <script src="support.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

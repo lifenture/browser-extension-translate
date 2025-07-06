@@ -1,27 +1,63 @@
-// Background script for Kagi Translation Extension
+// Chrome service worker for Kagi Translation Extension
+
+// Simple browser polyfill for Chrome
+if (typeof browser === 'undefined') {
+    globalThis.browser = chrome;
+}
+
+// Languages data - simplified for Chrome
+const LANGUAGES = [
+  { code: 'en', name: 'English', native: 'English' },
+  { code: 'es', name: 'Spanish', native: 'Español' },
+  { code: 'fr', name: 'French', native: 'Français' },
+  { code: 'de', name: 'German', native: 'Deutsch' },
+  { code: 'it', name: 'Italian', native: 'Italiano' },
+  { code: 'pt', name: 'Portuguese', native: 'Português' },
+  { code: 'ru', name: 'Russian', native: 'Русский' },
+  { code: 'ja', name: 'Japanese', native: '日本語' },
+  { code: 'ko', name: 'Korean', native: '한국어' },
+  { code: 'zh', name: 'Chinese (Simplified)', native: '中文 (简体)' },
+  { code: 'ar', name: 'Arabic', native: 'العربية' },
+  { code: 'hi', name: 'Hindi', native: 'हिन्दी' },
+  { code: 'tr', name: 'Turkish', native: 'Türkçe' },
+  { code: 'pl', name: 'Polish', native: 'Polski' },
+  { code: 'nl', name: 'Dutch', native: 'Nederlands' }
+];
+
+// Make languages available globally
+globalThis.LANGUAGES = LANGUAGES;
+
+// Language code mapping for Google Translate
+function mapCodeForGoogle(c) {
+  const table = {
+    'zh': 'zh-CN',
+    'zh-tw': 'zh-TW',
+    'pt': 'pt',
+    'yue': 'zh-TW'
+  };
+  return table[c] || c;
+}
+
+globalThis.mapCodeForGoogle = mapCodeForGoogle;
+
+// Background script class
 class TranslateBackground {
     constructor() {
-        this.defaultLanguages = []; // No default languages
+        this.defaultLanguages = ['pl'];
         this.init();
     }
 
     init() {
-        // Handle toolbar icon clicks (when popup is disabled or fails)
         browser.action.onClicked.addListener((tab) => this.handleToolbarClick(tab));
-        
-        // Handle messages from popup/options
         browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
             return this.handleMessage(request, sender, sendResponse);
         });
-        
-        // Initialize default settings if needed
         this.initializeDefaultSettings();
     }
 
     async initializeDefaultSettings() {
         try {
             const result = await browser.storage.sync.get(['selectedLanguages', 'provider']);
-            
             const updates = {};
             
             if (!result.selectedLanguages) {
@@ -29,7 +65,7 @@ class TranslateBackground {
             }
             
             if (!result.provider) {
-                updates.provider = 'kagi'; // Default provider
+                updates.provider = 'kagi';
             }
             
             if (Object.keys(updates).length > 0) {
@@ -47,39 +83,33 @@ class TranslateBackground {
             return;
         }
 
-        // Check if we're on translate domain and do nothing
         if (this.isTranslateDomain(tab.url)) {
             console.log('Extension disabled on translate domain');
             return;
         }
 
         try {
-            // Get user's preferred languages and provider
             const result = await browser.storage.sync.get(['selectedLanguages', 'provider']);
             const selectedLanguages = result.selectedLanguages || this.defaultLanguages;
             const provider = result.provider || 'kagi';
             
             if (selectedLanguages.length === 0) {
-                // Open options page if no languages selected
                 await browser.tabs.create({
                     url: browser.runtime.getURL('options.html')
                 });
                 return;
             }
 
-            // Use the first selected language for direct toolbar clicks
             const primaryLanguage = selectedLanguages[0];
             const target = this.buildTargetUrl(tab.url, primaryLanguage, provider);
             
             await browser.tabs.update(tab.id, { url: target });
-            console.log(`Translated page to ${primaryLanguage}`);
+            console.log('Translated page to', primaryLanguage);
             
         } catch (error) {
             console.error('Translation failed:', error);
-            // If translation fails and no languages are configured, open options page
-            await browser.tabs.create({
-                url: browser.runtime.getURL('options.html')
-            });
+            const target = this.buildTargetUrl(tab.url, 'pl', 'kagi');
+            await browser.tabs.update(tab.id, { url: target });
         }
     }
 
@@ -104,7 +134,6 @@ class TranslateBackground {
                 return { success: true };
                 
             default:
-                // Legacy support
                 if (request.greeting === "hello") {
                     return { farewell: "goodbye" };
                 }
@@ -124,23 +153,10 @@ class TranslateBackground {
 
     buildTargetUrl(tabUrl, lang, provider = 'kagi') {
         if (provider === 'google') {
-            const gCode = this.mapCodeForGoogle(lang);
-            return `https://translate.google.com/translate?sl=auto&tl=${gCode}&hl=en-US&u=${encodeURIComponent(tabUrl)}&client=webapp`;
+            const gCode = mapCodeForGoogle(lang);
+            return 'https://translate.google.com/translate?sl=auto&tl=' + gCode + '&hl=en-US&u=' + encodeURIComponent(tabUrl) + '&client=webapp';
         }
-        return `https://translate.kagi.com/translate/${lang}/` + encodeURIComponent(tabUrl);
-    }
-
-    // Language code mapping utility for Google Translate
-    // Most ISO codes are identical; only handle known special cases
-    mapCodeForGoogle(c) {
-        const table = { 
-            'zh': 'zh-CN',     // Chinese (Simplified)
-            'zh-tw': 'zh-TW',  // Chinese (Traditional)
-            'pt': 'pt',        // Portuguese (same as ISO)
-            'yue': 'zh-TW'     // Cantonese -> Chinese (Traditional)
-            /* Add more mappings here as needed */
-        };
-        return table[c] || c;
+        return 'https://translate.kagi.com/translate/' + lang + '/' + encodeURIComponent(tabUrl);
     }
 
     async translateToLanguage(tab, languageCode) {
@@ -148,25 +164,22 @@ class TranslateBackground {
             throw new Error('No valid tab for translation');
         }
 
-        // Get provider setting
         const result = await browser.storage.sync.get(['provider']);
         const provider = result.provider || 'kagi';
         
         const target = this.buildTargetUrl(tab.url, languageCode, provider);
         await browser.tabs.update(tab.id, { url: target });
-        console.log(`Translated page to ${languageCode}`);
+        console.log('Translated page to', languageCode);
     }
 
     isTranslateDomain(url) {
         try {
             const urlObj = new URL(url);
             
-            // Check if URL is on translate service domains
             if (urlObj.hostname === 'translate.kagi.com' || urlObj.hostname === 'translate.google.com') {
                 return true;
             }
             
-            // Check if page is already translated through Google Translate
             if (this.isGoogleTranslatedPage(urlObj)) {
                 return true;
             }
@@ -179,24 +192,18 @@ class TranslateBackground {
     }
 
     isGoogleTranslatedPage(url) {
-        // Check for Google Translate URL patterns that indicate a translated page
         if (url.hostname === 'translate.google.com') {
-            // Check if this is a translation result page (has 'u' parameter with original URL)
             return url.searchParams.has('u') && url.searchParams.has('tl');
         }
         
-        // Check for Google Translate translated pages (domains ending with .translate.goog)
         if (url.hostname.endsWith('.translate.goog')) {
             return true;
         }
         
-        // Check for Google Translate widget/frame patterns
-        // These might appear when Google Translate is embedded in pages
         if (url.hostname.includes('translate.googleusercontent.com')) {
             return true;
         }
         
-        // Check for other Google Translate related domains or patterns
         if (url.hostname.includes('translate-pa.googleapis.com')) {
             return true;
         }

@@ -1,0 +1,10 @@
+{
+    "extension_name": {
+        "message": "Translate Extension",
+        "description": "The display name for the extension."
+    },
+    "extension_description": {
+        "message": "Translate web pages to multiple languages using your choice of translation provider. Configure up to 5 preferred languages.",
+        "description": "Description of what the extension does."
+    }
+}
