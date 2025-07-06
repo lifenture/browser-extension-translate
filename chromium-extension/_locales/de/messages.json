@@ -1,0 +1,176 @@
+{
+  "extension_name": {
+    "message": "Übersetzungserweiterung",
+    "description": "The display name for the extension."
+  },
+  "extension_description": {
+    "message": "Übersetzen Sie Webseiten in mehrere Sprachen mit Ihrem bevorzugten Übersetzungsanbieter. Konfigurieren Sie bis zu 5 bevorzugte Sprachen.",
+    "description": "Description of what the extension does."
+  },
+  "translate": {
+    "message": "Übersetzen",
+    "description": "Main translate button text"
+  },
+  "translate_to": {
+    "message": "Übersetzen ins $LANGUAGE$",
+    "description": "Translate to specific language button text",
+    "placeholders": {
+      "language": {
+        "content": "$1",
+        "example": "German"
+      }
+    }
+  },
+  "settings": {
+    "message": "Einstellungen",
+    "description": "Settings button text"
+  },
+  "support_project": {
+    "message": "Projekt Unterstützen",
+    "description": "Support project button text"
+  },
+  "pages_translated": {
+    "message": "Übersetzte Seiten:",
+    "description": "Translation counter text"
+  },
+  "no_languages_selected": {
+    "message": "Keine Sprachen ausgewählt",
+    "description": "Empty state message when no languages selected"
+  },
+  "click_settings_hint": {
+    "message": "Klicken Sie auf Einstellungen, um Ihre bevorzugten Sprachen auszuwählen",
+    "description": "Hint text for empty state"
+  },
+  "translate_settings": {
+    "message": "Übersetzungseinstellungen",
+    "description": "Settings page title"
+  },
+  "select_languages_hint": {
+    "message": "Wählen Sie bis zu 5 bevorzugte Sprachen für schnelle Übersetzung",
+    "description": "Settings page subtitle"
+  },
+  "translation_provider": {
+    "message": "Übersetzungsanbieter",
+    "description": "Translation provider section title"
+  },
+  "kagi_description": {
+    "message": "Verwenden Sie Kagis FastGPT für private, hochwertige Übersetzungen ohne Verfolgung",
+    "description": "Kagi provider description"
+  },
+  "google_description": {
+    "message": "Schnelle und zuverlässige Übersetzungen mit Googles Übersetzungsdienst",
+    "description": "Google provider description"
+  },
+  "selected_languages": {
+    "message": "Ausgewählte Sprachen",
+    "description": "Selected languages section title"
+  },
+  "available_languages": {
+    "message": "Verfügbare Sprachen",
+    "description": "Available languages section title"
+  },
+  "search_languages": {
+    "message": "Sprachen suchen...",
+    "description": "Search placeholder text"
+  },
+  "preview": {
+    "message": "Vorschau",
+    "description": "Preview section title"
+  },
+  "preview_description": {
+    "message": "Ihr Popup zeigt diese Übersetzungsschaltflächen:",
+    "description": "Preview section description"
+  },
+  "select_languages_preview": {
+    "message": "Wählen Sie Sprachen für die Vorschau",
+    "description": "Empty preview message"
+  },
+  "save_settings": {
+    "message": "Einstellungen Speichern",
+    "description": "Save settings button text"
+  },
+  "settings_saved": {
+    "message": "Einstellungen erfolgreich gespeichert!",
+    "description": "Settings saved notification"
+  },
+  "save_failed": {
+    "message": "Fehler beim Speichern der Einstellungen",
+    "description": "Save failed error message"
+  },
+  "extension_disabled": {
+    "message": "Erweiterung auf Übersetzungsseite deaktiviert",
+    "description": "Extension disabled message title"
+  },
+  "extension_disabled_description": {
+    "message": "Diese Erweiterung kann nicht auf Übersetzungsdienstseiten verwendet werden, um Konflikte zu vermeiden.",
+    "description": "Extension disabled message description"
+  },
+  "navigate_hint": {
+    "message": "Navigieren Sie zu einer anderen Seite, um die Übersetzungsfunktion zu verwenden.",
+    "description": "Navigate hint for disabled extension"
+  },
+  "report_issue": {
+    "message": "Idee oder Problem melden",
+    "description": "Report issue link text"
+  },
+  "settings_close_hint": {
+    "message": "Die Einstellungsseite wird nach dem Speichern automatisch geschlossen",
+    "description": "Settings page auto-close hint"
+  },
+  "no_languages_yet": {
+    "message": "Noch keine Sprachen ausgewählt",
+    "description": "No languages selected message"
+  },
+  "choose_languages_hint": {
+    "message": "Wählen Sie aus der Liste unten, um Übersetzungsschaltflächen hinzuzufügen",
+    "description": "Choose languages hint"
+  },
+  "lang_en": {
+    "message": "Englisch"
+  },
+  "lang_es": {
+    "message": "Spanisch"
+  },
+  "lang_fr": {
+    "message": "Französisch"
+  },
+  "lang_de": {
+    "message": "Deutsch"
+  },
+  "lang_it": {
+    "message": "Italienisch"
+  },
+  "lang_pt": {
+    "message": "Portugiesisch"
+  },
+  "lang_ru": {
+    "message": "Russisch"
+  },
+  "lang_zh": {
+    "message": "Chinesisch"
+  },
+  "lang_ja": {
+    "message": "Japanisch"
+  },
+  "lang_ko": {
+    "message": "Koreanisch"
+  },
+  "lang_ar": {
+    "message": "Arabisch"
+  },
+  "lang_hi": {
+    "message": "Hindi"
+  },
+  "lang_tr": {
+    "message": "Türkisch"
+  },
+  "lang_pl": {
+    "message": "Polnisch"
+  },
+  "lang_nl": {
+    "message": "Niederländisch"
+  },
+  "settings_saved_short": {
+    "message": "Gespeichert"
+  }
+}

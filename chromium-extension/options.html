@@ -9,25 +9,25 @@
 <body>
     <div class="container">
         <header>
-            <h1><img src="images/icon-48.png" alt="Translate" class="header-icon"> Translate Settings</h1>
-            <p>Select up to 5 preferred languages for quick translation</p>
+            <h1><img src="images/icon-48.png" alt="Translate" class="header-icon"> <span data-i18n="translate_settings">Translate Settings</span></h1>
+            <p data-i18n="select_languages_hint">Select up to 5 preferred languages for quick translation</p>
         </header>
 
         <section class="provider-section">
-            <h2>Translation Provider</h2>
+            <h2 data-i18n="translation_provider">Translation Provider</h2>
             <div id="provider-select">
                 <label class="provider-option">
                     <input type="radio" name="provider" value="kagi" checked>
                     <div class="provider-info">
                         <span class="provider-name">Kagi</span>
-                        <span class="provider-description">Uses Kagi's FastGPT for high-quality, private translations with no tracking</span>
+                        <span class="provider-description" data-i18n="kagi_description">Uses Kagi's FastGPT for high-quality, private translations with no tracking</span>
                     </div>
                 </label>
                 <label class="provider-option">
                     <input type="radio" name="provider" value="google">
                     <div class="provider-info">
                         <span class="provider-name">Google Translate</span>
-                        <span class="provider-description">Fast and reliable translations using Google's translation service</span>
+                        <span class="provider-description" data-i18n="google_description">Fast and reliable translations using Google's translation service</span>
                     </div>
                 </label>
             </div>
@@ -35,19 +35,19 @@
 
         <main>
             <div class="current-selection">
-                <h2>Selected Languages (<span id="selection-count">0</span>/5)</h2>
+                <h2><span data-i18n="selected_languages">Selected Languages</span> (<span id="selection-count">0</span>/5)</h2>
                 <div id="selected-languages" class="selected-list">
                     <div class="empty-state">
-                        <p>No languages selected yet</p>
-                        <p class="hint">Choose from the list below to add translation buttons</p>
+                        <p data-i18n="no_languages_yet">No languages selected yet</p>
+                        <p class="hint" data-i18n="choose_languages_hint">Choose from the list below to add translation buttons</p>
                     </div>
                 </div>
             </div>
 
             <div class="language-selection">
-                <h2>Available Languages</h2>
+                <h2 data-i18n="available_languages">Available Languages</h2>
                 <div class="search-container">
-                    <input type="text" id="language-search" placeholder="Search languages..." />
+                    <input type="text" id="language-search" data-i18n="search_languages" placeholder="Search languages..." />
                     <span class="search-icon">🔍</span>
                 </div>
                 
@@ -58,10 +58,10 @@
 
 
             <div class="preview">
-                <h3>Preview</h3>
-                <p>Your popup will show these translation buttons:</p>
+                <h3 data-i18n="preview">Preview</h3>
+                <p data-i18n="preview_description">Your popup will show these translation buttons:</p>
                 <div id="popup-preview" class="popup-preview">
-                    <div class="preview-empty">Select languages to see preview</div>
+                    <div class="preview-empty" data-i18n="select_languages_preview">Select languages to see preview</div>
                 </div>
             </div>
         </main>
@@ -71,22 +71,22 @@
              href="https://github.com/lifenture/browser-extension-translate/issues/new"
              target="_blank"
              rel="noopener noreferrer">
-             💡  Report an idea or issue
+             💡  <span data-i18n="report_issue">Report an idea or issue</span>
           </a>
         </div>
 
         <footer>
-            <p>Settings page will close automatically after saving</p>
+            <p data-i18n="settings_close_hint">Settings page will close automatically after saving</p>
         </footer>
     </div>
 
     <!-- Sticky Save Bar -->
     <div class="sticky-save-bar">
         <button id="save-settings" class="primary-btn" disabled>
-            💾 Save Settings
+            💾 <span data-i18n="save_settings">Save Settings</span>
         </button>
         <button id="support-project" class="support-btn">
-            ❤️ Support Project
+            ❤️ <span data-i18n="support_project">Support Project</span>
         </button>
     </div>
     
@@ -98,6 +98,7 @@
 
     <script src="chromium-polyfill.js"></script>
     <script src="languages.js"></script>
+    <script src="i18n.js"></script>
     <script src="support.js"></script>
     <script src="options.js"></script>
 </body>

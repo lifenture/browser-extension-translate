@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "Vertaler"
+  },
+  "extension_description": {
+    "message": "Vertaal webpagina's naar meerdere talen met je gekozen vertaalprovider. Configureer tot 5 gewenste talen."
+  },
+  "translate_settings": {
+    "message": "Vertaalinstellingen"
+  },
+  "select_languages_hint": {
+    "message": "Selecteer tot 5 gewenste talen voor snelle vertaling"
+  },
+  "translation_provider": {
+    "message": "Vertaalprovider"
+  },
+  "kagi_description": {
+    "message": "Gebruikt Kagi's FastGPT voor hoogwaardige, privé vertalingen zonder tracking"
+  },
+  "google_description": {
+    "message": "Snelle en betrouwbare vertalingen met Google's vertaalservice"
+  },
+  "selected_languages": {
+    "message": "Geselecteerde Talen"
+  },
+  "no_languages_yet": {
+    "message": "Nog geen talen geselecteerd"
+  },
+  "choose_languages_hint": {
+    "message": "Kies uit de lijst hieronder om vertaalknoppen toe te voegen"
+  },
+  "available_languages": {
+    "message": "Beschikbare Talen"
+  },
+  "search_languages": {
+    "message": "Zoek talen..."
+  },
+  "preview": {
+    "message": "Voorvertoning"
+  },
+  "preview_description": {
+    "message": "Je popup toont deze vertaalknoppen:"
+  },
+  "select_languages_preview": {
+    "message": "Selecteer talen om voorvertoning te zien"
+  },
+  "report_issue": {
+    "message": "Rapporteer een idee of probleem"
+  },
+  "settings_close_hint": {
+    "message": "Instellingenpagina sluit automatisch na opslaan"
+  },
+  "save_settings": {
+    "message": "Instellingen Opslaan"
+  },
+  "support_project": {
+    "message": "Project Ondersteunen"
+  },
+  "pages_translated": {
+    "message": "Vertaalde pagina's: "
+  },
+  "settings": {
+    "message": "Instellingen"
+  },
+  "translate_to": {
+    "message": "Vertaal naar $LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "Engels"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "Geen talen geselecteerd"
+  },
+  "click_settings_hint": {
+    "message": "Klik Instellingen om je gewenste talen toe te voegen"
+  },
+  "extension_disabled": {
+    "message": "Extensie Uitgeschakeld"
+  },
+  "extension_disabled_description": {
+    "message": "Deze extensie is uitgeschakeld op vertaalservicepagina's om conflicten te voorkomen."
+  },
+  "navigate_hint": {
+    "message": "Navigeer naar een andere pagina om de vertaalfuncties te gebruiken."
+  },
+  "settings_saved": {
+    "message": "Instellingen succesvol opgeslagen!"
+  },
+  "save_failed": {
+    "message": "Opslaan van instellingen mislukt. Probeer opnieuw."
+  },
+  "lang_en": {
+    "message": "Engels"
+  },
+  "lang_es": {
+    "message": "Spaans"
+  },
+  "lang_fr": {
+    "message": "Frans"
+  },
+  "lang_de": {
+    "message": "Duits"
+  },
+  "lang_it": {
+    "message": "Italiaans"
+  },
+  "lang_pt": {
+    "message": "Portugees"
+  },
+  "lang_ru": {
+    "message": "Russisch"
+  },
+  "lang_zh": {
+    "message": "Chinees"
+  },
+  "lang_ja": {
+    "message": "Japans"
+  },
+  "lang_ko": {
+    "message": "Koreaans"
+  },
+  "lang_ar": {
+    "message": "Arabisch"
+  },
+  "lang_hi": {
+    "message": "Hindi"
+  },
+  "lang_tr": {
+    "message": "Turks"
+  },
+  "lang_pl": {
+    "message": "Pools"
+  },
+  "lang_nl": {
+    "message": "Nederlands"
+  },
+  "settings_saved_short": {
+    "message": "Opgeslagen"
+  }
+}

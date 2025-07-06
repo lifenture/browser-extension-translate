@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "מתרגם"
+  },
+  "extension_description": {
+    "message": "תרגם דפי אינטרנט למספר שפות באמצעות ספק התרגום המועדף עליך. הגדר עד 5 שפות מועדפות."
+  },
+  "translate_settings": {
+    "message": "הגדרות תרגום"
+  },
+  "select_languages_hint": {
+    "message": "בחר עד 5 שפות מועדפות לתרגום מהיר"
+  },
+  "translation_provider": {
+    "message": "ספק תרגום"
+  },
+  "kagi_description": {
+    "message": "משתמש ב-FastGPT של Kagi עבור תרגומים איכותיים ופרטיים ללא מעקב"
+  },
+  "google_description": {
+    "message": "תרגומים מהירים ואמינים באמצעות שירות התרגום של Google"
+  },
+  "selected_languages": {
+    "message": "שפות נבחרות"
+  },
+  "no_languages_yet": {
+    "message": "עדיין לא נבחרו שפות"
+  },
+  "choose_languages_hint": {
+    "message": "בחר מהרשימה למטה כדי להוסיף כפתורי תרגום"
+  },
+  "available_languages": {
+    "message": "שפות זמינות"
+  },
+  "search_languages": {
+    "message": "חפש שפות..."
+  },
+  "preview": {
+    "message": "תצוגה מקדימה"
+  },
+  "preview_description": {
+    "message": "החלון הקופץ שלך יציג את כפתורי התרגום האלה:"
+  },
+  "select_languages_preview": {
+    "message": "בחר שפות כדי לראות תצוגה מקדימה"
+  },
+  "report_issue": {
+    "message": "דווח על רעיון או בעיה"
+  },
+  "settings_close_hint": {
+    "message": "דף ההגדרות ייסגר אוטומטית לאחר השמירה"
+  },
+  "save_settings": {
+    "message": "שמור הגדרות"
+  },
+  "support_project": {
+    "message": "תמך בפרויקט"
+  },
+  "pages_translated": {
+    "message": "דפים מתורגמים: "
+  },
+  "settings": {
+    "message": "הגדרות"
+  },
+  "translate_to": {
+    "message": "תרגם ל$LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "אנגלית"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "לא נבחרו שפות"
+  },
+  "click_settings_hint": {
+    "message": "לחץ על הגדרות כדי להוסיף את השפות המועדפות עליך"
+  },
+  "extension_disabled": {
+    "message": "התוסף מושבת"
+  },
+  "extension_disabled_description": {
+    "message": "תוסף זה מושבת בדפי שירותי תרגום כדי למנוע קונפליקטים."
+  },
+  "navigate_hint": {
+    "message": "נווט לכל דף אחר כדי להשתמש בתכונות התרגום."
+  },
+  "settings_saved": {
+    "message": "ההגדרות נשמרו בהצלחה!"
+  },
+  "save_failed": {
+    "message": "שמירת ההגדרות נכשלה. אנא נסה שוב."
+  },
+  "lang_en": {
+    "message": "אנגלית"
+  },
+  "lang_es": {
+    "message": "ספרדית"
+  },
+  "lang_fr": {
+    "message": "צרפתית"
+  },
+  "lang_de": {
+    "message": "גרמנית"
+  },
+  "lang_it": {
+    "message": "איטלקית"
+  },
+  "lang_pt": {
+    "message": "פורטוגזית"
+  },
+  "lang_ru": {
+    "message": "רוסית"
+  },
+  "lang_zh": {
+    "message": "סינית"
+  },
+  "lang_ja": {
+    "message": "יפנית"
+  },
+  "lang_ko": {
+    "message": "קוריאנית"
+  },
+  "lang_ar": {
+    "message": "ערבית"
+  },
+  "lang_hi": {
+    "message": "הינדי"
+  },
+  "lang_tr": {
+    "message": "טורקית"
+  },
+  "lang_pl": {
+    "message": "פולנית"
+  },
+  "lang_nl": {
+    "message": "הולנדית"
+  },
+  "settings_saved_short": {
+    "message": "נשמר"
+  }
+}

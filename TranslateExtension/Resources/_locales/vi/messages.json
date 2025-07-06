@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "Dịch thuật"
+  },
+  "extension_description": {
+    "message": "Dịch các trang web sang nhiều ngôn ngữ bằng cách sử dụng nhà cung cấp dịch thuật ưa thích của bạn. Cấu hình tối đa 5 ngôn ngữ ưa thích."
+  },
+  "translate_settings": {
+    "message": "Cài đặt Dịch thuật"
+  },
+  "select_languages_hint": {
+    "message": "Chọn tối đa 5 ngôn ngữ ưa thích để dịch nhanh"
+  },
+  "translation_provider": {
+    "message": "Nhà cung cấp Dịch thuật"
+  },
+  "kagi_description": {
+    "message": "Sử dụng FastGPT của Kagi cho các bản dịch chất lượng cao, riêng tư không theo dõi"
+  },
+  "google_description": {
+    "message": "Dịch thuật nhanh và đáng tin cậy sử dụng dịch vụ dịch thuật của Google"
+  },
+  "selected_languages": {
+    "message": "Ngôn ngữ Đã chọn"
+  },
+  "no_languages_yet": {
+    "message": "Chưa chọn ngôn ngữ nào"
+  },
+  "choose_languages_hint": {
+    "message": "Chọn từ danh sách bên dưới để thêm nút dịch"
+  },
+  "available_languages": {
+    "message": "Ngôn ngữ Có sẵn"
+  },
+  "search_languages": {
+    "message": "Tìm kiếm ngôn ngữ..."
+  },
+  "preview": {
+    "message": "Xem trước"
+  },
+  "preview_description": {
+    "message": "Cửa sổ bật lên của bạn sẽ hiển thị các nút dịch này:"
+  },
+  "select_languages_preview": {
+    "message": "Chọn ngôn ngữ để xem trước"
+  },
+  "report_issue": {
+    "message": "Báo cáo ý tưởng hoặc vấn đề"
+  },
+  "settings_close_hint": {
+    "message": "Trang cài đặt sẽ tự động đóng sau khi lưu"
+  },
+  "save_settings": {
+    "message": "Lưu Cài đặt"
+  },
+  "support_project": {
+    "message": "Hỗ trợ Dự án"
+  },
+  "pages_translated": {
+    "message": "Trang đã dịch: "
+  },
+  "settings": {
+    "message": "Cài đặt"
+  },
+  "translate_to": {
+    "message": "Dịch sang $LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "tiếng Anh"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "Không có ngôn ngữ nào được chọn"
+  },
+  "click_settings_hint": {
+    "message": "Nhấp Cài đặt để thêm ngôn ngữ ưa thích của bạn"
+  },
+  "extension_disabled": {
+    "message": "Tiện ích bị Vô hiệu hóa"
+  },
+  "extension_disabled_description": {
+    "message": "Tiện ích này bị vô hiệu hóa trên các trang dịch vụ dịch thuật để tránh xung đột."
+  },
+  "navigate_hint": {
+    "message": "Điều hướng đến bất kỳ trang nào khác để sử dụng các tính năng dịch thuật."
+  },
+  "settings_saved": {
+    "message": "Cài đặt đã được lưu thành công!"
+  },
+  "save_failed": {
+    "message": "Lưu cài đặt thất bại. Vui lòng thử lại."
+  },
+  "lang_en": {
+    "message": "Tiếng Anh"
+  },
+  "lang_es": {
+    "message": "Tiếng Tây Ban Nha"
+  },
+  "lang_fr": {
+    "message": "Tiếng Pháp"
+  },
+  "lang_de": {
+    "message": "Tiếng Đức"
+  },
+  "lang_it": {
+    "message": "Tiếng Ý"
+  },
+  "lang_pt": {
+    "message": "Tiếng Bồ Đào Nha"
+  },
+  "lang_ru": {
+    "message": "Tiếng Nga"
+  },
+  "lang_zh": {
+    "message": "Tiếng Trung"
+  },
+  "lang_ja": {
+    "message": "Tiếng Nhật"
+  },
+  "lang_ko": {
+    "message": "Tiếng Hàn"
+  },
+  "lang_ar": {
+    "message": "Tiếng Ả Rập"
+  },
+  "lang_hi": {
+    "message": "Tiếng Hindi"
+  },
+  "lang_tr": {
+    "message": "Tiếng Thổ Nhĩ Kỳ"
+  },
+  "lang_pl": {
+    "message": "Tiếng Ba Lan"
+  },
+  "lang_nl": {
+    "message": "Tiếng Hà Lan"
+  },
+  "settings_saved_short": {
+    "message": "Đã lưu"
+  }
+}

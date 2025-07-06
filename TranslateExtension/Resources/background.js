@@ -7,10 +7,10 @@ class TranslateBackground {
 
     init() {
         // Handle toolbar icon clicks (when popup is disabled or fails)
-        browser.action.onClicked.addListener((tab) => this.handleToolbarClick(tab));
+        chrome.action.onClicked.addListener((tab) => this.handleToolbarClick(tab));
         
         // Handle messages from popup/options
-        browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
+        chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             return this.handleMessage(request, sender, sendResponse);
         });
         
@@ -20,7 +20,7 @@ class TranslateBackground {
 
     async initializeDefaultSettings() {
         try {
-            const result = await browser.storage.sync.get(['selectedLanguages', 'provider']);
+            const result = await chrome.storage.sync.get(['selectedLanguages', 'provider']);
             
             const updates = {};
             
@@ -33,7 +33,7 @@ class TranslateBackground {
             }
             
             if (Object.keys(updates).length > 0) {
-                await browser.storage.sync.set(updates);
+                await chrome.storage.sync.set(updates);
                 console.log('Initialized default settings:', updates);
             }
         } catch (error) {
@@ -55,30 +55,30 @@ class TranslateBackground {
 
         try {
             // Get user's preferred languages and provider
-            const result = await browser.storage.sync.get(['selectedLanguages', 'provider']);
+            const result = await chrome.storage.sync.get(['selectedLanguages', 'provider']);
             const selectedLanguages = result.selectedLanguages || this.defaultLanguages;
             const provider = result.provider || 'kagi';
             
             if (selectedLanguages.length === 0) {
                 // Open options page if no languages selected
-                await browser.tabs.create({
-                    url: browser.runtime.getURL('options.html')
+                await chrome.tabs.create({
+                    url: chrome.runtime.getURL('options.html')
                 });
                 return;
             }
-
+            
             // Use the first selected language for direct toolbar clicks
             const primaryLanguage = selectedLanguages[0];
             const target = this.buildTargetUrl(tab.url, primaryLanguage, provider);
             
-            await browser.tabs.update(tab.id, { url: target });
+            await chrome.tabs.update(tab.id, { url: target });
             console.log(`Translated page to ${primaryLanguage}`);
             
         } catch (error) {
             console.error('Translation failed:', error);
             // If translation fails and no languages are configured, open options page
-            await browser.tabs.create({
-                url: browser.runtime.getURL('options.html')
+            await chrome.tabs.create({
+                url: chrome.runtime.getURL('options.html')
             });
         }
     }
@@ -98,10 +98,23 @@ class TranslateBackground {
                 return { success: false, error: 'Invalid request' };
                 
             case 'openOptions':
-                await browser.tabs.create({
-                    url: browser.runtime.getURL('options.html')
+                await chrome.tabs.create({
+                    url: chrome.runtime.getURL('options.html')
                 });
                 return { success: true };
+                
+            case 'translate':
+                try {
+                    const translatedText = await this.translateText(
+                        request.text, 
+                        request.sourceLanguage, 
+                        request.targetLanguage
+                    );
+                    return { success: true, translatedText };
+                } catch (error) {
+                    console.error('Translation API failed:', error);
+                    return { success: false, error: error.message };
+                }
                 
             default:
                 // Legacy support
@@ -114,7 +127,7 @@ class TranslateBackground {
 
     async getSelectedLanguages() {
         try {
-            const result = await browser.storage.sync.get(['selectedLanguages']);
+            const result = await chrome.storage.sync.get(['selectedLanguages']);
             return result.selectedLanguages || this.defaultLanguages;
         } catch (error) {
             console.error('Failed to get selected languages:', error);
@@ -149,12 +162,79 @@ class TranslateBackground {
         }
 
         // Get provider setting
-        const result = await browser.storage.sync.get(['provider']);
+        const result = await chrome.storage.sync.get(['provider']);
         const provider = result.provider || 'kagi';
         
         const target = this.buildTargetUrl(tab.url, languageCode, provider);
-        await browser.tabs.update(tab.id, { url: target });
+        await chrome.tabs.update(tab.id, { url: target });
         console.log(`Translated page to ${languageCode}`);
+    }
+    
+    async translateText(text, sourceLanguage, targetLanguage) {
+        // Get the current provider setting
+        const result = await chrome.storage.sync.get(['provider']);
+        const provider = result.provider || 'kagi';
+        
+        if (provider === 'google') {
+            return await this.translateWithGoogle(text, sourceLanguage, targetLanguage);
+        } else {
+            return await this.translateWithKagi(text, sourceLanguage, targetLanguage);
+        }
+    }
+    
+    async translateWithKagi(text, sourceLanguage, targetLanguage) {
+        try {
+            // Use Kagi's translation API for UI text translation
+            const response = await fetch('https://kagi.com/api/v1/translate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    text: text,
+                    source_lang: sourceLanguage,
+                    target_lang: targetLanguage
+                })
+            });
+            
+            if (!response.ok) {
+                throw new Error(`Kagi translation failed: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            return data.translated_text || text;
+        } catch (error) {
+            console.warn('Kagi translation failed, falling back to Google:', error);
+            return await this.translateWithGoogle(text, sourceLanguage, targetLanguage);
+        }
+    }
+    
+    async translateWithGoogle(text, sourceLanguage, targetLanguage) {
+        try {
+            // Use Google Translate API as fallback
+            const sourceCode = sourceLanguage === 'en' ? 'en' : this.mapCodeForGoogle(sourceLanguage);
+            const targetCode = this.mapCodeForGoogle(targetLanguage);
+            
+            const response = await fetch(
+                `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sourceCode}&tl=${targetCode}&dt=t&q=${encodeURIComponent(text)}`
+            );
+            
+            if (!response.ok) {
+                throw new Error(`Google translation failed: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            // Google Translate API returns nested arrays
+            if (data && data[0] && data[0][0] && data[0][0][0]) {
+                return data[0][0][0];
+            }
+            
+            throw new Error('Invalid response format from Google Translate');
+        } catch (error) {
+            console.error('Google translation failed:', error);
+            // Final fallback: return original text
+            return text;
+        }
     }
 
     isTranslateDomain(url) {

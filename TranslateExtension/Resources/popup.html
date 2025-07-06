@@ -8,9 +8,9 @@
 <body>
     <div class="popup-container">
         <header class="popup-header">
-            <h1><img src="images/icon-48.png" alt="Translate" class="header-icon"> Translate</h1>
+            <h1><img src="images/icon-48.png" alt="Translate" class="header-icon"> <span data-i18n="extension_name">Translate</span></h1>
             <div class="translation-counter">
-                <span class="counter-text">Pages translated: </span>
+                <span class="counter-text" data-i18n="pages_translated">Pages translated: </span>
                 <span id="translation-count" class="counter-number">0</span>
             </div>
         </header>
@@ -23,8 +23,8 @@
         
         <footer class="popup-footer">
             <div class="footer-buttons">
-                <button id="open-settings">⚙️ Settings</button>
-                <button id="open-support">❤️ Support Project</button>
+                <button id="open-settings">⚙️ <span data-i18n="settings">Settings</span></button>
+                <button id="open-support">❤️ <span data-i18n="support_project">Support Project</span></button>
             </div>
         </footer>
         
@@ -33,7 +33,7 @@
                target="_blank" 
                rel="noopener noreferrer" 
                class="issues-link-small">
-                💡 Report an idea or issue
+                💡 <span data-i18n="report_issue">Report an idea or issue</span>
             </a>
             <div class="signature">
                 <a href="https://lifenture.com" target="_blank" rel="noopener noreferrer">
@@ -44,6 +44,7 @@
     </div>
     
     <script src="languages.js"></script>
+    <script src="i18n.js"></script>
     <script src="support.js"></script>
     <script src="popup.js"></script>
 </body>

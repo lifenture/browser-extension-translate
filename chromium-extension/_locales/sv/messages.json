@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "Översättare"
+  },
+  "extension_description": {
+    "message": "Översätt webbsidor till flera språk med din valda översättningstjänst. Konfigurera upp till 5 föredragna språk."
+  },
+  "translate_settings": {
+    "message": "Översättningsinställningar"
+  },
+  "select_languages_hint": {
+    "message": "Välj upp till 5 föredragna språk för snabb översättning"
+  },
+  "translation_provider": {
+    "message": "Översättningstjänst"
+  },
+  "kagi_description": {
+    "message": "Använder Kagis FastGPT för högkvalitativa, privata översättningar utan spårning"
+  },
+  "google_description": {
+    "message": "Snabba och pålitliga översättningar med Googles översättningstjänst"
+  },
+  "selected_languages": {
+    "message": "Valda Språk"
+  },
+  "no_languages_yet": {
+    "message": "Inga språk valda än"
+  },
+  "choose_languages_hint": {
+    "message": "Välj från listan nedan för att lägga till översättningsknappar"
+  },
+  "available_languages": {
+    "message": "Tillgängliga Språk"
+  },
+  "search_languages": {
+    "message": "Sök språk..."
+  },
+  "preview": {
+    "message": "Förhandsvisning"
+  },
+  "preview_description": {
+    "message": "Din popup kommer visa dessa översättningsknappar:"
+  },
+  "select_languages_preview": {
+    "message": "Välj språk för att se förhandsvisning"
+  },
+  "report_issue": {
+    "message": "Rapportera en idé eller problem"
+  },
+  "settings_close_hint": {
+    "message": "Inställningssidan stängs automatiskt efter sparande"
+  },
+  "save_settings": {
+    "message": "Spara Inställningar"
+  },
+  "support_project": {
+    "message": "Stöd Projekt"
+  },
+  "pages_translated": {
+    "message": "Översatta sidor: "
+  },
+  "settings": {
+    "message": "Inställningar"
+  },
+  "translate_to": {
+    "message": "Översätt till $LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "engelska"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "Inga språk valda"
+  },
+  "click_settings_hint": {
+    "message": "Klicka Inställningar för att lägga till dina föredragna språk"
+  },
+  "extension_disabled": {
+    "message": "Tillägg Inaktiverat"
+  },
+  "extension_disabled_description": {
+    "message": "Detta tillägg är inaktiverat på översättningstjänstsidor för att förhindra konflikter."
+  },
+  "navigate_hint": {
+    "message": "Navigera till någon annan sida för att använda översättningsfunktioner."
+  },
+  "settings_saved": {
+    "message": "Inställningar sparade framgångsrikt!"
+  },
+  "save_failed": {
+    "message": "Misslyckades spara inställningar. Vänligen försök igen."
+  },
+  "lang_en": {
+    "message": "Engelska"
+  },
+  "lang_es": {
+    "message": "Spanska"
+  },
+  "lang_fr": {
+    "message": "Franska"
+  },
+  "lang_de": {
+    "message": "Tyska"
+  },
+  "lang_it": {
+    "message": "Italienska"
+  },
+  "lang_pt": {
+    "message": "Portugisiska"
+  },
+  "lang_ru": {
+    "message": "Ryska"
+  },
+  "lang_zh": {
+    "message": "Kinesiska"
+  },
+  "lang_ja": {
+    "message": "Japanska"
+  },
+  "lang_ko": {
+    "message": "Koreanska"
+  },
+  "lang_ar": {
+    "message": "Arabiska"
+  },
+  "lang_hi": {
+    "message": "Hindi"
+  },
+  "lang_tr": {
+    "message": "Turkiska"
+  },
+  "lang_pl": {
+    "message": "Polska"
+  },
+  "lang_nl": {
+    "message": "Nederländska"
+  },
+  "settings_saved_short": {
+    "message": "Sparat"
+  }
+}

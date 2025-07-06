@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "번역기"
+  },
+  "extension_description": {
+    "message": "선택한 번역 제공업체를 사용하여 웹 페이지를 여러 언어로 번역합니다. 최대 5개의 선호 언어를 구성하세요."
+  },
+  "translate_settings": {
+    "message": "번역 설정"
+  },
+  "select_languages_hint": {
+    "message": "빠른 번역을 위해 최대 5개의 선호 언어를 선택하세요"
+  },
+  "translation_provider": {
+    "message": "번역 제공업체"
+  },
+  "kagi_description": {
+    "message": "추적 없는 고품질 프라이빗 번역을 위해 Kagi의 FastGPT를 사용합니다"
+  },
+  "google_description": {
+    "message": "Google 번역 서비스를 사용한 빠르고 신뢰할 수 있는 번역"
+  },
+  "selected_languages": {
+    "message": "선택된 언어"
+  },
+  "no_languages_yet": {
+    "message": "아직 선택된 언어가 없습니다"
+  },
+  "choose_languages_hint": {
+    "message": "번역 버튼을 추가하려면 아래 목록에서 선택하세요"
+  },
+  "available_languages": {
+    "message": "사용 가능한 언어"
+  },
+  "search_languages": {
+    "message": "언어 검색..."
+  },
+  "preview": {
+    "message": "미리보기"
+  },
+  "preview_description": {
+    "message": "팝업에서 이러한 번역 버튼들을 보여줍니다:"
+  },
+  "select_languages_preview": {
+    "message": "미리보기를 보려면 언어를 선택하세요"
+  },
+  "report_issue": {
+    "message": "아이디어나 문제 신고"
+  },
+  "settings_close_hint": {
+    "message": "설정 페이지는 저장 후 자동으로 닫힙니다"
+  },
+  "save_settings": {
+    "message": "설정 저장"
+  },
+  "support_project": {
+    "message": "프로젝트 지원"
+  },
+  "pages_translated": {
+    "message": "번역된 페이지: "
+  },
+  "settings": {
+    "message": "설정"
+  },
+  "translate_to": {
+    "message": "$LANGUAGE_NAME$(으)로 번역",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "영어"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "선택된 언어가 없습니다"
+  },
+  "click_settings_hint": {
+    "message": "선호 언어를 추가하려면 설정을 클릭하세요"
+  },
+  "extension_disabled": {
+    "message": "확장 프로그램 비활성화됨"
+  },
+  "extension_disabled_description": {
+    "message": "이 확장 프로그램은 충돌을 방지하기 위해 번역 서비스 페이지에서 비활성화됩니다."
+  },
+  "navigate_hint": {
+    "message": "번역 기능을 사용하려면 다른 페이지로 이동하세요."
+  },
+  "settings_saved": {
+    "message": "설정이 성공적으로 저장되었습니다!"
+  },
+  "save_failed": {
+    "message": "설정 저장에 실패했습니다. 다시 시도해 주세요."
+  },
+  "lang_en": {
+    "message": "영어"
+  },
+  "lang_es": {
+    "message": "스페인어"
+  },
+  "lang_fr": {
+    "message": "프랑스어"
+  },
+  "lang_de": {
+    "message": "독일어"
+  },
+  "lang_it": {
+    "message": "이탈리아어"
+  },
+  "lang_pt": {
+    "message": "포르투갈어"
+  },
+  "lang_ru": {
+    "message": "러시아어"
+  },
+  "lang_zh": {
+    "message": "중국어"
+  },
+  "lang_ja": {
+    "message": "일본어"
+  },
+  "lang_ko": {
+    "message": "한국어"
+  },
+  "lang_ar": {
+    "message": "아랍어"
+  },
+  "lang_hi": {
+    "message": "힌디어"
+  },
+  "lang_tr": {
+    "message": "터키어"
+  },
+  "lang_pl": {
+    "message": "폴란드어"
+  },
+  "lang_nl": {
+    "message": "네덜란드어"
+  },
+  "settings_saved_short": {
+    "message": "저장됨"
+  }
+}

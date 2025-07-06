@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "Kääntäjä"
+  },
+  "extension_description": {
+    "message": "Käännä verkkosivuja useille kielille valitsemallasi käännöspalveluntarjoajalla. Määritä enintään 5 suosikkikieltä."
+  },
+  "translate_settings": {
+    "message": "Käännösasetukset"
+  },
+  "select_languages_hint": {
+    "message": "Valitse enintään 5 suosikkikieltä nopeaa kääntämistä varten"
+  },
+  "translation_provider": {
+    "message": "Käännöspalveluntarjoaja"
+  },
+  "kagi_description": {
+    "message": "Käyttää Kagin FastGPT:tä korkealaatuisiin, yksityisiin käännöksiin ilman seurantaa"
+  },
+  "google_description": {
+    "message": "Nopeat ja luotettavat käännökset Googlen käännöspalvelulla"
+  },
+  "selected_languages": {
+    "message": "Valitut Kielet"
+  },
+  "no_languages_yet": {
+    "message": "Ei vielä valittuja kieliä"
+  },
+  "choose_languages_hint": {
+    "message": "Valitse alla olevasta listasta lisätäksesi käännöspainikkeet"
+  },
+  "available_languages": {
+    "message": "Saatavilla Olevat Kielet"
+  },
+  "search_languages": {
+    "message": "Etsi kieliä..."
+  },
+  "preview": {
+    "message": "Esikatselu"
+  },
+  "preview_description": {
+    "message": "Ponnahdusikkuna näyttää nämä käännöspainikkeet:"
+  },
+  "select_languages_preview": {
+    "message": "Valitse kielet nähdäksesi esikatselun"
+  },
+  "report_issue": {
+    "message": "Ilmoita ideasta tai ongelmasta"
+  },
+  "settings_close_hint": {
+    "message": "Asetussivu sulkeutuu automaattisesti tallennuksen jälkeen"
+  },
+  "save_settings": {
+    "message": "Tallenna Asetukset"
+  },
+  "support_project": {
+    "message": "Tue Projektia"
+  },
+  "pages_translated": {
+    "message": "Käännetyt sivut: "
+  },
+  "settings": {
+    "message": "Asetukset"
+  },
+  "translate_to": {
+    "message": "Käännä kielelle $LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "englanti"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "Ei valittuja kieliä"
+  },
+  "click_settings_hint": {
+    "message": "Napsauta Asetukset lisätäksesi suosikkikielesi"
+  },
+  "extension_disabled": {
+    "message": "Laajennus Poistettu Käytöstä"
+  },
+  "extension_disabled_description": {
+    "message": "Tämä laajennus on poistettu käytöstä käännöspalvelusivuilla konfliktien välttämiseksi."
+  },
+  "navigate_hint": {
+    "message": "Siirry toiselle sivulle käyttääksesi käännösominaisuuksia."
+  },
+  "settings_saved": {
+    "message": "Asetukset tallennettu onnistuneesti!"
+  },
+  "save_failed": {
+    "message": "Asetusten tallentaminen epäonnistui. Yritä uudelleen."
+  },
+  "lang_en": {
+    "message": "Englanti"
+  },
+  "lang_es": {
+    "message": "Espanja"
+  },
+  "lang_fr": {
+    "message": "Ranska"
+  },
+  "lang_de": {
+    "message": "Saksa"
+  },
+  "lang_it": {
+    "message": "Italia"
+  },
+  "lang_pt": {
+    "message": "Portugali"
+  },
+  "lang_ru": {
+    "message": "Venäjä"
+  },
+  "lang_zh": {
+    "message": "Kiina"
+  },
+  "lang_ja": {
+    "message": "Japani"
+  },
+  "lang_ko": {
+    "message": "Korea"
+  },
+  "lang_ar": {
+    "message": "Arabia"
+  },
+  "lang_hi": {
+    "message": "Hindi"
+  },
+  "lang_tr": {
+    "message": "Turkki"
+  },
+  "lang_pl": {
+    "message": "Puola"
+  },
+  "lang_nl": {
+    "message": "Hollanti"
+  },
+  "settings_saved_short": {
+    "message": "Tallennettu"
+  }
+}

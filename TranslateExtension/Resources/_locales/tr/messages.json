@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "Çevirmen"
+  },
+  "extension_description": {
+    "message": "Tercih ettiğiniz çeviri sağlayıcısını kullanarak web sayfalarını birden fazla dile çevirin. En fazla 5 tercih edilen dil yapılandırın."
+  },
+  "translate_settings": {
+    "message": "Çeviri Ayarları"
+  },
+  "select_languages_hint": {
+    "message": "Hızlı çeviri için en fazla 5 tercih edilen dil seçin"
+  },
+  "translation_provider": {
+    "message": "Çeviri Sağlayıcısı"
+  },
+  "kagi_description": {
+    "message": "İzleme olmadan yüksek kaliteli, özel çeviriler için Kagi'nin FastGPT'sini kullanır"
+  },
+  "google_description": {
+    "message": "Google'ın çeviri hizmetini kullanarak hızlı ve güvenilir çeviriler"
+  },
+  "selected_languages": {
+    "message": "Seçilen Diller"
+  },
+  "no_languages_yet": {
+    "message": "Henüz hiç dil seçilmedi"
+  },
+  "choose_languages_hint": {
+    "message": "Çeviri düğmeleri eklemek için aşağıdaki listeden seçin"
+  },
+  "available_languages": {
+    "message": "Mevcut Diller"
+  },
+  "search_languages": {
+    "message": "Dil ara..."
+  },
+  "preview": {
+    "message": "Önizleme"
+  },
+  "preview_description": {
+    "message": "Pop-up'ınız bu çeviri düğmelerini gösterecek:"
+  },
+  "select_languages_preview": {
+    "message": "Önizlemeyi görmek için dilleri seçin"
+  },
+  "report_issue": {
+    "message": "Bir fikir veya sorun bildir"
+  },
+  "settings_close_hint": {
+    "message": "Ayarlar sayfası kaydettikten sonra otomatik olarak kapanacak"
+  },
+  "save_settings": {
+    "message": "Ayarları Kaydet"
+  },
+  "support_project": {
+    "message": "Projeyi Destekle"
+  },
+  "pages_translated": {
+    "message": "Çevrilen sayfalar: "
+  },
+  "settings": {
+    "message": "Ayarlar"
+  },
+  "translate_to": {
+    "message": "$LANGUAGE_NAME$ diline çevir",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "İngilizce"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "Hiç dil seçilmedi"
+  },
+  "click_settings_hint": {
+    "message": "Tercih ettiğiniz dilleri eklemek için Ayarlar'a tıklayın"
+  },
+  "extension_disabled": {
+    "message": "Uzantı Devre Dışı"
+  },
+  "extension_disabled_description": {
+    "message": "Bu uzantı çakışmaları önlemek için çeviri hizmet sayfalarında devre dışı bırakılmıştır."
+  },
+  "navigate_hint": {
+    "message": "Çeviri özelliklerini kullanmak için başka bir sayfaya gidin."
+  },
+  "settings_saved": {
+    "message": "Ayarlar başarıyla kaydedildi!"
+  },
+  "save_failed": {
+    "message": "Ayarları kaydetme başarısız. Lütfen tekrar deneyin."
+  },
+  "lang_en": {
+    "message": "İngilizce"
+  },
+  "lang_es": {
+    "message": "İspanyolca"
+  },
+  "lang_fr": {
+    "message": "Fransızca"
+  },
+  "lang_de": {
+    "message": "Almanca"
+  },
+  "lang_it": {
+    "message": "İtalyanca"
+  },
+  "lang_pt": {
+    "message": "Portekizce"
+  },
+  "lang_ru": {
+    "message": "Rusça"
+  },
+  "lang_zh": {
+    "message": "Çince"
+  },
+  "lang_ja": {
+    "message": "Japonca"
+  },
+  "lang_ko": {
+    "message": "Korece"
+  },
+  "lang_ar": {
+    "message": "Arapça"
+  },
+  "lang_hi": {
+    "message": "Hintçe"
+  },
+  "lang_tr": {
+    "message": "Türkçe"
+  },
+  "lang_pl": {
+    "message": "Lehçe"
+  },
+  "lang_nl": {
+    "message": "Felemenkçe"
+  },
+  "settings_saved_short": {
+    "message": "Kaydedildi"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "Překladač"
+  },
+  "extension_description": {
+    "message": "Překládejte webové stránky do více jazyků pomocí vámi vybraného poskytovatele překladů. Nakonfigurujte až 5 preferovaných jazyků."
+  },
+  "translate_settings": {
+    "message": "Nastavení Překladu"
+  },
+  "select_languages_hint": {
+    "message": "Vyberte až 5 preferovaných jazyků pro rychlý překlad"
+  },
+  "translation_provider": {
+    "message": "Poskytovatel Překladů"
+  },
+  "kagi_description": {
+    "message": "Používá FastGPT od Kagi pro vysoce kvalitní, soukromé překlady bez sledování"
+  },
+  "google_description": {
+    "message": "Rychlé a spolehlivé překlady pomocí překladatelské služby Google"
+  },
+  "selected_languages": {
+    "message": "Vybrané Jazyky"
+  },
+  "no_languages_yet": {
+    "message": "Zatím nebyly vybrány žádné jazyky"
+  },
+  "choose_languages_hint": {
+    "message": "Vyberte ze seznamu níže pro přidání tlačítek překladu"
+  },
+  "available_languages": {
+    "message": "Dostupné Jazyky"
+  },
+  "search_languages": {
+    "message": "Hledat jazyky..."
+  },
+  "preview": {
+    "message": "Náhled"
+  },
+  "preview_description": {
+    "message": "Váš popup zobrazí tato tlačítka překladu:"
+  },
+  "select_languages_preview": {
+    "message": "Vyberte jazyky pro zobrazení náhledu"
+  },
+  "report_issue": {
+    "message": "Nahlásit nápad nebo problém"
+  },
+  "settings_close_hint": {
+    "message": "Stránka nastavení se automaticky zavře po uložení"
+  },
+  "save_settings": {
+    "message": "Uložit Nastavení"
+  },
+  "support_project": {
+    "message": "Podpořit Projekt"
+  },
+  "pages_translated": {
+    "message": "Přeložené stránky: "
+  },
+  "settings": {
+    "message": "Nastavení"
+  },
+  "translate_to": {
+    "message": "Přeložit do $LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "angličtina"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "Nebyly vybrány žádné jazyky"
+  },
+  "click_settings_hint": {
+    "message": "Klikněte na Nastavení pro přidání vašich preferovaných jazyků"
+  },
+  "extension_disabled": {
+    "message": "Rozšíření Zakázáno"
+  },
+  "extension_disabled_description": {
+    "message": "Toto rozšíření je zakázáno na stránkách překladatelských služeb pro zabránění konfliktům."
+  },
+  "navigate_hint": {
+    "message": "Přejděte na jinou stránku pro použití funkcí překladu."
+  },
+  "settings_saved": {
+    "message": "Nastavení úspěšně uložena!"
+  },
+  "save_failed": {
+    "message": "Uložení nastavení selhalo. Zkuste to prosím znovu."
+  },
+  "lang_en": {
+    "message": "Angličtina"
+  },
+  "lang_es": {
+    "message": "Španělština"
+  },
+  "lang_fr": {
+    "message": "Francouzština"
+  },
+  "lang_de": {
+    "message": "Němčina"
+  },
+  "lang_it": {
+    "message": "Italština"
+  },
+  "lang_pt": {
+    "message": "Portugalština"
+  },
+  "lang_ru": {
+    "message": "Ruština"
+  },
+  "lang_zh": {
+    "message": "Čínština"
+  },
+  "lang_ja": {
+    "message": "Japonština"
+  },
+  "lang_ko": {
+    "message": "Korejština"
+  },
+  "lang_ar": {
+    "message": "Arabština"
+  },
+  "lang_hi": {
+    "message": "Hindština"
+  },
+  "lang_tr": {
+    "message": "Turečtina"
+  },
+  "lang_pl": {
+    "message": "Polština"
+  },
+  "lang_nl": {
+    "message": "Nizozemština"
+  },
+  "settings_saved_short": {
+    "message": "Uloženo"
+  }
+}

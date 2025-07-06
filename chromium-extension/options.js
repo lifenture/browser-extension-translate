@@ -12,8 +12,15 @@ class LanguageSelector {
     }
 
     async init() {
+        // Initialize i18n first
+        await window.i18n.init();
+        
         this.bindEvents();
         await this.loadSavedSettings();
+        
+        // Translate the page
+        window.i18n.translatePage();
+        
         this.renderLanguageGrid();
         this.updateUI();
     }
@@ -53,7 +60,7 @@ class LanguageSelector {
 
     async loadSavedSettings() {
         try {
-            const { selectedLanguages, provider } = await browser.storage.sync.get(['selectedLanguages', 'provider']);
+            const { selectedLanguages, provider } = await chrome.storage.sync.get(['selectedLanguages', 'provider']);
             
             // Load selected languages
             if (selectedLanguages && Array.isArray(selectedLanguages)) {
@@ -81,31 +88,31 @@ class LanguageSelector {
 
     async saveSettings() {
         try {
-            await browser.storage.sync.set({
+            await chrome.storage.sync.set({
                 selectedLanguages: this.selectedLanguages,
                 provider: this.provider
             });
             
-            this.showNotification('Settings saved successfully!', 'success');
+            this.showNotification(window.i18n.getMessage('settings_saved'), 'success');
             
             // Disable save button and show confirmation
             const saveBtn = document.getElementById('save-settings');
             saveBtn.disabled = true;
-            saveBtn.textContent = '✅ Saved';
+            saveBtn.textContent = '✅ ' + window.i18n.getMessage('settings_saved_short');
             
             // Close the settings page after a short delay and return to original tab
             setTimeout(async () => {
                 try {
                     // Get the original tab ID that was stored when opening settings
-                    const { originalTabId } = await browser.storage.local.get(['originalTabId']);
+                    const { originalTabId } = await chrome.storage.local.get(['originalTabId']);
                     
                     if (typeof window !== 'undefined' && window.close) {
                         window.close();
                     } else {
                         // Fallback: close the current settings tab
-                        const [currentTab] = await browser.tabs.query({ active: true, currentWindow: true });
+                        const [currentTab] = await chrome.tabs.query({ active: true, currentWindow: true });
                         if (currentTab && currentTab.id) {
-                            await browser.tabs.remove(currentTab.id);
+                            await chrome.tabs.remove(currentTab.id);
                         }
                     }
                     
@@ -113,12 +120,12 @@ class LanguageSelector {
                     if (originalTabId) {
                         try {
                             // Check if the original tab still exists
-                            const originalTab = await browser.tabs.get(originalTabId);
+                            const originalTab = await chrome.tabs.get(originalTabId);
                             if (originalTab) {
                                 // Switch to the original tab
-                                await browser.tabs.update(originalTabId, { active: true });
+                                await chrome.tabs.update(originalTabId, { active: true });
                                 // Focus the window containing the tab
-                                await browser.windows.update(originalTab.windowId, { focused: true });
+                                await chrome.windows.update(originalTab.windowId, { focused: true });
                             }
                         } catch (tabError) {
                             // Original tab no longer exists, that's okay
@@ -126,20 +133,20 @@ class LanguageSelector {
                         }
                         
                         // Clean up the stored tab ID
-                        await browser.storage.local.remove(['originalTabId']);
+                        await chrome.storage.local.remove(['originalTabId']);
                     }
                     
                 } catch (error) {
                     console.error('Failed to return to original tab:', error);
                     // Reset button state if there's an error
                     saveBtn.disabled = false;
-                    saveBtn.innerHTML = '💾 Save Settings';
+            saveBtn.innerHTML = '💾 ' + window.i18n.getMessage('save_settings');
                 }
             }, 1500); // Close after 1.5 seconds to allow user to see confirmation
             
         } catch (error) {
             console.error('Failed to save settings:', error);
-            this.showNotification('Failed to save settings', 'error');
+            this.showNotification(window.i18n.getMessage('save_failed'), 'error');
         }
     }
 
@@ -215,10 +222,13 @@ class LanguageSelector {
         const container = document.getElementById('selected-languages');
         
         if (this.selectedLanguages.length === 0) {
+            const noLanguagesText = window.i18n.getMessage('no_languages_yet');
+            const hintText = window.i18n.getMessage('choose_languages_hint');
+            
             container.innerHTML = `
                 <div class="empty-state">
-                    <p>No languages selected yet</p>
-                    <p class="hint">Choose from the list below to add translation buttons</p>
+                    <p>${noLanguagesText}</p>
+                    <p class="hint">${hintText}</p>
                 </div>
             `;
             return;
@@ -263,7 +273,8 @@ class LanguageSelector {
         const preview = document.getElementById('popup-preview');
         
         if (this.selectedLanguages.length === 0) {
-            preview.innerHTML = '<div class="preview-empty">Select languages to see preview</div>';
+            const previewEmptyText = window.i18n.getMessage('select_languages_preview');
+            preview.innerHTML = `<div class="preview-empty">${previewEmptyText}</div>`;
             return;
         }
 
@@ -275,7 +286,8 @@ class LanguageSelector {
             
             const btn = document.createElement('div');
             btn.className = 'preview-btn';
-            btn.textContent = `Translate to ${language.name}`;
+            const translateText = window.i18n.getMessage('translate_to', [language.name]);
+            btn.textContent = translateText;
             preview.appendChild(btn);
         });
     }

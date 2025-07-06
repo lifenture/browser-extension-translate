@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "अनुवादक"
+  },
+  "extension_description": {
+    "message": "अपने पसंदीदा अनुवाद प्रदाता का उपयोग करके वेब पेजों को कई भाषाओं में अनुवादित करें। 5 पसंदीदा भाषाओं तक कॉन्फ़िगर करें।"
+  },
+  "translate_settings": {
+    "message": "अनुवाद सेटिंग्स"
+  },
+  "select_languages_hint": {
+    "message": "त्वरित अनुवाद के लिए 5 पसंदीदा भाषाओं तक चुनें"
+  },
+  "translation_provider": {
+    "message": "अनुवाद प्रदाता"
+  },
+  "kagi_description": {
+    "message": "बिना ट्रैकिंग के उच्च गुणवत्ता, निजी अनुवाद के लिए Kagi का FastGPT उपयोग करता है"
+  },
+  "google_description": {
+    "message": "Google की अनुवाद सेवा का उपयोग करके तेज़ और विश्वसनीय अनुवाद"
+  },
+  "selected_languages": {
+    "message": "चयनित भाषाएं"
+  },
+  "no_languages_yet": {
+    "message": "अभी तक कोई भाषा नहीं चुनी गई"
+  },
+  "choose_languages_hint": {
+    "message": "अनुवाद बटन जोड़ने के लिए नीचे की सूची से चुनें"
+  },
+  "available_languages": {
+    "message": "उपलब्ध भाषाएं"
+  },
+  "search_languages": {
+    "message": "भाषाएं खोजें..."
+  },
+  "preview": {
+    "message": "पूर्वावलोकन"
+  },
+  "preview_description": {
+    "message": "आपका पॉपअप ये अनुवाद बटन दिखाएगा:"
+  },
+  "select_languages_preview": {
+    "message": "पूर्वावलोकन देखने के लिए भाषाएं चुनें"
+  },
+  "report_issue": {
+    "message": "कोई विचार या समस्या रिपोर्ट करें"
+  },
+  "settings_close_hint": {
+    "message": "सेटिंग्स पेज सेव करने के बाद अपने आप बंद हो जाएगा"
+  },
+  "save_settings": {
+    "message": "सेटिंग्स सेव करें"
+  },
+  "support_project": {
+    "message": "प्रोजेक्ट का समर्थन करें"
+  },
+  "pages_translated": {
+    "message": "अनुवादित पेज: "
+  },
+  "settings": {
+    "message": "सेटिंग्स"
+  },
+  "translate_to": {
+    "message": "$LANGUAGE_NAME$ में अनुवाद करें",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "अंग्रेजी"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "कोई भाषा चयनित नहीं"
+  },
+  "click_settings_hint": {
+    "message": "अपनी पसंदीदा भाषाएं जोड़ने के लिए सेटिंग्स पर क्लिक करें"
+  },
+  "extension_disabled": {
+    "message": "एक्सटेंशन अक्षम"
+  },
+  "extension_disabled_description": {
+    "message": "संघर्ष को रोकने के लिए यह एक्सटेंशन अनुवाद सेवा पेजों पर अक्षम है।"
+  },
+  "navigate_hint": {
+    "message": "अनुवाद सुविधाओं का उपयोग करने के लिए किसी अन्य पेज पर जाएं।"
+  },
+  "settings_saved": {
+    "message": "सेटिंग्स सफलतापूर्वक सेव हो गईं!"
+  },
+  "save_failed": {
+    "message": "सेटिंग्स सेव करने में विफल। कृपया पुनः प्रयास करें।"
+  },
+  "lang_en": {
+    "message": "अंग्रेज़ी"
+  },
+  "lang_es": {
+    "message": "स्पेनी"
+  },
+  "lang_fr": {
+    "message": "फ़्रेंच"
+  },
+  "lang_de": {
+    "message": "जर्मन"
+  },
+  "lang_it": {
+    "message": "इतालवी"
+  },
+  "lang_pt": {
+    "message": "पुर्तगाली"
+  },
+  "lang_ru": {
+    "message": "रूसी"
+  },
+  "lang_zh": {
+    "message": "चीनी"
+  },
+  "lang_ja": {
+    "message": "जापानी"
+  },
+  "lang_ko": {
+    "message": "कोरियाई"
+  },
+  "lang_ar": {
+    "message": "अरबी"
+  },
+  "lang_hi": {
+    "message": "हिन्दी"
+  },
+  "lang_tr": {
+    "message": "तुर्की"
+  },
+  "lang_pl": {
+    "message": "पोलिश"
+  },
+  "lang_nl": {
+    "message": "डच"
+  },
+  "settings_saved_short": {
+    "message": "सेव हो गया"
+  }
+}

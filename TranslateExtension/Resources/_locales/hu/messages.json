@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "Fordító"
+  },
+  "extension_description": {
+    "message": "Fordítsa le a weboldalakat több nyelvre a választott fordítási szolgáltatóval. Állítson be legfeljebb 5 preferált nyelvet."
+  },
+  "translate_settings": {
+    "message": "Fordítási Beállítások"
+  },
+  "select_languages_hint": {
+    "message": "Válasszon legfeljebb 5 preferált nyelvet a gyors fordításhoz"
+  },
+  "translation_provider": {
+    "message": "Fordítási Szolgáltató"
+  },
+  "kagi_description": {
+    "message": "A Kagi FastGPT-jét használja magas minőségű, privát fordításokhoz követés nélkül"
+  },
+  "google_description": {
+    "message": "Gyors és megbízható fordítások a Google fordítási szolgáltatásával"
+  },
+  "selected_languages": {
+    "message": "Kiválasztott Nyelvek"
+  },
+  "no_languages_yet": {
+    "message": "Még nincsenek kiválasztott nyelvek"
+  },
+  "choose_languages_hint": {
+    "message": "Válasszon az alábbi listából fordítási gombok hozzáadásához"
+  },
+  "available_languages": {
+    "message": "Elérhető Nyelvek"
+  },
+  "search_languages": {
+    "message": "Nyelvek keresése..."
+  },
+  "preview": {
+    "message": "Előnézet"
+  },
+  "preview_description": {
+    "message": "A felugró ablak ezeket a fordítási gombokat fogja mutatni:"
+  },
+  "select_languages_preview": {
+    "message": "Válasszon nyelveket az előnézet megtekintéséhez"
+  },
+  "report_issue": {
+    "message": "Ötlet vagy probléma bejelentése"
+  },
+  "settings_close_hint": {
+    "message": "A beállítások oldal automatikusan bezárul mentés után"
+  },
+  "save_settings": {
+    "message": "Beállítások Mentése"
+  },
+  "support_project": {
+    "message": "Projekt Támogatása"
+  },
+  "pages_translated": {
+    "message": "Lefordított oldalak: "
+  },
+  "settings": {
+    "message": "Beállítások"
+  },
+  "translate_to": {
+    "message": "Fordítás $LANGUAGE_NAME$ nyelvre",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "angol"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "Nincsenek kiválasztott nyelvek"
+  },
+  "click_settings_hint": {
+    "message": "Kattintson a Beállításokra a preferált nyelvek hozzáadásához"
+  },
+  "extension_disabled": {
+    "message": "Bővítmény Letiltva"
+  },
+  "extension_disabled_description": {
+    "message": "Ez a bővítmény le van tiltva a fordítási szolgáltatások oldalain az ütközések elkerülése érdekében."
+  },
+  "navigate_hint": {
+    "message": "Navigáljon bármely más oldalra a fordítási funkciók használatához."
+  },
+  "settings_saved": {
+    "message": "Beállítások sikeresen elmentve!"
+  },
+  "save_failed": {
+    "message": "A beállítások mentése sikertelen. Kérjük, próbálja újra."
+  },
+  "lang_en": {
+    "message": "Angol"
+  },
+  "lang_es": {
+    "message": "Spanyol"
+  },
+  "lang_fr": {
+    "message": "Francia"
+  },
+  "lang_de": {
+    "message": "Német"
+  },
+  "lang_it": {
+    "message": "Olasz"
+  },
+  "lang_pt": {
+    "message": "Portugál"
+  },
+  "lang_ru": {
+    "message": "Orosz"
+  },
+  "lang_zh": {
+    "message": "Kínai"
+  },
+  "lang_ja": {
+    "message": "Japán"
+  },
+  "lang_ko": {
+    "message": "Koreai"
+  },
+  "lang_ar": {
+    "message": "Arab"
+  },
+  "lang_hi": {
+    "message": "Hindi"
+  },
+  "lang_tr": {
+    "message": "Török"
+  },
+  "lang_pl": {
+    "message": "Lengyel"
+  },
+  "lang_nl": {
+    "message": "Holland"
+  },
+  "settings_saved_short": {
+    "message": "Mentve"
+  }
+}

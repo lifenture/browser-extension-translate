@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "Преводач"
+  },
+  "extension_description": {
+    "message": "Превеждайте уеб страници на множество езици, използвайки избрания от вас доставчик на преводи. Конфигурирайте до 5 предпочитани езика."
+  },
+  "translate_settings": {
+    "message": "Настройки за Превод"
+  },
+  "select_languages_hint": {
+    "message": "Изберете до 5 предпочитани езика за бърз превод"
+  },
+  "translation_provider": {
+    "message": "Доставчик на Преводи"
+  },
+  "kagi_description": {
+    "message": "Използва FastGPT на Kagi за висококачествени, частни преводи без проследяване"
+  },
+  "google_description": {
+    "message": "Бързи и надеждни преводи, използвайки услугата за превод на Google"
+  },
+  "selected_languages": {
+    "message": "Избрани Езици"
+  },
+  "no_languages_yet": {
+    "message": "Все още няма избрани езици"
+  },
+  "choose_languages_hint": {
+    "message": "Изберете от списъка по-долу, за да добавите бутони за превод"
+  },
+  "available_languages": {
+    "message": "Налични Езици"
+  },
+  "search_languages": {
+    "message": "Търсене на езици..."
+  },
+  "preview": {
+    "message": "Преглед"
+  },
+  "preview_description": {
+    "message": "Вашият изскачащ прозорец ще покаже тези бутони за превод:"
+  },
+  "select_languages_preview": {
+    "message": "Изберете езици, за да видите прегледа"
+  },
+  "report_issue": {
+    "message": "Съобщете идея или проблем"
+  },
+  "settings_close_hint": {
+    "message": "Страницата с настройки ще се затвори автоматично след запазване"
+  },
+  "save_settings": {
+    "message": "Запази Настройки"
+  },
+  "support_project": {
+    "message": "Подкрепи Проекта"
+  },
+  "pages_translated": {
+    "message": "Преведени страници: "
+  },
+  "settings": {
+    "message": "Настройки"
+  },
+  "translate_to": {
+    "message": "Преведи на $LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "английски"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "Няма избрани езици"
+  },
+  "click_settings_hint": {
+    "message": "Кликнете върху Настройки, за да добавите предпочитаните си езици"
+  },
+  "extension_disabled": {
+    "message": "Разширението е Деактивирано"
+  },
+  "extension_disabled_description": {
+    "message": "Това разширение е деактивирано на страници с услуги за превод, за да се предотвратят конфликти."
+  },
+  "navigate_hint": {
+    "message": "Отидете на друга страница, за да използвате функциите за превод."
+  },
+  "settings_saved": {
+    "message": "Настройките са запазени успешно!"
+  },
+  "save_failed": {
+    "message": "Запазването на настройките се провали. Моля, опитайте отново."
+  },
+  "lang_en": {
+    "message": "Английски"
+  },
+  "lang_es": {
+    "message": "Испански"
+  },
+  "lang_fr": {
+    "message": "Френски"
+  },
+  "lang_de": {
+    "message": "Немски"
+  },
+  "lang_it": {
+    "message": "Италиански"
+  },
+  "lang_pt": {
+    "message": "Португалски"
+  },
+  "lang_ru": {
+    "message": "Руски"
+  },
+  "lang_zh": {
+    "message": "Китайски"
+  },
+  "lang_ja": {
+    "message": "Японски"
+  },
+  "lang_ko": {
+    "message": "Корейски"
+  },
+  "lang_ar": {
+    "message": "Арабски"
+  },
+  "lang_hi": {
+    "message": "Хинди"
+  },
+  "lang_tr": {
+    "message": "Турски"
+  },
+  "lang_pl": {
+    "message": "Полски"
+  },
+  "lang_nl": {
+    "message": "Холандски"
+  },
+  "settings_saved_short": {
+    "message": "Запазено"
+  }
+}

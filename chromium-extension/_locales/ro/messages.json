@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "Translator"
+  },
+  "extension_description": {
+    "message": "Traduceți paginile web în mai multe limbi folosind furnizorul de traducere preferat. Configurați până la 5 limbi preferate."
+  },
+  "translate_settings": {
+    "message": "Setări Traducere"
+  },
+  "select_languages_hint": {
+    "message": "Selectați până la 5 limbi preferate pentru traducere rapidă"
+  },
+  "translation_provider": {
+    "message": "Furnizor Traducere"
+  },
+  "kagi_description": {
+    "message": "Folosește FastGPT de la Kagi pentru traduceri de înaltă calitate, private, fără urmărire"
+  },
+  "google_description": {
+    "message": "Traduceri rapide și fiabile folosind serviciul de traducere Google"
+  },
+  "selected_languages": {
+    "message": "Limbi Selectate"
+  },
+  "no_languages_yet": {
+    "message": "Încă nu au fost selectate limbi"
+  },
+  "choose_languages_hint": {
+    "message": "Alegeți din lista de mai jos pentru a adăuga butoane de traducere"
+  },
+  "available_languages": {
+    "message": "Limbi Disponibile"
+  },
+  "search_languages": {
+    "message": "Căutați limbi..."
+  },
+  "preview": {
+    "message": "Previzualizare"
+  },
+  "preview_description": {
+    "message": "Popup-ul dvs. va afișa aceste butoane de traducere:"
+  },
+  "select_languages_preview": {
+    "message": "Selectați limbi pentru a vedea previzualizarea"
+  },
+  "report_issue": {
+    "message": "Raportați o idee sau problemă"
+  },
+  "settings_close_hint": {
+    "message": "Pagina de setări se va închide automat după salvare"
+  },
+  "save_settings": {
+    "message": "Salvați Setările"
+  },
+  "support_project": {
+    "message": "Sprijiniți Proiectul"
+  },
+  "pages_translated": {
+    "message": "Pagini traduse: "
+  },
+  "settings": {
+    "message": "Setări"
+  },
+  "translate_to": {
+    "message": "Traduceți în $LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "engleză"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "Nu sunt selectate limbi"
+  },
+  "click_settings_hint": {
+    "message": "Faceți clic pe Setări pentru a adăuga limbile preferate"
+  },
+  "extension_disabled": {
+    "message": "Extensie Dezactivată"
+  },
+  "extension_disabled_description": {
+    "message": "Această extensie este dezactivată pe paginile serviciilor de traducere pentru a preveni conflictele."
+  },
+  "navigate_hint": {
+    "message": "Navigați la orice altă pagină pentru a folosi funcțiile de traducere."
+  },
+  "settings_saved": {
+    "message": "Setări salvate cu succes!"
+  },
+  "save_failed": {
+    "message": "Salvarea setărilor a eșuat. Vă rugăm să încercați din nou."
+  },
+  "lang_en": {
+    "message": "Engleză"
+  },
+  "lang_es": {
+    "message": "Spaniolă"
+  },
+  "lang_fr": {
+    "message": "Franceză"
+  },
+  "lang_de": {
+    "message": "Germană"
+  },
+  "lang_it": {
+    "message": "Italiană"
+  },
+  "lang_pt": {
+    "message": "Portugheză"
+  },
+  "lang_ru": {
+    "message": "Rusă"
+  },
+  "lang_zh": {
+    "message": "Chineză"
+  },
+  "lang_ja": {
+    "message": "Japoneză"
+  },
+  "lang_ko": {
+    "message": "Coreeană"
+  },
+  "lang_ar": {
+    "message": "Arabă"
+  },
+  "lang_hi": {
+    "message": "Hindi"
+  },
+  "lang_tr": {
+    "message": "Turcă"
+  },
+  "lang_pl": {
+    "message": "Poloneză"
+  },
+  "lang_nl": {
+    "message": "Olandeză"
+  },
+  "settings_saved_short": {
+    "message": "Salvat"
+  }
+}

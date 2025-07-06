@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "แปลภาษา"
+  },
+  "extension_description": {
+    "message": "แปลหน้าเว็บเป็นหลายภาษาโดยใช้ผู้ให้บริการแปลภาษาที่คุณต้องการ กำหนดค่าภาษาที่ต้องการได้สูงสุด 5 ภาษา"
+  },
+  "translate_settings": {
+    "message": "การตั้งค่าการแปล"
+  },
+  "select_languages_hint": {
+    "message": "เลือกภาษาที่ต้องการสูงสุด 5 ภาษาสำหรับการแปลอย่างรวดเร็ว"
+  },
+  "translation_provider": {
+    "message": "ผู้ให้บริการแปลภาษา"
+  },
+  "kagi_description": {
+    "message": "ใช้ FastGPT ของ Kagi สำหรับการแปลคุณภาพสูงและเป็นส่วนตัวโดยไม่มีการติดตาม"
+  },
+  "google_description": {
+    "message": "การแปลที่รวดเร็วและเชื่อถือได้โดยใช้บริการแปลของ Google"
+  },
+  "selected_languages": {
+    "message": "ภาษาที่เลือก"
+  },
+  "no_languages_yet": {
+    "message": "ยังไม่ได้เลือกภาษาใดๆ"
+  },
+  "choose_languages_hint": {
+    "message": "เลือกจากรายการด้านล่างเพื่อเพิ่มปุ่มแปล"
+  },
+  "available_languages": {
+    "message": "ภาษาที่ใช้ได้"
+  },
+  "search_languages": {
+    "message": "ค้นหาภาษา..."
+  },
+  "preview": {
+    "message": "ดูตัวอย่าง"
+  },
+  "preview_description": {
+    "message": "ป๊อปอัปของคุณจะแสดงปุ่มแปลเหล่านี้:"
+  },
+  "select_languages_preview": {
+    "message": "เลือกภาษาเพื่อดูตัวอย่าง"
+  },
+  "report_issue": {
+    "message": "รายงานความคิดหรือปัญหา"
+  },
+  "settings_close_hint": {
+    "message": "หน้าการตั้งค่าจะปิดโดยอัตโนมัติหลังจากบันทึก"
+  },
+  "save_settings": {
+    "message": "บันทึกการตั้งค่า"
+  },
+  "support_project": {
+    "message": "สนับสนุนโครงการ"
+  },
+  "pages_translated": {
+    "message": "หน้าที่แปลแล้ว: "
+  },
+  "settings": {
+    "message": "การตั้งค่า"
+  },
+  "translate_to": {
+    "message": "แปลเป็น$LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "ภาษาอังกฤษ"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "ไม่ได้เลือกภาษาใดๆ"
+  },
+  "click_settings_hint": {
+    "message": "คลิกการตั้งค่าเพื่อเพิ่มภาษาที่คุณต้องการ"
+  },
+  "extension_disabled": {
+    "message": "ส่วนขยายถูกปิดใช้งาน"
+  },
+  "extension_disabled_description": {
+    "message": "ส่วนขยายนี้ถูกปิดใช้งานในหน้าบริการแปลเพื่อป้องกันความขัดแย้ง"
+  },
+  "navigate_hint": {
+    "message": "ไปยังหน้าอื่นๆ เพื่อใช้คุณสมบัติการแปล"
+  },
+  "settings_saved": {
+    "message": "บันทึกการตั้งค่าเรียบร้อยแล้ว!"
+  },
+  "save_failed": {
+    "message": "บันทึกการตั้งค่าล้มเหลว โปรดลองอีกครั้ง"
+  },
+  "lang_en": {
+    "message": "อังกฤษ"
+  },
+  "lang_es": {
+    "message": "สเปน"
+  },
+  "lang_fr": {
+    "message": "ฝรั่งเศส"
+  },
+  "lang_de": {
+    "message": "เยอรมัน"
+  },
+  "lang_it": {
+    "message": "อิตาลี"
+  },
+  "lang_pt": {
+    "message": "โปรตุเกส"
+  },
+  "lang_ru": {
+    "message": "รัสเซีย"
+  },
+  "lang_zh": {
+    "message": "จีน"
+  },
+  "lang_ja": {
+    "message": "ญี่ปุ่น"
+  },
+  "lang_ko": {
+    "message": "เกาหลี"
+  },
+  "lang_ar": {
+    "message": "อาหรับ"
+  },
+  "lang_hi": {
+    "message": "ฮินดี"
+  },
+  "lang_tr": {
+    "message": "ตุรกี"
+  },
+  "lang_pl": {
+    "message": "โปแลนด์"
+  },
+  "lang_nl": {
+    "message": "ดัตช์"
+  },
+  "settings_saved_short": {
+    "message": "บันทึกแล้ว"
+  }
+}

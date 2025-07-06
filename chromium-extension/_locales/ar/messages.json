@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "مترجم"
+  },
+  "extension_description": {
+    "message": "ترجم صفحات الويب إلى لغات متعددة باستخدام مزود الترجمة المفضل لديك. قم بتكوين ما يصل إلى 5 لغات مفضلة."
+  },
+  "translate_settings": {
+    "message": "إعدادات الترجمة"
+  },
+  "select_languages_hint": {
+    "message": "اختر ما يصل إلى 5 لغات مفضلة للترجمة السريعة"
+  },
+  "translation_provider": {
+    "message": "مزود الترجمة"
+  },
+  "kagi_description": {
+    "message": "يستخدم FastGPT من Kagi للترجمات عالية الجودة والخاصة بدون تتبع"
+  },
+  "google_description": {
+    "message": "ترجمات سريعة وموثوقة باستخدام خدمة الترجمة من Google"
+  },
+  "selected_languages": {
+    "message": "اللغات المختارة"
+  },
+  "no_languages_yet": {
+    "message": "لم يتم اختيار أي لغات بعد"
+  },
+  "choose_languages_hint": {
+    "message": "اختر من القائمة أدناه لإضافة أزرار الترجمة"
+  },
+  "available_languages": {
+    "message": "اللغات المتاحة"
+  },
+  "search_languages": {
+    "message": "البحث عن اللغات..."
+  },
+  "preview": {
+    "message": "معاينة"
+  },
+  "preview_description": {
+    "message": "ستعرض النافذة المنبثقة أزرار الترجمة هذه:"
+  },
+  "select_languages_preview": {
+    "message": "اختر اللغات لرؤية المعاينة"
+  },
+  "report_issue": {
+    "message": "الإبلاغ عن فكرة أو مشكلة"
+  },
+  "settings_close_hint": {
+    "message": "ستُغلق صفحة الإعدادات تلقائياً بعد الحفظ"
+  },
+  "save_settings": {
+    "message": "حفظ الإعدادات"
+  },
+  "support_project": {
+    "message": "دعم المشروع"
+  },
+  "pages_translated": {
+    "message": "الصفحات المترجمة: "
+  },
+  "settings": {
+    "message": "الإعدادات"
+  },
+  "translate_to": {
+    "message": "ترجم إلى $LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "الإنجليزية"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "لم يتم اختيار أي لغات"
+  },
+  "click_settings_hint": {
+    "message": "انقر على الإعدادات لإضافة لغاتك المفضلة"
+  },
+  "extension_disabled": {
+    "message": "الإضافة معطلة"
+  },
+  "extension_disabled_description": {
+    "message": "هذه الإضافة معطلة على صفحات خدمات الترجمة لمنع التعارضات."
+  },
+  "navigate_hint": {
+    "message": "انتقل إلى أي صفحة أخرى لاستخدام ميزات الترجمة."
+  },
+  "settings_saved": {
+    "message": "تم حفظ الإعدادات بنجاح!"
+  },
+  "save_failed": {
+    "message": "فشل في حفظ الإعدادات. يرجى المحاولة مرة أخرى."
+  },
+  "lang_en": {
+    "message": "الإنجليزية"
+  },
+  "lang_es": {
+    "message": "الإسبانية"
+  },
+  "lang_fr": {
+    "message": "الفرنسية"
+  },
+  "lang_de": {
+    "message": "الألمانية"
+  },
+  "lang_it": {
+    "message": "الإيطالية"
+  },
+  "lang_pt": {
+    "message": "البرتغالية"
+  },
+  "lang_ru": {
+    "message": "الروسية"
+  },
+  "lang_zh": {
+    "message": "الصينية"
+  },
+  "lang_ja": {
+    "message": "اليابانية"
+  },
+  "lang_ko": {
+    "message": "الكورية"
+  },
+  "lang_ar": {
+    "message": "العربية"
+  },
+  "lang_hi": {
+    "message": "الهندية"
+  },
+  "lang_tr": {
+    "message": "التركية"
+  },
+  "lang_pl": {
+    "message": "البولندية"
+  },
+  "lang_nl": {
+    "message": "الهولندية"
+  },
+  "settings_saved_short": {
+    "message": "محفوظ"
+  }
+}

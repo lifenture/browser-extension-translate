@@ -7,8 +7,14 @@ class TranslatePopup {
     }
 
     async init() {
+        // Initialize i18n first
+        await window.i18n.init();
+        
         await this.loadLanguagesData();
         await this.loadUserSettings();
+        
+        // Translate the page
+        window.i18n.translatePage();
         
         // Check if we're on translate domain and show appropriate message
         if (await this.isOnTranslateDomain()) {
@@ -31,7 +37,7 @@ class TranslatePopup {
 
     async loadUserSettings() {
         try {
-            const result = await browser.storage.sync.get(['selectedLanguages', 'provider', 'translationCount']);
+            const result = await chrome.storage.sync.get(['selectedLanguages', 'provider', 'translationCount']);
             this.selectedLanguages = result.selectedLanguages || this.defaultLanguages;
             this.provider = result.provider || 'kagi'; // Default to 'kagi'
             this.translationCount = result.translationCount || 0;
@@ -62,25 +68,28 @@ class TranslatePopup {
         container.innerHTML = '';
 
         if (this.selectedLanguages.length === 0) {
-            this.renderEmptyState(container);
+            await this.renderEmptyState(container);
             return;
         }
 
-        this.selectedLanguages.forEach(langCode => {
+        for (const langCode of this.selectedLanguages) {
             const language = window.LANGUAGES?.find(l => l.code === langCode);
             if (language) {
                 const button = this.createTranslateButton(language);
                 container.appendChild(button);
             }
-        });
+        }
     }
 
     createTranslateButton(language) {
         const button = document.createElement('button');
         button.className = 'translate-btn';
+        
+        const localizedLanguageName = window.i18n.getLocalizedLanguageName(language.code);
+        const translateText = window.i18n.getMessage('translate_to', [localizedLanguageName]);
         button.innerHTML = `
             <span class="flag">${this.getLanguageFlag(language.code)}</span>
-            <span class="text">Translate to ${language.name}</span>
+            <span class="text">${translateText}</span>
         `;
         
         button.addEventListener('click', async () => {
@@ -90,11 +99,14 @@ class TranslatePopup {
         return button;
     }
 
-    renderEmptyState(container) {
+    async renderEmptyState(container) {
+        const noLanguagesText = window.i18n.getMessage('no_languages_selected');
+        const hintText = window.i18n.getMessage('click_settings_hint');
+        
         container.innerHTML = `
             <div class="empty-state">
-                <p>No languages selected</p>
-                <p class="hint">Click settings to choose your preferred languages</p>
+                <p>${noLanguagesText}</p>
+                <p class="hint">${hintText}</p>
             </div>
         `;
     }
@@ -127,14 +139,14 @@ class TranslatePopup {
 
     async translateToLanguage(languageCode) {
         try {
-            const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
+            const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
             if (!tab || !tab.url) {
                 console.error('No active tab found');
                 return;
             }
 
             const target = this.buildTargetUrl(tab.url, languageCode);
-            await browser.tabs.update(tab.id, { url: target });
+            await chrome.tabs.update(tab.id, { url: target });
             
             // Increment translation counter
             await this.incrementTranslationCounter();
@@ -148,23 +160,23 @@ class TranslatePopup {
     async openSettings() {
         try {
             // Get the current active tab before opening settings
-            const [currentTab] = await browser.tabs.query({ active: true, currentWindow: true });
+            const [currentTab] = await chrome.tabs.query({ active: true, currentWindow: true });
             
             // Store the original tab ID for returning later
             if (currentTab && currentTab.id) {
-                await browser.storage.local.set({ originalTabId: currentTab.id });
+                await chrome.storage.local.set({ originalTabId: currentTab.id });
             }
             
             // Create the settings tab
-            browser.tabs.create({
-                url: browser.runtime.getURL('options.html')
+            chrome.tabs.create({
+                url: chrome.runtime.getURL('options.html')
             });
             window.close();
         } catch (error) {
             console.error('Failed to open settings:', error);
             // Fallback: just open settings without storing tab ID
-            browser.tabs.create({
-                url: browser.runtime.getURL('options.html')
+            chrome.tabs.create({
+                url: chrome.runtime.getURL('options.html')
             });
             window.close();
         }
@@ -173,7 +185,7 @@ class TranslatePopup {
 
     async isOnTranslateDomain() {
         try {
-            const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
+            const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
             if (!tab || !tab.url) {
                 return false;
             }
@@ -232,13 +244,17 @@ class TranslatePopup {
             return;
         }
 
+        const disabledTitle = window.i18n.getMessage('extension_disabled');
+        const disabledDescription = window.i18n.getMessage('extension_disabled_description');
+        const navigateHint = window.i18n.getMessage('navigate_hint');
+
         container.innerHTML = `
             <div class="kagi-domain-message">
                 <div class="message-icon">⚠️</div>
                 <div class="message-content">
-                    <h3>Extension Disabled on translation site</h3>
-                    <p>This extension cannot be used on translation service pages to prevent conflicts.</p>
-                    <p class="hint">Navigate to another page to use the translation feature.</p>
+                    <h3>${disabledTitle}</h3>
+                    <p>${disabledDescription}</p>
+                    <p class="hint">${navigateHint}</p>
                 </div>
             </div>
         `;
@@ -254,7 +270,7 @@ class TranslatePopup {
     async incrementTranslationCounter() {
         try {
             this.translationCount = (this.translationCount || 0) + 1;
-            await browser.storage.sync.set({ translationCount: this.translationCount });
+            await chrome.storage.sync.set({ translationCount: this.translationCount });
             this.updateTranslationCounter();
         } catch (error) {
             console.error('Failed to update translation counter:', error);

@@ -1,0 +1,176 @@
+{
+  "extension_name": {
+    "message": "Extension de Traduction",
+    "description": "The display name for the extension."
+  },
+  "extension_description": {
+    "message": "Traduit les pages web dans plusieurs langues en utilisant votre fournisseur de traduction préféré. Configurez jusqu'à 5 langues préférées.",
+    "description": "Description of what the extension does."
+  },
+  "translate": {
+    "message": "Traduire",
+    "description": "Main translate button text"
+  },
+  "translate_to": {
+    "message": "Traduire en $LANGUAGE$",
+    "description": "Translate to specific language button text",
+    "placeholders": {
+      "language": {
+        "content": "$1",
+        "example": "French"
+      }
+    }
+  },
+  "settings": {
+    "message": "Paramètres",
+    "description": "Settings button text"
+  },
+  "support_project": {
+    "message": "Soutenir le Projet",
+    "description": "Support project button text"
+  },
+  "pages_translated": {
+    "message": "Pages traduites :",
+    "description": "Translation counter text"
+  },
+  "no_languages_selected": {
+    "message": "Aucune langue sélectionnée",
+    "description": "Empty state message when no languages selected"
+  },
+  "click_settings_hint": {
+    "message": "Cliquez sur paramètres pour choisir vos langues préférées",
+    "description": "Hint text for empty state"
+  },
+  "translate_settings": {
+    "message": "Paramètres de Traduction",
+    "description": "Settings page title"
+  },
+  "select_languages_hint": {
+    "message": "Sélectionnez jusqu'à 5 langues préférées pour une traduction rapide",
+    "description": "Settings page subtitle"
+  },
+  "translation_provider": {
+    "message": "Fournisseur de Traduction",
+    "description": "Translation provider section title"
+  },
+  "kagi_description": {
+    "message": "Utilisez FastGPT de Kagi pour des traductions privées de haute qualité sans suivi",
+    "description": "Kagi provider description"
+  },
+  "google_description": {
+    "message": "Traductions rapides et fiables utilisant le service de traduction de Google",
+    "description": "Google provider description"
+  },
+  "selected_languages": {
+    "message": "Langues Sélectionnées",
+    "description": "Selected languages section title"
+  },
+  "available_languages": {
+    "message": "Langues Disponibles",
+    "description": "Available languages section title"
+  },
+  "search_languages": {
+    "message": "Rechercher des langues...",
+    "description": "Search placeholder text"
+  },
+  "preview": {
+    "message": "Aperçu",
+    "description": "Preview section title"
+  },
+  "preview_description": {
+    "message": "Votre popup affichera ces boutons de traduction :",
+    "description": "Preview section description"
+  },
+  "select_languages_preview": {
+    "message": "Sélectionnez des langues pour voir l'aperçu",
+    "description": "Empty preview message"
+  },
+  "save_settings": {
+    "message": "Enregistrer les Paramètres",
+    "description": "Save settings button text"
+  },
+  "settings_saved": {
+    "message": "Paramètres sauvegardés avec succès !",
+    "description": "Settings saved notification"
+  },
+  "save_failed": {
+    "message": "Échec de la sauvegarde des paramètres",
+    "description": "Save failed error message"
+  },
+  "extension_disabled": {
+    "message": "Extension désactivée sur le site de traduction",
+    "description": "Extension disabled message title"
+  },
+  "extension_disabled_description": {
+    "message": "Cette extension ne peut pas être utilisée sur les pages de services de traduction pour éviter les conflits.",
+    "description": "Extension disabled message description"
+  },
+  "navigate_hint": {
+    "message": "Naviguez vers une autre page pour utiliser la fonction de traduction.",
+    "description": "Navigate hint for disabled extension"
+  },
+  "report_issue": {
+    "message": "Signaler une idée ou un problème",
+    "description": "Report issue link text"
+  },
+  "settings_close_hint": {
+    "message": "La page de paramètres se fermera automatiquement après la sauvegarde",
+    "description": "Settings page auto-close hint"
+  },
+  "no_languages_yet": {
+    "message": "Aucune langue sélectionnée encore",
+    "description": "No languages selected message"
+  },
+  "choose_languages_hint": {
+    "message": "Choisissez dans la liste ci-dessous pour ajouter des boutons de traduction",
+    "description": "Choose languages hint"
+  },
+  "lang_en": {
+    "message": "Anglais"
+  },
+  "lang_es": {
+    "message": "Espagnol"
+  },
+  "lang_fr": {
+    "message": "Français"
+  },
+  "lang_de": {
+    "message": "Allemand"
+  },
+  "lang_it": {
+    "message": "Italien"
+  },
+  "lang_pt": {
+    "message": "Portugais"
+  },
+  "lang_ru": {
+    "message": "Russe"
+  },
+  "lang_zh": {
+    "message": "Chinois"
+  },
+  "lang_ja": {
+    "message": "Japonais"
+  },
+  "lang_ko": {
+    "message": "Coréen"
+  },
+  "lang_ar": {
+    "message": "Arabe"
+  },
+  "lang_hi": {
+    "message": "Hindi"
+  },
+  "lang_tr": {
+    "message": "Turc"
+  },
+  "lang_pl": {
+    "message": "Polonais"
+  },
+  "lang_nl": {
+    "message": "Néerlandais"
+  },
+  "settings_saved_short": {
+    "message": "Enregistré"
+  }
+}

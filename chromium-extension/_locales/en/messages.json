@@ -1,10 +1,143 @@
 {
-    "extension_name": {
-        "message": "Translate Extension",
-        "description": "The display name for the extension."
-    },
-    "extension_description": {
-        "message": "Translate web pages to multiple languages using your choice of translation provider. Configure up to 5 preferred languages.",
-        "description": "Description of what the extension does."
+  "extension_name": {
+    "message": "Translate"
+  },
+  "extension_description": {
+    "message": "Translate web pages to multiple languages using your choice of translation provider. Configure up to 5 preferred languages."
+  },
+  "translate_settings": {
+    "message": "Translate Settings"
+  },
+  "select_languages_hint": {
+    "message": "Select up to 5 preferred languages for quick translation"
+  },
+  "translation_provider": {
+    "message": "Translation Provider"
+  },
+  "kagi_description": {
+    "message": "Uses Kagi's FastGPT for high-quality, private translations with no tracking"
+  },
+  "google_description": {
+    "message": "Fast and reliable translations using Google's translation service"
+  },
+  "selected_languages": {
+    "message": "Selected Languages"
+  },
+  "no_languages_yet": {
+    "message": "No languages selected yet"
+  },
+  "choose_languages_hint": {
+    "message": "Choose from the list below to add translation buttons"
+  },
+  "available_languages": {
+    "message": "Available Languages"
+  },
+  "search_languages": {
+    "message": "Search languages..."
+  },
+  "preview": {
+    "message": "Preview"
+  },
+  "preview_description": {
+    "message": "Your popup will show these translation buttons:"
+  },
+  "select_languages_preview": {
+    "message": "Select languages to see preview"
+  },
+  "report_issue": {
+    "message": "Report an idea or issue"
+  },
+  "settings_close_hint": {
+    "message": "Settings page will close automatically after saving"
+  },
+  "save_settings": {
+    "message": "Save Settings"
+  },
+  "support_project": {
+    "message": "Support Project"
+  },
+  "pages_translated": {
+    "message": "Pages translated: "
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "translate_to": {
+    "message": "Translate to $LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "Spanish"
+      }
     }
+  },
+  "no_languages_selected": {
+    "message": "No languages selected"
+  },
+  "click_settings_hint": {
+    "message": "Click Settings to add your preferred languages"
+  },
+  "extension_disabled": {
+    "message": "Extension Disabled"
+  },
+  "extension_disabled_description": {
+    "message": "This extension is disabled on translation service pages to prevent conflicts."
+  },
+  "navigate_hint": {
+    "message": "Navigate to any other page to use the translation features."
+  },
+  "settings_saved": {
+    "message": "Settings saved successfully!"
+  },
+  "save_failed": {
+    "message": "Failed to save settings. Please try again."
+  },
+  "lang_en": {
+    "message": "English"
+  },
+  "lang_es": {
+    "message": "Spanish"
+  },
+  "lang_fr": {
+    "message": "French"
+  },
+  "lang_de": {
+    "message": "German"
+  },
+  "lang_it": {
+    "message": "Italian"
+  },
+  "lang_pt": {
+    "message": "Portuguese"
+  },
+  "lang_ru": {
+    "message": "Russian"
+  },
+  "lang_zh": {
+    "message": "Chinese"
+  },
+  "lang_ja": {
+    "message": "Japanese"
+  },
+  "lang_ko": {
+    "message": "Korean"
+  },
+  "lang_ar": {
+    "message": "Arabic"
+  },
+  "lang_hi": {
+    "message": "Hindi"
+  },
+  "lang_tr": {
+    "message": "Turkish"
+  },
+  "lang_pl": {
+    "message": "Polish"
+  },
+  "lang_nl": {
+    "message": "Dutch"
+  },
+  "settings_saved_short": {
+    "message": "Saved"
+  }
 }

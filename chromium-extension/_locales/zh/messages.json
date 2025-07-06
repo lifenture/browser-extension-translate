@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "翻译"
+  },
+  "extension_description": {
+    "message": "使用您选择的翻译服务将网页翻译成多种语言。配置最多5种首选语言。"
+  },
+  "translate_settings": {
+    "message": "翻译设置"
+  },
+  "select_languages_hint": {
+    "message": "选择最多5种首选语言进行快速翻译"
+  },
+  "translation_provider": {
+    "message": "翻译服务"
+  },
+  "kagi_description": {
+    "message": "使用Kagi的FastGPT进行高质量、私密的翻译，无跟踪"
+  },
+  "google_description": {
+    "message": "使用Google翻译服务进行快速可靠的翻译"
+  },
+  "selected_languages": {
+    "message": "已选语言"
+  },
+  "no_languages_yet": {
+    "message": "尚未选择任何语言"
+  },
+  "choose_languages_hint": {
+    "message": "从下面的列表中选择以添加翻译按钮"
+  },
+  "available_languages": {
+    "message": "可用语言"
+  },
+  "search_languages": {
+    "message": "搜索语言..."
+  },
+  "preview": {
+    "message": "预览"
+  },
+  "preview_description": {
+    "message": "您的弹出窗口将显示这些翻译按钮："
+  },
+  "select_languages_preview": {
+    "message": "选择语言以查看预览"
+  },
+  "report_issue": {
+    "message": "报告想法或问题"
+  },
+  "settings_close_hint": {
+    "message": "设置页面将在保存后自动关闭"
+  },
+  "save_settings": {
+    "message": "保存设置"
+  },
+  "support_project": {
+    "message": "支持项目"
+  },
+  "pages_translated": {
+    "message": "已翻译页面："
+  },
+  "settings": {
+    "message": "设置"
+  },
+  "translate_to": {
+    "message": "翻译为$LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "西班牙语"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "未选择语言"
+  },
+  "click_settings_hint": {
+    "message": "点击设置添加您的首选语言"
+  },
+  "extension_disabled": {
+    "message": "扩展已禁用"
+  },
+  "extension_disabled_description": {
+    "message": "此扩展在翻译服务页面上被禁用以防止冲突。"
+  },
+  "navigate_hint": {
+    "message": "导航到任何其他页面以使用翻译功能。"
+  },
+  "settings_saved": {
+    "message": "设置保存成功！"
+  },
+  "save_failed": {
+    "message": "保存设置失败。请重试。"
+  },
+  "lang_en": {
+    "message": "英语"
+  },
+  "lang_es": {
+    "message": "西班牙语"
+  },
+  "lang_fr": {
+    "message": "法语"
+  },
+  "lang_de": {
+    "message": "德语"
+  },
+  "lang_it": {
+    "message": "意大利语"
+  },
+  "lang_pt": {
+    "message": "葡萄牙语"
+  },
+  "lang_ru": {
+    "message": "俄语"
+  },
+  "lang_zh": {
+    "message": "中文"
+  },
+  "lang_ja": {
+    "message": "日语"
+  },
+  "lang_ko": {
+    "message": "韩语"
+  },
+  "lang_ar": {
+    "message": "阿拉伯语"
+  },
+  "lang_hi": {
+    "message": "印地语"
+  },
+  "lang_tr": {
+    "message": "土耳其语"
+  },
+  "lang_pl": {
+    "message": "波兰语"
+  },
+  "lang_nl": {
+    "message": "荷兰语"
+  },
+  "settings_saved_short": {
+    "message": "已保存"
+  }
+}

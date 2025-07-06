@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "Tłumacz"
+  },
+  "extension_description": {
+    "message": "Tłumacz strony internetowe na wiele języków korzystając z wybranego dostawcy tłumaczeń. Skonfiguruj do 5 preferowanych języków."
+  },
+  "translate_settings": {
+    "message": "Ustawienia Tłumacza"
+  },
+  "select_languages_hint": {
+    "message": "Wybierz do 5 preferowanych języków do szybkiego tłumaczenia"
+  },
+  "translation_provider": {
+    "message": "Dostawca Tłumaczeń"
+  },
+  "kagi_description": {
+    "message": "Używa Kagi FastGPT do wysokiej jakości, prywatnych tłumaczeń bez śledzenia"
+  },
+  "google_description": {
+    "message": "Szybkie i niezawodne tłumaczenia korzystając z usługi tłumaczenia Google"
+  },
+  "selected_languages": {
+    "message": "Wybrane Języki"
+  },
+  "no_languages_yet": {
+    "message": "Nie wybrano jeszcze żadnych języków"
+  },
+  "choose_languages_hint": {
+    "message": "Wybierz z listy poniżej, aby dodać przyciski tłumaczenia"
+  },
+  "available_languages": {
+    "message": "Dostępne Języki"
+  },
+  "search_languages": {
+    "message": "Wyszukaj języki..."
+  },
+  "preview": {
+    "message": "Podgląd"
+  },
+  "preview_description": {
+    "message": "Twój popup pokaże te przyciski tłumaczenia:"
+  },
+  "select_languages_preview": {
+    "message": "Wybierz języki, aby zobaczyć podgląd"
+  },
+  "report_issue": {
+    "message": "Zgłoś pomysł lub problem"
+  },
+  "settings_close_hint": {
+    "message": "Strona ustawień zamknie się automatycznie po zapisaniu"
+  },
+  "save_settings": {
+    "message": "Zapisz Ustawienia"
+  },
+  "support_project": {
+    "message": "Wspieraj Projekt"
+  },
+  "pages_translated": {
+    "message": "Przetłumaczonych stron: "
+  },
+  "settings": {
+    "message": "Ustawienia"
+  },
+  "translate_to": {
+    "message": "Tłumacz na $LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "hiszpański"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "Nie wybrano języków"
+  },
+  "click_settings_hint": {
+    "message": "Kliknij Ustawienia, aby dodać preferowane języki"
+  },
+  "extension_disabled": {
+    "message": "Rozszerzenie Wyłączone"
+  },
+  "extension_disabled_description": {
+    "message": "To rozszerzenie jest wyłączone na stronach usług tłumaczeniowych, aby zapobiec konfliktom."
+  },
+  "navigate_hint": {
+    "message": "Przejdź do dowolnej innej strony, aby korzystać z funkcji tłumaczenia."
+  },
+  "settings_saved": {
+    "message": "Ustawienia zapisane pomyślnie!"
+  },
+  "save_failed": {
+    "message": "Nie udało się zapisać ustawień. Spróbuj ponownie."
+  },
+  "lang_en": {
+    "message": "Angielski"
+  },
+  "lang_es": {
+    "message": "Hiszpański"
+  },
+  "lang_fr": {
+    "message": "Francuski"
+  },
+  "lang_de": {
+    "message": "Niemiecki"
+  },
+  "lang_it": {
+    "message": "Włoski"
+  },
+  "lang_pt": {
+    "message": "Portugalski"
+  },
+  "lang_ru": {
+    "message": "Rosyjski"
+  },
+  "lang_zh": {
+    "message": "Chiński"
+  },
+  "lang_ja": {
+    "message": "Japoński"
+  },
+  "lang_ko": {
+    "message": "Koreański"
+  },
+  "lang_ar": {
+    "message": "Arabski"
+  },
+  "lang_hi": {
+    "message": "Hinduski"
+  },
+  "lang_tr": {
+    "message": "Turecki"
+  },
+  "lang_pl": {
+    "message": "Polski"
+  },
+  "lang_nl": {
+    "message": "Holenderski"
+  },
+  "settings_saved_short": {
+    "message": "Zapisano"
+  }
+}

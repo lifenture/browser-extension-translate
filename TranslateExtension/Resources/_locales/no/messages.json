@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "Oversetter"
+  },
+  "extension_description": {
+    "message": "Oversett nettsider til flere språk ved hjelp av din valgte oversettelsesleverandør. Konfigurer opptil 5 foretrukne språk."
+  },
+  "translate_settings": {
+    "message": "Oversettelsesinnstillinger"
+  },
+  "select_languages_hint": {
+    "message": "Velg opptil 5 foretrukne språk for rask oversettelse"
+  },
+  "translation_provider": {
+    "message": "Oversettelsesleverandør"
+  },
+  "kagi_description": {
+    "message": "Bruker Kagis FastGPT for høykvalitets, private oversettelser uten sporing"
+  },
+  "google_description": {
+    "message": "Raske og pålitelige oversettelser ved hjelp av Googles oversettertjeneste"
+  },
+  "selected_languages": {
+    "message": "Valgte Språk"
+  },
+  "no_languages_yet": {
+    "message": "Ingen språk valgt ennå"
+  },
+  "choose_languages_hint": {
+    "message": "Velg fra listen nedenfor for å legge til oversettelsesknapper"
+  },
+  "available_languages": {
+    "message": "Tilgjengelige Språk"
+  },
+  "search_languages": {
+    "message": "Søk språk..."
+  },
+  "preview": {
+    "message": "Forhåndsvisning"
+  },
+  "preview_description": {
+    "message": "Din popup vil vise disse oversettelsesknappene:"
+  },
+  "select_languages_preview": {
+    "message": "Velg språk for å se forhåndsvisning"
+  },
+  "report_issue": {
+    "message": "Rapporter en idé eller problem"
+  },
+  "settings_close_hint": {
+    "message": "Innstillingssiden lukkes automatisk etter lagring"
+  },
+  "save_settings": {
+    "message": "Lagre Innstillinger"
+  },
+  "support_project": {
+    "message": "Støtt Prosjekt"
+  },
+  "pages_translated": {
+    "message": "Oversatte sider: "
+  },
+  "settings": {
+    "message": "Innstillinger"
+  },
+  "translate_to": {
+    "message": "Oversett til $LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "engelsk"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "Ingen språk valgt"
+  },
+  "click_settings_hint": {
+    "message": "Klikk Innstillinger for å legge til dine foretrukne språk"
+  },
+  "extension_disabled": {
+    "message": "Utvidelse Deaktivert"
+  },
+  "extension_disabled_description": {
+    "message": "Denne utvidelsen er deaktivert på oversettertjenestesider for å forhindre konflikter."
+  },
+  "navigate_hint": {
+    "message": "Naviger til en annen side for å bruke oversettelsesefunksjonene."
+  },
+  "settings_saved": {
+    "message": "Innstillinger lagret vellykket!"
+  },
+  "save_failed": {
+    "message": "Kunne ikke lagre innstillinger. Vennligst prøv igjen."
+  },
+  "lang_en": {
+    "message": "Engelsk"
+  },
+  "lang_es": {
+    "message": "Spansk"
+  },
+  "lang_fr": {
+    "message": "Fransk"
+  },
+  "lang_de": {
+    "message": "Tysk"
+  },
+  "lang_it": {
+    "message": "Italiensk"
+  },
+  "lang_pt": {
+    "message": "Portugisisk"
+  },
+  "lang_ru": {
+    "message": "Russisk"
+  },
+  "lang_zh": {
+    "message": "Kinesisk"
+  },
+  "lang_ja": {
+    "message": "Japansk"
+  },
+  "lang_ko": {
+    "message": "Koreansk"
+  },
+  "lang_ar": {
+    "message": "Arabisk"
+  },
+  "lang_hi": {
+    "message": "Hindi"
+  },
+  "lang_tr": {
+    "message": "Tyrkisk"
+  },
+  "lang_pl": {
+    "message": "Polsk"
+  },
+  "lang_nl": {
+    "message": "Nederlandsk"
+  },
+  "settings_saved_short": {
+    "message": "Lagret"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "翻訳"
+  },
+  "extension_description": {
+    "message": "お好みの翻訳プロバイダーを使用してWebページを複数の言語に翻訳します。最大5つの優先言語を設定できます。"
+  },
+  "translate_settings": {
+    "message": "翻訳設定"
+  },
+  "select_languages_hint": {
+    "message": "素早い翻訳のために最大5つの優先言語を選択してください"
+  },
+  "translation_provider": {
+    "message": "翻訳プロバイダー"
+  },
+  "kagi_description": {
+    "message": "トラッキングなしの高品質でプライベートな翻訳にKagiのFastGPTを使用"
+  },
+  "google_description": {
+    "message": "Googleの翻訳サービスを使用した高速で信頼性の高い翻訳"
+  },
+  "selected_languages": {
+    "message": "選択された言語"
+  },
+  "no_languages_yet": {
+    "message": "まだ言語が選択されていません"
+  },
+  "choose_languages_hint": {
+    "message": "翻訳ボタンを追加するために下のリストから選択してください"
+  },
+  "available_languages": {
+    "message": "利用可能な言語"
+  },
+  "search_languages": {
+    "message": "言語を検索..."
+  },
+  "preview": {
+    "message": "プレビュー"
+  },
+  "preview_description": {
+    "message": "ポップアップにはこれらの翻訳ボタンが表示されます："
+  },
+  "select_languages_preview": {
+    "message": "プレビューを見るために言語を選択してください"
+  },
+  "report_issue": {
+    "message": "アイデアや問題を報告"
+  },
+  "settings_close_hint": {
+    "message": "設定ページは保存後に自動的に閉じます"
+  },
+  "save_settings": {
+    "message": "設定を保存"
+  },
+  "support_project": {
+    "message": "プロジェクトをサポート"
+  },
+  "pages_translated": {
+    "message": "翻訳されたページ："
+  },
+  "settings": {
+    "message": "設定"
+  },
+  "translate_to": {
+    "message": "$LANGUAGE_NAME$に翻訳",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "英語"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "言語が選択されていません"
+  },
+  "click_settings_hint": {
+    "message": "優先言語を追加するには設定をクリックしてください"
+  },
+  "extension_disabled": {
+    "message": "拡張機能が無効"
+  },
+  "extension_disabled_description": {
+    "message": "この拡張機能は競合を防ぐため翻訳サービスページでは無効になっています。"
+  },
+  "navigate_hint": {
+    "message": "翻訳機能を使用するには他のページに移動してください。"
+  },
+  "settings_saved": {
+    "message": "設定が正常に保存されました！"
+  },
+  "save_failed": {
+    "message": "設定の保存に失敗しました。もう一度お試しください。"
+  },
+  "lang_en": {
+    "message": "英語"
+  },
+  "lang_es": {
+    "message": "スペイン語"
+  },
+  "lang_fr": {
+    "message": "フランス語"
+  },
+  "lang_de": {
+    "message": "ドイツ語"
+  },
+  "lang_it": {
+    "message": "イタリア語"
+  },
+  "lang_pt": {
+    "message": "ポルトガル語"
+  },
+  "lang_ru": {
+    "message": "ロシア語"
+  },
+  "lang_zh": {
+    "message": "中国語"
+  },
+  "lang_ja": {
+    "message": "日本語"
+  },
+  "lang_ko": {
+    "message": "韓国語"
+  },
+  "lang_ar": {
+    "message": "アラビア語"
+  },
+  "lang_hi": {
+    "message": "ヒンディー語"
+  },
+  "lang_tr": {
+    "message": "トルコ語"
+  },
+  "lang_pl": {
+    "message": "ポーランド語"
+  },
+  "lang_nl": {
+    "message": "オランダ語"
+  },
+  "settings_saved_short": {
+    "message": "保存済み"
+  }
+}

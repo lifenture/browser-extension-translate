@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "Prevoditelj"
+  },
+  "extension_description": {
+    "message": "Prevedite web stranice na više jezika koristeći vaš odabrani pružatelj prijevoda. Konfigurirajte do 5 omiljenih jezika."
+  },
+  "translate_settings": {
+    "message": "Postavke Prijevoda"
+  },
+  "select_languages_hint": {
+    "message": "Odaberite do 5 omiljenih jezika za brzi prijevod"
+  },
+  "translation_provider": {
+    "message": "Pružatelj Prijevoda"
+  },
+  "kagi_description": {
+    "message": "Koristi Kagi FastGPT za visokokvalitetne, privatne prijevode bez praćenja"
+  },
+  "google_description": {
+    "message": "Brzi i pouzdani prijevodi koristeći Google uslugu prijevoda"
+  },
+  "selected_languages": {
+    "message": "Odabrani Jezici"
+  },
+  "no_languages_yet": {
+    "message": "Još nema odabranih jezika"
+  },
+  "choose_languages_hint": {
+    "message": "Odaberite s popisa ispod da dodate gumbove za prijevod"
+  },
+  "available_languages": {
+    "message": "Dostupni Jezici"
+  },
+  "search_languages": {
+    "message": "Pretraži jezike..."
+  },
+  "preview": {
+    "message": "Pregled"
+  },
+  "preview_description": {
+    "message": "Vaš popup će prikazati ove gumbove za prijevod:"
+  },
+  "select_languages_preview": {
+    "message": "Odaberite jezike da vidite pregled"
+  },
+  "report_issue": {
+    "message": "Prijavite ideju ili problem"
+  },
+  "settings_close_hint": {
+    "message": "Stranica postavki će se automatski zatvoriti nakon spremanja"
+  },
+  "save_settings": {
+    "message": "Spremi Postavke"
+  },
+  "support_project": {
+    "message": "Podržite Projekt"
+  },
+  "pages_translated": {
+    "message": "Prevedene stranice: "
+  },
+  "settings": {
+    "message": "Postavke"
+  },
+  "translate_to": {
+    "message": "Prevedi na $LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "engleski"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "Nema odabranih jezika"
+  },
+  "click_settings_hint": {
+    "message": "Kliknite Postavke da dodate svoje omiljene jezike"
+  },
+  "extension_disabled": {
+    "message": "Proširenje Onemogućeno"
+  },
+  "extension_disabled_description": {
+    "message": "Ovo proširenje je onemogućeno na stranicama usluga prijevoda da se spriječe konflikti."
+  },
+  "navigate_hint": {
+    "message": "Idite na bilo koju drugu stranicu da koristite funkcije prijevoda."
+  },
+  "settings_saved": {
+    "message": "Postavke uspješno spremljene!"
+  },
+  "save_failed": {
+    "message": "Spremanje postavki neuspješno. Molimo pokušajte ponovno."
+  },
+  "lang_en": {
+    "message": "Engleski"
+  },
+  "lang_es": {
+    "message": "Španjolski"
+  },
+  "lang_fr": {
+    "message": "Francuski"
+  },
+  "lang_de": {
+    "message": "Njemački"
+  },
+  "lang_it": {
+    "message": "Talijanski"
+  },
+  "lang_pt": {
+    "message": "Portugalski"
+  },
+  "lang_ru": {
+    "message": "Ruski"
+  },
+  "lang_zh": {
+    "message": "Kineski"
+  },
+  "lang_ja": {
+    "message": "Japanski"
+  },
+  "lang_ko": {
+    "message": "Korejski"
+  },
+  "lang_ar": {
+    "message": "Arapski"
+  },
+  "lang_hi": {
+    "message": "Hindi"
+  },
+  "lang_tr": {
+    "message": "Turski"
+  },
+  "lang_pl": {
+    "message": "Poljski"
+  },
+  "lang_nl": {
+    "message": "Nizozemski"
+  },
+  "settings_saved_short": {
+    "message": "Spremljeno"
+  }
+}

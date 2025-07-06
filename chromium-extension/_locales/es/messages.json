@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "Traductor"
+  },
+  "extension_description": {
+    "message": "Traduce páginas web a múltiples idiomas usando tu proveedor de traducción preferido. Configura hasta 5 idiomas preferidos."
+  },
+  "translate_settings": {
+    "message": "Configuración de Traducción"
+  },
+  "select_languages_hint": {
+    "message": "Selecciona hasta 5 idiomas preferidos para traducción rápida"
+  },
+  "translation_provider": {
+    "message": "Proveedor de Traducción"
+  },
+  "kagi_description": {
+    "message": "Usa FastGPT de Kagi para traducciones de alta calidad y privadas sin seguimiento"
+  },
+  "google_description": {
+    "message": "Traducciones rápidas y confiables usando el servicio de traducción de Google"
+  },
+  "selected_languages": {
+    "message": "Idiomas Seleccionados"
+  },
+  "no_languages_yet": {
+    "message": "No se han seleccionado idiomas aún"
+  },
+  "choose_languages_hint": {
+    "message": "Elige de la lista de abajo para agregar botones de traducción"
+  },
+  "available_languages": {
+    "message": "Idiomas Disponibles"
+  },
+  "search_languages": {
+    "message": "Buscar idiomas..."
+  },
+  "preview": {
+    "message": "Vista Previa"
+  },
+  "preview_description": {
+    "message": "Tu popup mostrará estos botones de traducción:"
+  },
+  "select_languages_preview": {
+    "message": "Selecciona idiomas para ver la vista previa"
+  },
+  "report_issue": {
+    "message": "Reportar una idea o problema"
+  },
+  "settings_close_hint": {
+    "message": "La página de configuración se cerrará automáticamente después de guardar"
+  },
+  "save_settings": {
+    "message": "Guardar Configuración"
+  },
+  "support_project": {
+    "message": "Apoyar Proyecto"
+  },
+  "pages_translated": {
+    "message": "Páginas traducidas: "
+  },
+  "settings": {
+    "message": "Configuración"
+  },
+  "translate_to": {
+    "message": "Traducir a $LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "inglés"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "No se seleccionaron idiomas"
+  },
+  "click_settings_hint": {
+    "message": "Haz clic en Configuración para agregar tus idiomas preferidos"
+  },
+  "extension_disabled": {
+    "message": "Extensión Deshabilitada"
+  },
+  "extension_disabled_description": {
+    "message": "Esta extensión está deshabilitada en páginas de servicios de traducción para prevenir conflictos."
+  },
+  "navigate_hint": {
+    "message": "Navega a cualquier otra página para usar las funciones de traducción."
+  },
+  "settings_saved": {
+    "message": "¡Configuración guardada exitosamente!"
+  },
+  "save_failed": {
+    "message": "Error al guardar la configuración. Por favor, inténtalo de nuevo."
+  },
+  "lang_en": {
+    "message": "Inglés"
+  },
+  "lang_es": {
+    "message": "Español"
+  },
+  "lang_fr": {
+    "message": "Francés"
+  },
+  "lang_de": {
+    "message": "Alemán"
+  },
+  "lang_it": {
+    "message": "Italiano"
+  },
+  "lang_pt": {
+    "message": "Portugués"
+  },
+  "lang_ru": {
+    "message": "Ruso"
+  },
+  "lang_zh": {
+    "message": "Chino"
+  },
+  "lang_ja": {
+    "message": "Japonés"
+  },
+  "lang_ko": {
+    "message": "Coreano"
+  },
+  "lang_ar": {
+    "message": "Árabe"
+  },
+  "lang_hi": {
+    "message": "Hindi"
+  },
+  "lang_tr": {
+    "message": "Turco"
+  },
+  "lang_pl": {
+    "message": "Polaco"
+  },
+  "lang_nl": {
+    "message": "Holandés"
+  },
+  "settings_saved_short": {
+    "message": "Guardado"
+  }
+}

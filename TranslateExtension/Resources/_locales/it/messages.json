@@ -1,0 +1,143 @@
+{
+  "extension_name": {
+    "message": "Traduttore"
+  },
+  "extension_description": {
+    "message": "Traduci pagine web in più lingue usando il tuo provider di traduzione preferito. Configura fino a 5 lingue preferite."
+  },
+  "translate_settings": {
+    "message": "Impostazioni Traduzione"
+  },
+  "select_languages_hint": {
+    "message": "Seleziona fino a 5 lingue preferite per traduzione rapida"
+  },
+  "translation_provider": {
+    "message": "Provider di Traduzione"
+  },
+  "kagi_description": {
+    "message": "Usa FastGPT di Kagi per traduzioni di alta qualità e private senza tracciamento"
+  },
+  "google_description": {
+    "message": "Traduzioni veloci e affidabili usando il servizio di traduzione di Google"
+  },
+  "selected_languages": {
+    "message": "Lingue Selezionate"
+  },
+  "no_languages_yet": {
+    "message": "Nessuna lingua ancora selezionata"
+  },
+  "choose_languages_hint": {
+    "message": "Scegli dalla lista sotto per aggiungere pulsanti di traduzione"
+  },
+  "available_languages": {
+    "message": "Lingue Disponibili"
+  },
+  "search_languages": {
+    "message": "Cerca lingue..."
+  },
+  "preview": {
+    "message": "Anteprima"
+  },
+  "preview_description": {
+    "message": "Il tuo popup mostrerà questi pulsanti di traduzione:"
+  },
+  "select_languages_preview": {
+    "message": "Seleziona lingue per vedere l'anteprima"
+  },
+  "report_issue": {
+    "message": "Segnala un'idea o problema"
+  },
+  "settings_close_hint": {
+    "message": "La pagina impostazioni si chiuderà automaticamente dopo il salvataggio"
+  },
+  "save_settings": {
+    "message": "Salva Impostazioni"
+  },
+  "support_project": {
+    "message": "Supporta Progetto"
+  },
+  "pages_translated": {
+    "message": "Pagine tradotte: "
+  },
+  "settings": {
+    "message": "Impostazioni"
+  },
+  "translate_to": {
+    "message": "Traduci in $LANGUAGE_NAME$",
+    "placeholders": {
+      "language_name": {
+        "content": "$1",
+        "example": "inglese"
+      }
+    }
+  },
+  "no_languages_selected": {
+    "message": "Nessuna lingua selezionata"
+  },
+  "click_settings_hint": {
+    "message": "Clicca Impostazioni per aggiungere le tue lingue preferite"
+  },
+  "extension_disabled": {
+    "message": "Estensione Disabilitata"
+  },
+  "extension_disabled_description": {
+    "message": "Questa estensione è disabilitata sulle pagine dei servizi di traduzione per prevenire conflitti."
+  },
+  "navigate_hint": {
+    "message": "Naviga su qualsiasi altra pagina per usare le funzioni di traduzione."
+  },
+  "settings_saved": {
+    "message": "Impostazioni salvate con successo!"
+  },
+  "save_failed": {
+    "message": "Salvataggio impostazioni fallito. Riprova."
+  },
+  "lang_en": {
+    "message": "Inglese"
+  },
+  "lang_es": {
+    "message": "Spagnolo"
+  },
+  "lang_fr": {
+    "message": "Francese"
+  },
+  "lang_de": {
+    "message": "Tedesco"
+  },
+  "lang_it": {
+    "message": "Italiano"
+  },
+  "lang_pt": {
+    "message": "Portoghese"
+  },
+  "lang_ru": {
+    "message": "Russo"
+  },
+  "lang_zh": {
+    "message": "Cinese"
+  },
+  "lang_ja": {
+    "message": "Giapponese"
+  },
+  "lang_ko": {
+    "message": "Coreano"
+  },
+  "lang_ar": {
+    "message": "Arabo"
+  },
+  "lang_hi": {
+    "message": "Hindi"
+  },
+  "lang_tr": {
+    "message": "Turco"
+  },
+  "lang_pl": {
+    "message": "Polacco"
+  },
+  "lang_nl": {
+    "message": "Olandese"
+  },
+  "settings_saved_short": {
+    "message": "Salvato"
+  }
+}
